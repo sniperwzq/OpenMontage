@@ -40,7 +40,18 @@ Recommended metadata keys:
 - `transition_map`
 - `scene_timing_notes`
 
-### 5. Quality Gate
+### 5. Prefer Phrase Subtitles
+
+For narration-led animation or comic recap videos, default subtitles to phrase/page captions, not word-by-word or karaoke highlighting. Word-level timestamps may still be used internally to group short caption pages, but the rendered subtitle style should be plain phrase display unless the user explicitly asks for active-word highlighting.
+
+Recommended subtitle fields:
+
+- `style`: `"phrase"`
+- `max_words_per_line`: 4-7 for vertical video
+- `position`: `"bottom-center"`
+- `captionHighlightMode`: `"none"` when building Remotion props
+
+### 6. Quality Gate
 
 - key information has enough dwell time,
 - movement clarifies hierarchy,

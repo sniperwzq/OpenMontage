@@ -230,6 +230,7 @@ If the folder has tracks, the proposal and asset stages should present them as o
 | `podcast-repurpose` | Podcast highlights and derivatives | beta |
 | `cinematic` | Trailer, teaser, and mood-led edits | production |
 | `animation` | Motion-graphics and animation-first videos | production |
+| `novel-comic-recap-arc` | One adapted novel arc to one English vertical comic-recap drama video | beta |
 | `character-animation` | Local rigged cartoon characters and reusable character acting | beta |
 | `hybrid` | Source footage plus support visuals | production |
 | `avatar-spokesperson` | Presenter-led avatar or lip-sync videos | production |

@@ -104,6 +104,7 @@ Record:
 - Which video generation providers are available — run `registry.get_by_capability("video_generation")` and check status
 - Which enhancement tools are available
 - Image generation status — run `registry.get_by_capability("image_generation")` and check status
+- Codex runtime image import status — run `registry.get_by_capability("asset_import")` and check whether `codex_image_import` is available. If it is, you may offer a zero-key, agent-mediated still-image path, but explain that OpenMontage cannot call Codex image generation from Python and must import files after the agent creates them.
 - **Remotion render engine status** — check `video_compose.get_info()["render_engines"]["remotion"]`. If `true`, Remotion is available for animated text cards, stat cards, charts, spring-physics transitions, and image-to-video rendering. This is a major quality upgrade over Ken Burns pan-and-zoom.
 
 This directly affects what you can promise in the production plan. **Do not propose a concept that requires tools you don't have.**

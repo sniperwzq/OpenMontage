@@ -161,6 +161,7 @@ Present the approaches as clear options:
 | Approach | What It Looks Like | Tools Required | Cost | Proven? |
 |----------|-------------------|----------------|------|---------|
 | **A: Image-Based Animation (Remotion)** | AI-generated keyframes with crossfade, camera motion, particles. Looks like moving anime/illustration. | `image_selector` (any provider) + Remotion | Pull per-image cost from the chosen provider's `estimate_cost`; 2-3 images per scene is typical | ✅ Proven (mori-no-seishin) |
+| **A2: Codex Runtime Image Animation** | Codex-generated stills imported as project assets, then animated with camera motion/panel movement. Good for zero-key agent sessions. | Codex runtime image tool + `codex_image_import` + Remotion/HyperFrames | Not tracked by local OpenMontage cost estimator; import is free | ⚠️ Agent-mediated |
 | **B: Clip-Based Video** | AI-generated video clips assembled as a story. Most cinematic but least consistent. | `video_selector` routing to whichever provider is available | Pull per-clip cost from the chosen provider's `estimate_cost`; varies widely between providers | ❌ Not yet proven |
 | **C: Programmatic Animation (Manim)** | Code-driven math/geometry animation. Precise, clean, 3Blue1Brown style. | `math_animate` (ManimCE) | Free (local) | ❌ Not yet proven |
 | **D: Data Visualization (Remotion)** | Animated charts, KPIs, kinetic typography. Data-driven storytelling. | Remotion (built-in components) | Free (local) | ✅ Proven (zero-key formula) |
@@ -182,6 +183,10 @@ You need: An image generation API key.
   → You already have: {from provider_menu_summary: available image_generation providers}
   → Alternative: {from setup_offers: 1-env-var image_generation tools}
   → Alternative: local Stable Diffusion (see local_diffusion tool install_instructions)
+  → Zero-key agent-mediated alternative: if `asset_import` includes
+    `codex_runtime`, use Codex runtime images plus `codex_image_import`
+    (read `skills/creative/codex-runtime-image.md`). This is not an
+    unattended API provider and must be sample-approved before batching.
 
 Estimated cost for 30s video: pull per-image costs from each provider's
 `estimate_cost` (do NOT hardcode — they drift between releases).

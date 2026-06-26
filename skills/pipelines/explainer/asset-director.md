@@ -31,7 +31,7 @@ Quick routing for common explainer needs:
 | Schema | `schemas/artifacts/asset_manifest.schema.json` | Artifact validation |
 | Prior artifacts | `state.artifacts["scene_plan"]["scene_plan"]`, `state.artifacts["script"]["script"]`, `state.artifacts["proposal"]["proposal_packet"]` | What to produce |
 | Playbook | Active style playbook | Image prompts, diagram style, audio preferences |
-| Tools | `tts_selector`, `image_selector`, `video_selector`, `diagram_gen`, `code_snippet`, `music_gen` — selectors auto-discover all available providers from the registry | Generation capabilities |
+| Tools | `tts_selector`, `image_selector`, `video_selector`, `diagram_gen`, `code_snippet`, `codex_image_import`, `music_gen` — selectors auto-discover provider families; `codex_image_import` imports agent-mediated Codex images | Generation capabilities |
 | Cost tracker | `tools/cost_tracker.py` | Budget governance |
 
 ## Process
@@ -106,6 +106,20 @@ Process asset tasks grouped by tool for efficiency:
 3. Include consistency anchors (same character/world/palette family), but do NOT reuse the exact same phrasing for every image
 4. Generate and verify the file exists
 5. If the result doesn't match expectations, refine the prompt and regenerate (max 2 retries)
+
+**Codex runtime images (`codex_image_import`)**:
+Use this only when the user approved Codex runtime images or no configured
+`image_generation` provider is available and the active agent runtime can create
+images. Read `skills/creative/codex-runtime-image.md` first.
+
+1. Generate one representative sample through Codex runtime and get approval.
+2. Save approved images under `projects/<project>/assets/images/`.
+3. Import each saved file with `codex_image_import`.
+4. Append `result.data.asset_entry` to `asset_manifest.assets[]`.
+5. Record `source_tool: "codex_image_import"` and `provider: "codex_runtime"`.
+
+Do not call `image_selector` for this path, and do not present it as unattended
+API generation.
 
 **Diagrams (`diagram_gen`)**:
 1. Convert the scene description into valid Mermaid syntax

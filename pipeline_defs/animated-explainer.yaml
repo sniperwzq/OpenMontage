@@ -172,6 +172,7 @@ stages:
       - math_animate
       - diagram_gen
       - code_snippet
+      - codex_image_import
       - music_gen
     tools_available:
       - tts_selector
@@ -179,6 +180,7 @@ stages:
       - video_selector
       - diagram_gen
       - code_snippet
+      - codex_image_import
       - music_gen
       - math_animate
     checkpoint_required: true

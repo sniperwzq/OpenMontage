@@ -31,7 +31,7 @@ Quick routing for common animation-pipeline needs:
 |-------|----------|---------|
 | Schema | `schemas/artifacts/asset_manifest.schema.json` | Artifact validation |
 | Prior artifacts | `state.artifacts["scene_plan"]["scene_plan"]`, `state.artifacts["script"]["script"]`, `state.artifacts["proposal"]["proposal_packet"]` | Tool path and beat map |
-| Tools | `tts_selector`, `image_selector`, `video_selector`, `math_animate`, `diagram_gen`, `code_snippet`, `music_gen` — selectors auto-discover all available providers from the registry | Asset production options |
+| Tools | `tts_selector`, `image_selector`, `video_selector`, `math_animate`, `diagram_gen`, `code_snippet`, `codex_image_import`, `music_gen` — selectors auto-discover provider families; `codex_image_import` imports agent-mediated Codex images | Asset production options |
 | Playbook | Active style playbook | Visual consistency |
 
 ## Process
@@ -54,7 +54,27 @@ Before batch-generating assets, produce one sample of each expensive type and sh
 
 If rejected, adjust parameters and retry (max 3 iterations). Do not batch until approved.
 
-### 1c. Multi-Image Generation for Image-Based Animation (Approach A)
+### 1c. Codex Runtime Image Bridge (Zero-Key, Agent-Mediated)
+
+If no API-key image provider is configured and the active Codex session can
+create images, use the Codex runtime bridge instead of `image_selector`.
+
+Read `skills/creative/codex-runtime-image.md` before using this path.
+
+Workflow:
+
+1. Tell the user this is `codex_runtime_external` generation plus local
+   `codex_image_import`, not an OpenMontage Python API provider.
+2. Generate one representative visual sample through Codex runtime first.
+3. After approval, save each image under `projects/<project>/assets/images/`.
+4. Run `codex_image_import` for each saved image and append
+   `result.data.asset_entry` to `asset_manifest.assets[]`.
+5. Mark `source_tool: "codex_image_import"` and `provider: "codex_runtime"`.
+
+Do not list `codex_image_import` as an `image_selector` provider, and do not
+batch-generate without an approved sample.
+
+### 1d. Multi-Image Generation for Image-Based Animation (Approach A)
 
 When `animation_mode == "image_animation"`, each scene needs **2-3 images** for crossfade animation. This is what makes stills look like movement.
 

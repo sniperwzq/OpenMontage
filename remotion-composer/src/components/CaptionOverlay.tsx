@@ -14,6 +14,8 @@ export interface WordCaption {
   endMs: number;
 }
 
+export type CaptionHighlightMode = "none" | "active";
+
 interface CaptionOverlayProps {
   words: WordCaption[];
   // How many words to show at once in a "page"
@@ -21,6 +23,7 @@ interface CaptionOverlayProps {
   fontSize?: number;
   color?: string;
   highlightColor?: string;
+  highlightMode?: CaptionHighlightMode;
   backgroundColor?: string;
   fontFamily?: string;
 }
@@ -50,13 +53,23 @@ const PageRenderer: React.FC<{
   fontSize: number;
   color: string;
   highlightColor: string;
+  highlightMode: CaptionHighlightMode;
   backgroundColor: string;
   fontFamily: string;
-}> = ({ page, fontSize, color, highlightColor, backgroundColor, fontFamily }) => {
+}> = ({
+  page,
+  fontSize,
+  color,
+  highlightColor,
+  highlightMode,
+  backgroundColor,
+  fontFamily,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
   const currentMs = page.startMs + (frame / fps) * 1000;
+  const useActiveHighlight = highlightMode === "active";
 
   // Spring entrance
   const entrance = spring({
@@ -95,14 +108,13 @@ const PageRenderer: React.FC<{
         >
           {page.words.map((w, i) => {
             const isActive = w.startMs <= currentMs && w.endMs > currentMs;
-            const isPast = w.endMs <= currentMs;
             return (
               <span
                 key={`${w.startMs}-${i}`}
                 style={{
-                  color: isActive ? highlightColor : isPast ? color : `${color}99`,
+                  color: useActiveHighlight && isActive ? highlightColor : color,
                   transition: "none", // CSS transitions forbidden in Remotion
-                  textShadow: isActive
+                  textShadow: useActiveHighlight && isActive
                     ? `0 0 20px ${highlightColor}66, 0 2px 4px rgba(0,0,0,0.5)`
                     : "0 2px 4px rgba(0,0,0,0.5)",
                 }}
@@ -123,6 +135,7 @@ export const CaptionOverlay: React.FC<CaptionOverlayProps> = ({
   fontSize = 42,
   color = "#F8FAFC",
   highlightColor = "#22D3EE",
+  highlightMode = "none",
   backgroundColor = "rgba(15, 23, 42, 0.75)",
   fontFamily = "Space Grotesk, Inter, system-ui, sans-serif",
 }) => {
@@ -146,6 +159,7 @@ export const CaptionOverlay: React.FC<CaptionOverlayProps> = ({
               fontSize={fontSize}
               color={color}
               highlightColor={highlightColor}
+              highlightMode={highlightMode}
               backgroundColor={backgroundColor}
               fontFamily={fontFamily}
             />

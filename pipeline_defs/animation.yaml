@@ -181,6 +181,7 @@ stages:
       - math_animate
       - diagram_gen
       - code_snippet
+      - codex_image_import
       - music_gen
     tools_available:
       - tts_selector
@@ -189,6 +190,7 @@ stages:
       - math_animate
       - diagram_gen
       - code_snippet
+      - codex_image_import
       - music_gen
     checkpoint_required: true
     human_approval_default: false

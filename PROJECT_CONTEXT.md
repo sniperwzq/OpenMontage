@@ -91,6 +91,7 @@ Each tool's `agent_skills[]` field bridges Layer 1 → Layer 3. See `skills/INDE
 | `podcast-repurpose` | `pipeline_defs/podcast-repurpose.yaml` | Podcast repurposing |
 | `cinematic` | `pipeline_defs/cinematic.yaml` | Cinematic edit |
 | `animation` | `pipeline_defs/animation.yaml` | Animation-first |
+| `novel-comic-recap-arc` | `pipeline_defs/novel-comic-recap-arc.yaml` | One adapted novel arc to one English comic-recap drama video |
 | `character-animation` | `pipeline_defs/character-animation.yaml` | Local rigged character animation |
 | `hybrid` | `pipeline_defs/hybrid.yaml` | Source-plus-support hybrid |
 | `avatar-spokesperson` | `pipeline_defs/avatar-spokesperson.yaml` | Avatar presenter |

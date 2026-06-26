@@ -51,6 +51,7 @@ export interface CinematicCaptionConfig {
   fontSize?: number;
   color?: string;
   highlightColor?: string;
+  highlightMode?: "none" | "active";
   backgroundColor?: string;
 }
 

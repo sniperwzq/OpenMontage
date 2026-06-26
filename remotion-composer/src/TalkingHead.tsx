@@ -6,7 +6,11 @@ import {
   useCurrentFrame,
   useVideoConfig,
 } from "remotion";
-import { CaptionOverlay, WordCaption } from "./components/CaptionOverlay";
+import {
+  CaptionOverlay,
+  type CaptionHighlightMode,
+  WordCaption,
+} from "./components/CaptionOverlay";
 import { TextCard } from "./components/TextCard";
 import { StatCard } from "./components/StatCard";
 import { CalloutBox } from "./components/CalloutBox";
@@ -302,6 +306,7 @@ export interface TalkingHeadProps {
   wordsPerPage?: number;
   fontSize?: number;
   highlightColor?: string;
+  highlightMode?: CaptionHighlightMode;
 }
 
 export const TalkingHead: React.FC<TalkingHeadProps> = ({
@@ -311,6 +316,7 @@ export const TalkingHead: React.FC<TalkingHeadProps> = ({
   wordsPerPage = 4,
   fontSize = 52,
   highlightColor = "#22D3EE",
+  highlightMode = "none",
 }) => {
   const { fps } = useVideoConfig();
 
@@ -345,6 +351,7 @@ export const TalkingHead: React.FC<TalkingHeadProps> = ({
         wordsPerPage={wordsPerPage}
         fontSize={fontSize}
         highlightColor={highlightColor}
+        highlightMode={highlightMode}
         backgroundColor="rgba(0, 0, 0, 0.65)"
         color="#FFFFFF"
       />

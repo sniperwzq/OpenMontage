@@ -189,6 +189,7 @@ export const Root: React.FC = () => {
           wordsPerPage: 4,
           fontSize: 52,
           highlightColor: "#22D3EE",
+          highlightMode: "none",
         }}
       />
       <Composition
@@ -265,6 +266,7 @@ export const Root: React.FC = () => {
           wordsPerPage: 3,
           fontSize: 58,
           highlightColor: "#FACC15",
+          highlightMode: "none",
           backgroundColor: "rgba(15, 23, 42, 0.75)",
         }}
       />

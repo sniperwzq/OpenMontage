@@ -529,6 +529,7 @@ export const CinematicRenderer: React.FC<CinematicRendererProps> = ({
           fontSize={captions.fontSize ?? 48}
           color={captions.color ?? "#F8FAFC"}
           highlightColor={captions.highlightColor ?? "#FBBF24"}
+          highlightMode={captions.highlightMode ?? "none"}
           backgroundColor={captions.backgroundColor ?? "rgba(0, 0, 0, 0.6)"}
         />
       ) : null}

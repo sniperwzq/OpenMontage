@@ -55,6 +55,7 @@ Key capability families to look for in the output:
 | `tts` | `tts_selector` | Auto-discovers all `capability="tts"` tools |
 | `video_generation` | `video_selector` | Auto-discovers all `capability="video_generation"` tools |
 | `image_generation` | `image_selector` | Auto-discovers all `capability="image_generation"` tools |
+| `asset_import` | — | Imports externally generated assets such as Codex runtime images |
 | `audio_processing` | — | FFmpeg-based local tools |
 | `enhancement` | — | Mixed providers |
 | `analysis` | — | Mixed providers |
@@ -106,6 +107,7 @@ Key capability families to look for in the output:
 | ManimCE Usage | `creative/manim-usage.md` | Scene composition, animation timing, color usage | `manimce-best-practices` |
 | Image Gen Usage | `creative/image-gen-usage.md` | Prompt consistency, hero reference, batch strategy | `flux-best-practices`, `bfl-api` |
 | Image Provider Usage | `creative/image-provider-usage.md` | Provider selection (FLUX/Grok/OpenAI/Recraft/stock), cost-quality tradeoffs | `flux-best-practices`, `bfl-api`, `grok-media` |
+| Codex Runtime Image Bridge | `creative/codex-runtime-image.md` | Zero-key, agent-mediated Codex still-image generation imported into OpenMontage assets | — |
 | B-Roll Planning | `creative/broll-planning.md` | Stock vs. generated decision, query construction, footage evaluation | — |
 | Stock Sourcing Usage | `creative/stock-sourcing-usage.md` | Pexels/Pixabay usage, parameters, licensing, integration | — |
 | Scene Detect Usage | `creative/scene-detect-usage.md` | Threshold tuning, algorithm selection, content presets | â€" |
@@ -230,6 +232,20 @@ Stage director skills teach the agent HOW to execute each pipeline stage. Each s
 | Publish Director | `pipelines/animation/publish-director.md` | `publish` | Animation-mode packaging, thumbnail-system alignment |
 
 > **Note:** The old `idea-director.md` still exists for reference but is superseded by the research + proposal two-stage flow in v2.0.
+
+### Novel Comic Recap Arc Pipeline (`pipelines/novel-comic-recap-arc/`) — v1.0
+
+| Skill | File | Stage | Key Capabilities |
+|-------|------|-------|-----------------|
+| **Executive Producer** | `pipelines/novel-comic-recap-arc/executive-producer.md` | `all` | **One adapted novel arc to one complete English vertical comic-recap video** |
+| Research Director | `pipelines/novel-comic-recap-arc/research-director.md` | `research` | Arc intake from `adapt_arc*.md` and `ec_arc*_Ch*.md`, boundaries, nodes, dialogue candidates |
+| Proposal Director | `pipelines/novel-comic-recap-arc/proposal-director.md` | `proposal` | One-arc-one-video concept options, runtime approval, zero-key/local-first plan |
+| Script Director | `pipelines/novel-comic-recap-arc/script-director.md` | `script` | Fast English recap script, dynamic node compression, speech-bubble selection |
+| Scene Director | `pipelines/novel-comic-recap-arc/scene-director.md` | `scene_plan` | 8-12 scene vertical comic-panel plan, node-to-scene mapping, overlay separation |
+| Asset Director | `pipelines/novel-comic-recap-arc/asset-director.md` | `assets` | Codex-runtime image flow, local TTS, style/character consistency, no audiobook audio |
+| Edit Director | `pipelines/novel-comic-recap-arc/edit-director.md` | `edit` | Fast arc timeline, phrase captions, speech bubble scheduling |
+| Compose Director | `pipelines/novel-comic-recap-arc/compose-director.md` | `compose` | Remotion-first 9:16 render, phrase captions, frame/audio QA |
+| Publish Director | `pipelines/novel-comic-recap-arc/publish-director.md` | `publish` | Arc-safe titles, thumbnail concept, no future-spoiler packaging |
 
 ### Hybrid Pipeline (`pipelines/hybrid/`) — v2.0
 

@@ -1,0 +1,261 @@
+name: novel-comic-recap-arc
+version: "1.0"
+description: >
+  Custom pipeline for turning one adapted novel arc into one vertical English comic-recap
+  drama video. It reads stable arc files such as adapt_arcXXXX.md and ec_arcXXXX_ChN-M.md,
+  compresses variable node counts into a fast complete mini-story, generates/organizes
+  comic-style stills, adds narration, speech bubbles, phrase captions, and renders a
+  single 9:16 short-form recap.
+category: animation
+stability: beta
+default_checkpoint_policy: guided
+
+reference_input:
+  supported: false
+  analysis_depth: standard
+  analysis_tools: []
+
+extensions:
+  custom_scripts: true
+  custom_playbooks: true
+  custom_skills: true
+  custom_tools: false
+
+required_skills:
+  - pipelines/novel-comic-recap-arc/executive-producer
+  - pipelines/novel-comic-recap-arc/research-director
+  - pipelines/novel-comic-recap-arc/proposal-director
+  - pipelines/novel-comic-recap-arc/script-director
+  - pipelines/novel-comic-recap-arc/scene-director
+  - pipelines/novel-comic-recap-arc/asset-director
+  - pipelines/novel-comic-recap-arc/edit-director
+  - pipelines/novel-comic-recap-arc/compose-director
+  - pipelines/novel-comic-recap-arc/publish-director
+  - meta/reviewer
+  - meta/checkpoint-protocol
+  - meta/animation-runtime-selector
+
+orchestration:
+  mode: executive-producer
+  skill: pipelines/novel-comic-recap-arc/executive-producer
+  budget_default_usd: 0.50
+  max_revisions_per_stage: 3
+  max_send_backs: 2
+  max_wall_time_minutes: 20
+
+compatible_playbooks:
+  recommended:
+    - flat-motion-graphics
+  also_works:
+    - clean-professional
+    - minimalist-diagram
+  custom_allowed: true
+
+metadata:
+  default_aspect_ratio: "9:16"
+  default_language: "en-US"
+  communication_language: "zh-CN"
+  default_duration_seconds: 90
+  duration_range_seconds: [75, 120]
+  recap_unit: "one_arc_one_video"
+  caption_highlight_mode: "none"
+  default_render_runtime_recommendation: "remotion"
+
+stages:
+  - name: research
+    skill: pipelines/novel-comic-recap-arc/research-director
+    produces:
+      - research_brief
+    tools_available: []
+    checkpoint_required: true
+    human_approval_default: false
+    review_focus:
+      - Arc intake captures adapt_arc and ec_arc files without chapter-structure lock-in
+      - Variable node count is preserved and ranked for recap importance
+      - No-spoiler boundaries and bottom-card protections are carried forward
+      - Bible and character-reference constraints are recorded
+    success_criteria:
+      - Schema-valid research_brief artifact
+      - research_brief.metadata.arc_brief contains arc_id, source_paths, nodes, boundaries, and episode_unit="arc"
+      - Local source files are cited in sources
+
+  - name: proposal
+    skill: pipelines/novel-comic-recap-arc/proposal-director
+    required_artifacts_in:
+      - research_brief
+    produces:
+      - proposal_packet
+      - decision_log
+    tools_available: []
+    checkpoint_required: true
+    human_approval_default: true
+    review_focus:
+      - One arc maps to one complete video, not one video per chapter
+      - Concept options differ by hook/tone/compression strategy, not by source coverage
+      - Runtime options are presented per AGENT_GUIDE.md before locking render_runtime
+      - Zero-key/local-first path is explicit; paid upgrades are optional
+    success_criteria:
+      - Schema-valid proposal_packet and decision_log
+      - production_plan.pipeline is "novel-comic-recap-arc"
+      - target duration is within 75-120 seconds unless user overrides
+      - approval.status is approved or approved_with_changes before production
+
+  - name: script
+    skill: pipelines/novel-comic-recap-arc/script-director
+    required_artifacts_in:
+      - proposal_packet
+      - research_brief
+    produces:
+      - script
+    tools_available: []
+    checkpoint_required: true
+    human_approval_default: true
+    review_focus:
+      - English narration is recap-style, not audiobook-style
+      - Arc nodes are compressed into fast emotional escalation
+      - Chapter order informs source coverage but does not dictate video structure
+      - Key dialogue bubbles are short and high-impact
+    success_criteria:
+      - Schema-valid script artifact
+      - Total duration is within approved target range
+      - metadata.dialogue_bubbles has 3-6 items
+      - metadata.node_coverage covers all must-show nodes or explicitly merges them
+
+  - name: scene_plan
+    skill: pipelines/novel-comic-recap-arc/scene-director
+    required_artifacts_in:
+      - script
+      - proposal_packet
+      - research_brief
+    produces:
+      - scene_plan
+    tools_available: []
+    checkpoint_required: true
+    human_approval_default: true
+    review_focus:
+      - Scene count stays dense, normally 8-12 scenes for a 75-120 second arc recap
+      - Every scene has a clear arc-node role and image requirement
+      - Speech bubbles and captions are planned as overlays, not baked into generated images
+      - 9:16 safe zones are explicit
+    success_criteria:
+      - Schema-valid scene_plan artifact
+      - Every scene has required_assets and node/source metadata
+      - No generated image is asked to render exact subtitle text
+
+  - name: assets
+    skill: pipelines/novel-comic-recap-arc/asset-director
+    required_artifacts_in:
+      - scene_plan
+      - script
+      - proposal_packet
+    optional_artifacts_in:
+      - research_brief
+    produces:
+      - asset_manifest
+    required_tools:
+      - tts_selector
+    optional_tools:
+      - codex_image_import
+      - image_selector
+      - music_gen
+      - pixabay_music
+      - audio_probe
+    tools_available:
+      - tts_selector
+      - codex_image_import
+      - image_selector
+      - music_gen
+      - pixabay_music
+      - audio_probe
+    checkpoint_required: true
+    human_approval_default: false
+    review_focus:
+      - Codex-runtime image workflow is preferred when zero-key path is requested
+      - Style block, character descriptors, and reference provenance are reused across all scenes
+      - Missing images are listed before generation if the approved path cannot create them
+      - Narration uses generated TTS, not existing audiobook audio
+    success_criteria:
+      - Schema-valid asset_manifest artifact
+      - All referenced asset files exist or missing-assets are explicitly blocked for approval
+      - layer3_skills_read list includes generation tools used
+
+  - name: edit
+    skill: pipelines/novel-comic-recap-arc/edit-director
+    required_artifacts_in:
+      - scene_plan
+      - asset_manifest
+      - script
+    optional_artifacts_in:
+      - proposal_packet
+    produces:
+      - edit_decisions
+    tools_available: []
+    checkpoint_required: true
+    human_approval_default: false
+    review_focus:
+      - Timeline feels faster than single-chapter pilot pacing
+      - Phrase captions are used; word highlighting is disabled
+      - Dialogue bubbles land on key story turns without crowding captions
+      - Final seconds create next-arc curiosity while completing this arc
+    success_criteria:
+      - Schema-valid edit_decisions artifact
+      - render_runtime matches proposal_packet.production_plan.render_runtime
+      - subtitles.style is phrase and captionHighlightMode is none
+
+  - name: compose
+    skill: pipelines/novel-comic-recap-arc/compose-director
+    required_artifacts_in:
+      - edit_decisions
+      - asset_manifest
+    optional_artifacts_in:
+      - scene_plan
+      - script
+      - proposal_packet
+    produces:
+      - render_report
+      - final_review
+    required_tools:
+      - video_compose
+      - audio_mixer
+    optional_tools:
+      - hyperframes_compose
+      - video_stitch
+    tools_available:
+      - video_compose
+      - hyperframes_compose
+      - audio_mixer
+      - video_stitch
+    checkpoint_required: true
+    human_approval_default: false
+    review_focus:
+      - Output is 9:16 and within approved duration tolerance
+      - Captions are phrase-only and visually aligned enough for narration
+      - Speech bubbles, subtitles, and faces do not overlap incoherently
+      - Render runtime matches approved proposal; silent swaps are forbidden
+      - Post-render frame review verifies image visibility and style consistency
+    success_criteria:
+      - Schema-valid render_report and final_review artifacts
+      - Output MP4 exists and passes ffprobe validation
+      - final_review includes per-scene screenshot or frame-sampling notes
+
+  - name: publish
+    skill: pipelines/novel-comic-recap-arc/publish-director
+    required_artifacts_in:
+      - render_report
+      - final_review
+    optional_artifacts_in:
+      - script
+      - proposal_packet
+      - research_brief
+    produces:
+      - publish_log
+    tools_available: []
+    checkpoint_required: true
+    human_approval_default: true
+    review_focus:
+      - Title, description, and thumbnail promise match the completed arc
+      - Metadata names arc_id and avoids spoiling protected future arcs
+      - Packaging emphasizes one complete mini-story and next-arc curiosity
+    success_criteria:
+      - Schema-valid publish_log artifact
+      - Export package contains final video path and platform metadata

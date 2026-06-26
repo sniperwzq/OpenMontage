@@ -83,9 +83,12 @@ For `anime_scene` compositions, build a JSON file at `remotion-composer/public/d
     }
   ],
   "overlays": [...],
+  "captionHighlightMode": "none",
   "audio": { "music": { "src": "<project>/music.mp3", "volume": 0.15, "fadeInSeconds": 2, "fadeOutSeconds": 3 } }
 }
 ```
+
+Use `"captionHighlightMode": "none"` by default for narration-led animation and comic recap videos. Only set it to `"active"` when the user explicitly wants karaoke-style word highlighting.
 
 **Prop name reference (JSON field → AnimeScene prop):**
 
