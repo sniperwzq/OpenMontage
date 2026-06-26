@@ -254,7 +254,8 @@ class HyperFramesCompose(BaseTool):
         on PATH, which meant `runtime_available: True` on any machine with
         Node + FFmpeg — even offline, even if npm was down, even if the
         package was unpublished. This method performs a cheap
-        `npm view hyperframes version` (5s timeout) and caches the answer
+        direct `hyperframes --version` first, then falls back to
+        `npm view hyperframes version` (5s timeout), and caches the answer
         for the rest of the process.
 
         Returns {"version": "X.Y.Z"} on success, {"error": "<short>"} on any
@@ -262,6 +263,31 @@ class HyperFramesCompose(BaseTool):
         """
         if cls._npm_resolve_cache is not None:
             return cls._npm_resolve_cache
+
+        hyperframes = shutil.which("hyperframes")
+        if hyperframes:
+            try:
+                proc = subprocess.run(
+                    [hyperframes, "--version"],
+                    capture_output=True,
+                    text=True,
+                    timeout=10,
+                )
+            except subprocess.TimeoutExpired:
+                cls._npm_resolve_cache = {
+                    "error": "direct hyperframes command timed out (10s)"
+                }
+                return cls._npm_resolve_cache
+            except (OSError, subprocess.SubprocessError) as e:
+                cls._npm_resolve_cache = {
+                    "error": f"direct hyperframes check failed: {type(e).__name__}"
+                }
+                return cls._npm_resolve_cache
+            if proc.returncode == 0:
+                version = (proc.stdout or "").strip()
+                if version:
+                    cls._npm_resolve_cache = {"version": version, "source": "command"}
+                    return cls._npm_resolve_cache
 
         npm = shutil.which("npm")
         if not npm:
@@ -298,7 +324,7 @@ class HyperFramesCompose(BaseTool):
         if not version:
             cls._npm_resolve_cache = {"error": "npm view returned empty version"}
         else:
-            cls._npm_resolve_cache = {"version": version}
+            cls._npm_resolve_cache = {"version": version, "source": "npm_view"}
         return cls._npm_resolve_cache
 
     def _runtime_check(self) -> dict[str, Any]:
@@ -1122,13 +1148,14 @@ class HyperFramesCompose(BaseTool):
         timeout: int,
         check: bool,
     ) -> subprocess.CompletedProcess:
-        """Invoke `npx hyperframes <args>` with the right Windows quirks.
+        """Invoke HyperFrames with the right Windows quirks.
 
         We intentionally bypass `self.run_command` here because we do NOT
         want to raise CalledProcessError on non-zero exits — the caller
         parses lint/validate/render exit codes itself.
         """
-        cmd = ["npx", "--yes", "hyperframes", *args]
+        hyperframes = shutil.which("hyperframes")
+        cmd = [hyperframes, *args] if hyperframes else ["npx", "--yes", "hyperframes", *args]
         # On Windows, resolve the .cmd wrapper so subprocess can find it
         # without shell=True.
         if os.name == "nt":

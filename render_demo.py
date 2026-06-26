@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -50,11 +51,17 @@ def ensure_demo_environment() -> str:
     if not find_command("node", "node.exe"):
         raise SystemExit("Error: Node.js is required. Install it from https://nodejs.org/")
 
-    npm_cmd = find_command("npm.cmd", "npm", "npm.exe")
+    if os.name == "nt":
+        npm_cmd = find_command("npm.cmd", "npm", "npm.exe")
+    else:
+        npm_cmd = find_command("npm", "npm.cmd", "npm.exe")
     if not npm_cmd:
         raise SystemExit("Error: npm is required but was not found on PATH.")
 
-    npx_cmd = find_command("npx.cmd", "npx", "npx.exe")
+    if os.name == "nt":
+        npx_cmd = find_command("npx.cmd", "npx", "npx.exe")
+    else:
+        npx_cmd = find_command("npx", "npx.cmd", "npx.exe")
     if not npx_cmd:
         raise SystemExit("Error: npx is required but was not found on PATH.")
 
@@ -84,6 +91,11 @@ def render_demo(name: str, props_path: Path, npx_cmd: str) -> None:
     print(f"Output:    {output_path}")
     print()
 
+    env = os.environ.copy()
+    env["TMPDIR"] = "/tmp"
+    env["TEMP"] = "/tmp"
+    env["TMP"] = "/tmp"
+
     subprocess.run(
         [
             npx_cmd,
@@ -98,6 +110,7 @@ def render_demo(name: str, props_path: Path, npx_cmd: str) -> None:
             "h264",
         ],
         cwd=COMPOSER_DIR,
+        env=env,
         check=True,
     )
 

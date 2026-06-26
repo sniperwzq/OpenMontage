@@ -39,7 +39,7 @@ class PiperTTS(BaseTool):
         "  pip install piper-tts\n"
         "Or download from https://github.com/rhasspy/piper/releases\n"
         "Then download a voice model:\n"
-        "  piper --download-dir ~/.piper/models --model en_US-lessac-medium"
+        "  python -m piper.download_voices en_US-lessac-medium --download-dir ~/.local/share/piper/voices"
     )
     agent_skills = ["text-to-speech"]
 
@@ -123,11 +123,13 @@ class PiperTTS(BaseTool):
     def _generate(self, inputs: dict[str, Any]) -> ToolResult:
         output_path = Path(inputs.get("output_path", "tts_output.wav"))
         output_path.parent.mkdir(parents=True, exist_ok=True)
+        model = inputs.get("model", "en_US-lessac-medium")
+        model_path = self._resolve_model_path(model)
 
         proc = subprocess.run(
             [
                 "piper",
-                "--model", inputs.get("model", "en_US-lessac-medium"),
+                "--model", model_path,
                 "--speaker", str(inputs.get("speaker_id", 0)),
                 "--length-scale", str(inputs.get("length_scale", 1.0)),
                 "--sentence-silence", str(inputs.get("sentence_silence", 0.3)),
@@ -148,12 +150,30 @@ class PiperTTS(BaseTool):
             success=True,
             data={
                 "provider": self.provider,
-                "model": inputs.get("model", "en_US-lessac-medium"),
+                "model": model,
+                "model_path": model_path,
                 "speaker_id": inputs.get("speaker_id", 0),
                 "text_length": len(inputs["text"]),
                 "output": str(output_path),
                 "format": "wav",
             },
             artifacts=[str(output_path)],
-            model=inputs.get("model", "en_US-lessac-medium"),
+            model=model,
         )
+
+    def _resolve_model_path(self, model: str) -> str:
+        """Resolve a Piper voice name to a local .onnx path when possible."""
+        model_path = Path(model).expanduser()
+        if model_path.exists():
+            return str(model_path)
+
+        candidates = [
+            Path.home() / ".local" / "share" / "piper" / "voices" / f"{model}.onnx",
+            Path.home() / ".piper" / "models" / f"{model}.onnx",
+            Path.cwd() / f"{model}.onnx",
+        ]
+        for candidate in candidates:
+            if candidate.exists():
+                return str(candidate)
+
+        return model

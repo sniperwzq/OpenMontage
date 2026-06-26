@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import subprocess
 import time
 from pathlib import Path
@@ -1371,11 +1372,15 @@ class VideoCompose(BaseTool):
                 pass
 
         try:
+            env = os.environ.copy()
+            env["TMPDIR"] = "/tmp"
+            env["TEMP"] = "/tmp"
+            env["TMP"] = "/tmp"
             # Invoke from inside the composer dir so npx can resolve the
             # local remotion binary via node_modules/.bin. Without this,
             # Windows npx cannot locate the CLI and returns "could not
             # determine executable to run".
-            self.run_command(cmd, timeout=600, cwd=composer_dir)
+            self.run_command(cmd, timeout=600, cwd=composer_dir, env=env)
         except Exception as e:
             return ToolResult(success=False, error=f"Remotion render failed: {e}")
         finally:
