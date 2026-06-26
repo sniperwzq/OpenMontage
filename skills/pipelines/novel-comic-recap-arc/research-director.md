@@ -12,7 +12,7 @@ Required when available:
 - `ec_arc*_Ch*.md`
 - `bible_setting.md`
 - character reference image(s)
-- visual style instructions from the user
+- visual style instructions from the user, especially `visual_style.md`
 
 ## Process
 
@@ -67,7 +67,27 @@ Write:
 - which images are likely hero frames
 - what must not be spoiled from later arcs
 
-### 5. Produce A Schema-Valid `research_brief`
+### 5. Read Visual Style
+
+If the user supplies a `visual_style.md`, read it. If no explicit file is
+provided, check the bundled repository default:
+
+`styles/novel-comic-recap-arc.visual-style.md`
+
+Extract and carry forward:
+
+- `STYLE_CORE`: default is `Modern American superhero comic-book illustration style`.
+- `VISUAL_STYLE_BLOCK`: use for scene/image prompts.
+- `ASSET_STYLE_BLOCK`: use for character sheets and reference assets.
+- `PALETTE`, `LIGHTING`, `CAMERA_LANGUAGE`, `TEXTURE_WORLD`, `MOOD_TONE`.
+- `GLOBAL_NEGATIVE`: apply to generated images.
+- `SOUND_POLICY`: prefer no music or only restrained environmental sound unless the user approves otherwise.
+
+Important: `GLOBAL_NEGATIVE` and no-text/no-logo/no-watermark restrictions apply
+to generated images. The recap format may still use controlled Remotion overlay
+captions and speech bubbles unless the user explicitly disables them.
+
+### 6. Produce A Schema-Valid `research_brief`
 
 Use local source paths as citations. The generic research schema requires landscape/data/audience fields; adapt them as follows:
 
@@ -92,7 +112,15 @@ Store the detailed source analysis under:
     "must_show_moments": [],
     "dialogue_candidates": [],
     "hero_frame_candidates": [],
-    "compression_notes": []
+    "compression_notes": [],
+    "visual_style": {
+      "source_path": "...",
+      "style_core": "Modern American superhero comic-book illustration style",
+      "visual_style_block": "...",
+      "asset_style_block": "...",
+      "global_negative": "...",
+      "sound_policy": "none_or_minimal_environment_only"
+    }
   }
 }
 ```
@@ -102,4 +130,5 @@ Store the detailed source analysis under:
 - Every node in `adapt_arc` is represented.
 - Protected future material is explicit.
 - Key dialogue is quoted only as short snippets.
+- The active visual style file is summarized and stored in metadata when present.
 - No unsupported story invention enters the brief.

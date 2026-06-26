@@ -15,6 +15,7 @@ State plainly:
 - target duration is 75-120 seconds unless the user overrides,
 - narration is English for Western audiences,
 - the video is recap drama, not audiobook reading.
+- visual style follows the current `visual_style.md` when available, with `Modern American superhero comic-book illustration style` as the default look.
 
 ### 2. Offer Three Concept Options
 
@@ -59,6 +60,11 @@ The selected concept should normally use:
 - `music_source.source_type`: `none`, `user_library`, or approved local/free source
 - `voice_selection`: local/free TTS first, unless user approves another provider
 
+Use the current visual style's sound policy as default: no added emotional music
+unless requested; if sound is used, prefer restrained environmental ambience.
+English narration remains part of this recap pipeline even if the visual style's
+source-footage policy says not to add unrelated narration.
+
 ### 5. Approval Gate
 
 Do not proceed to script/assets until the user approves the concept and runtime.
@@ -71,7 +77,9 @@ Include:
 - target duration,
 - node coverage summary,
 - image count estimate,
+- visual style source and a short style summary,
 - TTS path,
+- music/sound policy, defaulting to no music or minimal environment sound,
 - caption style: phrase captions, no word highlighting,
 - speech bubble count: usually 3-6,
 - cost estimate with zero-key path first.

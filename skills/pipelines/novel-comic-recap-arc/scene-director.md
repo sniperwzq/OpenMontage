@@ -20,6 +20,8 @@ Default:
 - Use Remotion overlays for captions, bubbles, warning tape, title cards, and small readable text.
 - Favor strong stills with camera motion over many weak images.
 - Keep vertical-safe composition: important faces and text away from platform UI zones.
+- Follow the active `visual_style.md`: vertical power staging, centered or triangular group composition, clear upper-body expressions, low angles for power pressure, high angles for trapped/scrutinized characters, symmetrical public spaces, oppressive foreground framing for private conflict, slow push-in/orbit/frozen-stare motion.
+- Use the visual style's modern high-society world: Pack as old-money/corporate power, private security, medical foundations, manors, black business cars, closed rooms, cold family insignia. Do not introduce tribal, medieval, magical, or overt werewolf transformation visuals.
 
 ## Required Scene Metadata
 
@@ -46,6 +48,8 @@ Store arc-specific details in `scene_plan.metadata`:
   "scene_budget": 10,
   "node_to_scene_map": {},
   "speech_bubble_plan": [],
+  "visual_style_source": "...",
+  "style_core": "Modern American superhero comic-book illustration style",
   "caption_style": "phrase",
   "captionHighlightMode": "none"
 }

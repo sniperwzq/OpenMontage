@@ -41,6 +41,8 @@ Maintain these arc-specific fields across stages:
 - `target_duration_seconds`
 - `scene_budget`
 - `visual_style_block`
+- `asset_style_block`
+- `visual_style_path`
 - `render_runtime`
 - `captionHighlightMode = "none"`
 
@@ -59,6 +61,7 @@ After research:
 - Confirm both arc files were parsed.
 - Confirm protected future reveals are listed.
 - Confirm all nodes were captured even if the node count is not six.
+- Confirm `visual_style.md` was read when supplied or found at the bundled repository default, and that `VISUAL_STYLE_BLOCK`, `ASSET_STYLE_BLOCK`, and global negative constraints were carried forward.
 
 After proposal:
 
@@ -81,6 +84,7 @@ After assets:
 
 - Confirm narration is newly generated TTS, not audiobook audio.
 - Confirm image style and character descriptors are consistent.
+- Confirm generated images follow `Modern American superhero comic-book illustration style` and the visual style file's no-text/no-logo/no-watermark restrictions.
 - Confirm any missing visuals are surfaced before compose.
 
 After edit:

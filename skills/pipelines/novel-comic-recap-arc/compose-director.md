@@ -37,7 +37,9 @@ Required props-level flags:
 ## Text Safety
 
 - Do not rely on AI-generated images for exact text.
-- Captions, bubbles, title cards, warning labels, and readable UI text should be rendered by Remotion.
+- The active visual style forbids text, logo, watermark, subtitles, and gibberish text inside generated images.
+- Captions and speech bubbles are controlled Remotion overlays for the recap format; keep them sparse, readable, and outside faces/key action.
+- Avoid title-card-heavy treatment unless the user explicitly asks for it.
 - Check that captions and speech bubbles do not cover faces or key action.
 
 ## Validation
@@ -51,6 +53,7 @@ Before final delivery:
 - confirm duration is within approved tolerance,
 - confirm no black/blank frames,
 - confirm style consistency across scenes.
+- confirm images keep the modern superhero comic / luxury noir style and do not drift into photoreal, anime, manga, webtoon, 3D, game CG, or fantasy-werewolf imagery.
 
 ## Output
 

@@ -34,3 +34,12 @@ def test_novel_comic_recap_arc_defaults_one_arc_one_video():
     assert metadata["default_aspect_ratio"] == "9:16"
     assert metadata["default_language"] == "en-US"
     assert metadata["caption_highlight_mode"] == "none"
+    style_path = Path(metadata["default_visual_style_path"])
+    assert not style_path.is_absolute()
+    assert style_path.as_posix() == "styles/novel-comic-recap-arc.visual-style.md"
+    assert (Path(__file__).resolve().parents[2] / style_path).exists()
+    assert (
+        metadata["default_image_style_core"]
+        == "Modern American superhero comic-book illustration style"
+    )
+    assert metadata["default_music_policy"] == "none_or_minimal_environment_only"

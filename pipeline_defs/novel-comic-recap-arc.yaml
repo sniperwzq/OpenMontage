@@ -60,6 +60,10 @@ metadata:
   recap_unit: "one_arc_one_video"
   caption_highlight_mode: "none"
   default_render_runtime_recommendation: "remotion"
+  default_visual_style_path: "styles/novel-comic-recap-arc.visual-style.md"
+  default_visual_style_name: "Burned Luna, Crowned Queen"
+  default_image_style_core: "Modern American superhero comic-book illustration style"
+  default_music_policy: "none_or_minimal_environment_only"
 
 stages:
   - name: research
