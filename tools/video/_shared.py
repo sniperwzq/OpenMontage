@@ -151,6 +151,20 @@ def local_generation_enabled() -> bool:
     return os.environ.get("VIDEO_GEN_LOCAL_ENABLED", "").lower() in {"true", "1", "yes"}
 
 
+def local_accelerator_device() -> str | None:
+    """Return the best local torch accelerator for video generation."""
+    try:
+        import torch
+    except ImportError:
+        return None
+
+    if torch.cuda.is_available():
+        return "cuda"
+    if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        return "mps"
+    return None
+
+
 def local_generation_status() -> ToolStatus:
     if not local_generation_enabled():
         return ToolStatus.UNAVAILABLE
@@ -159,7 +173,7 @@ def local_generation_status() -> ToolStatus:
         import torch  # noqa: F401
     except ImportError:
         return ToolStatus.UNAVAILABLE
-    return ToolStatus.AVAILABLE
+    return ToolStatus.AVAILABLE if local_accelerator_device() else ToolStatus.UNAVAILABLE
 
 
 def local_install_instructions() -> str:
@@ -193,6 +207,10 @@ def load_diffusers_pipeline(pipeline_class: str, model_id: str, enable_offload: 
     import diffusers
     import torch
 
+    device = local_accelerator_device()
+    if device is None:
+        raise RuntimeError("Local video generation requires CUDA or Apple MPS, but no torch accelerator is available.")
+
     pipeline_map = {
         "WanPipeline": "WanPipeline",
         "HunyuanVideoPipeline": "HunyuanVideoPipeline",
@@ -201,13 +219,13 @@ def load_diffusers_pipeline(pipeline_class: str, model_id: str, enable_offload: 
     }
     pipeline_name = pipeline_map.get(pipeline_class, pipeline_class)
     pipeline_class_obj = getattr(diffusers, pipeline_name)
-    dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+    dtype = torch.bfloat16 if device == "cuda" and torch.cuda.is_bf16_supported() else torch.float16
     pipeline = pipeline_class_obj.from_pretrained(model_id, torch_dtype=dtype)
 
-    if enable_offload:
+    if enable_offload and device == "cuda":
         pipeline.enable_model_cpu_offload()
     else:
-        pipeline = pipeline.to("cuda")
+        pipeline = pipeline.to(device)
 
     if hasattr(pipeline, "vae") and pipeline.vae is not None:
         if hasattr(pipeline.vae, "enable_tiling"):

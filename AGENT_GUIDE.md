@@ -91,6 +91,23 @@ Core loop:
 
 For any meaningful production decision, the agent must communicate the decision before acting. The user should never have to infer which provider, model, or render path was chosen after the fact.
 
+## Codex Sandbox Policy for GPU and Render Work
+
+Project-local `.codex/config.toml` files are not a reliable way to change the active Codex sandbox for this repository. Treat GPU access and final rendering as per-command execution decisions.
+
+When running inside Codex, the agent MUST request sandbox escalation before executing any command that needs local GPU, hardware encoders, browser-based rendering, or long-running video composition. Use `sandbox_permissions="require_escalated"` with a concise justification such as: "Rendering/local GPU work needs access to Apple MPS/Metal, hardware encoders, or process resources blocked by the Codex sandbox."
+
+This rule applies to:
+
+- Tools whose runtime is `ToolRuntime.LOCAL_GPU`, including local video generation, local diffusion, talking-head/lip-sync, upscaling, face restoration, and GPU video understanding.
+- Final or preview render commands using Remotion, HyperFrames, FFmpeg, browser capture, or composition tools.
+- Commands that probe accelerator availability, such as PyTorch CUDA/MPS checks, Metal/MPS smoke tests, hardware encoder checks, and local model warmup.
+- Any command likely to download model/runtime assets or use npm/pip/network caches for render runtimes.
+
+Safe metadata checks may run inside the sandbox: reading files, inspecting manifests, validating JSON, listing tools, and selecting a pipeline. Once the command will render, encode, invoke Chromium for frames, call `ffmpeg` for production output, or load a GPU model, escalate first.
+
+Before escalation, announce the exact command/tool, whether it is a sample or full render, and why GPU or render access is needed. If escalation is rejected, surface the blocker and ask whether to continue with CPU-only/degraded rendering or retry with approval.
+
 ### Announce Before Execution
 
 Before any paid or consequential generation call, state:
