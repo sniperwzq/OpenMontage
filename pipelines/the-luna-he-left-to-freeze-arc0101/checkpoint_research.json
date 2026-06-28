@@ -1,0 +1,617 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "research",
+  "status": "completed",
+  "timestamp": "2026-06-27T08:56:51.373411+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": false,
+  "human_approved": true,
+  "artifacts": {
+    "research_brief": {
+      "version": "1.0",
+      "topic": "Arc 0101 Snowline Abandonment from The Luna He Left to Freeze, adapted into one English vertical comic recap drama video.",
+      "research_date": "2026-06-27",
+      "landscape": {
+        "existing_content": [
+          {
+            "title": "adapt_arc0101.md",
+            "url": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+            "source": "local_arc_design",
+            "angle": "Arc-level betrayal-to-severance structure",
+            "what_it_covers": "Boundaries, six emotional nodes, iconic frames, future-spoiler protections, and bottom-card protections.",
+            "what_it_misses": "Final prose wording and scene-level dialogue calibration."
+          },
+          {
+            "title": "ec_arc0101_Ch1-3.md",
+            "url": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+            "source": "local_chapter_breakdown",
+            "angle": "Beat-by-beat chapter material",
+            "what_it_covers": "Chapter beats, freeze frames, dialogue candidates, and experience goals for chapters 1-3.",
+            "what_it_misses": "Arc-level compression into one short video."
+          },
+          {
+            "title": "novels/chapter_1.txt",
+            "url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+            "source": "local_final_chapter_text",
+            "angle": "Survival and public replacement",
+            "what_it_covers": "Final English prose for snow collapse, helicopter choice, shelter station replacement, and exact dialogue.",
+            "what_it_misses": "Later home, severance, and fireplace turns."
+          },
+          {
+            "title": "novels/chapter_2.txt",
+            "url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+            "source": "local_final_chapter_text",
+            "angle": "Home rejection and value collapse",
+            "what_it_covers": "Final English prose for Caspian rejection and Lucien minimizing Evelyn's hand injury.",
+            "what_it_misses": "The severance act and burning of the letter."
+          },
+          {
+            "title": "novels/chapter_3.txt",
+            "url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+            "source": "local_final_chapter_text",
+            "angle": "Quiet severance versus coercive control",
+            "what_it_covers": "Final English prose for left-hand severance request, ring removal, move to old guest room, and Lucien burning the letter.",
+            "what_it_misses": "Future arcs after her first true decision to leave."
+          }
+        ],
+        "saturated_angles": [
+          "Linear chapter-summary narration that merely retells chapter 1, then chapter 2, then chapter 3.",
+          "Generic rejected-mate revenge framing that reveals Sterling identity, fake death, or later laboratory attacks too early.",
+          "Overly romantic triangle framing that softens Lucien's abandonment and coercion."
+        ],
+        "underserved_gaps": [
+          "A compact one-arc mini-drama centered on the exact moment Evelyn stops begging the old family to choose her.",
+          "A visual emphasis on public power symbols: helicopter, warning tape, Luna blanket, child charm, ring, and burning letter.",
+          "A still-led comic recap that uses speech bubbles sparingly for the cruelest lines instead of relying on image text."
+        ]
+      },
+      "data_points": [
+        {
+          "claim": "Arc 0101 begins with a blizzard mountain collapse where Evelyn protects medical supplies and gets her right hand pinned under rock.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+          "source_name": "chapter_1.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "notable",
+          "usable_as": "opening hook and first hero frame"
+        },
+        {
+          "claim": "Lucien publicly chooses Seraphina first and says Evelyn can reach the shelter line herself.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+          "source_name": "chapter_1.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "surprising",
+          "usable_as": "hook and speech bubble"
+        },
+        {
+          "claim": "At the shelter, Seraphina wears the black-and-gold wolf blanket reserved for the Luna while Evelyn is kept outside warning tape.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+          "source_name": "chapter_1.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "surprising",
+          "usable_as": "identity humiliation frame"
+        },
+        {
+          "claim": "Caspian hides behind Seraphina and gives her the charm meant for his mother, deepening Evelyn's sense of replacement.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+          "source_name": "chapter_2.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "notable",
+          "usable_as": "midpoint emotional hit"
+        },
+        {
+          "claim": "Evelyn hears Lucien minimize her potential hand microsurgery as not important if she can still stay in the Manor.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+          "source_name": "chapter_2.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "counterintuitive",
+          "usable_as": "turning-point verdict"
+        },
+        {
+          "claim": "Evelyn writes the severance request with her left hand, removes the Luna ring, and moves out of the master suite.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+          "source_name": "chapter_3.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "notable",
+          "usable_as": "decision montage"
+        },
+        {
+          "claim": "Lucien burns the severance letter without reading it and declares Blackthorn Pack has no discarded Luna.",
+          "source_url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+          "source_name": "chapter_3.txt",
+          "credibility": "primary_source",
+          "surprise_factor": "surprising",
+          "usable_as": "final conflict and next-arc curiosity"
+        }
+      ],
+      "audience_insights": {
+        "common_questions": [
+          "Why did Lucien save Seraphina first when Evelyn was the one badly injured?",
+          "How does Evelyn finally stop waiting for her family to choose her?",
+          "What keeps Evelyn trapped after she signs the severance request?"
+        ],
+        "misconceptions": [
+          {
+            "myth": "This arc should reveal the later Sterling comeback to feel satisfying.",
+            "reality": "The arc ending is psychological severance, not public revenge; later identity reveals are protected future material.",
+            "source": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md"
+          },
+          {
+            "myth": "The Pack should be shown with wolf transformations or fantasy species visuals.",
+            "reality": "The setting uses Alpha/Luna/Pack as power labels in a modern luxury world; wolf transformations are explicitly forbidden.",
+            "source": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/bible_setting.md"
+          },
+          {
+            "myth": "One chapter should become one video.",
+            "reality": "The pipeline contract is one complete arc per video; chapters are evidence and texture, not the output unit.",
+            "source": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md"
+          }
+        ],
+        "knowledge_level": "Target viewers understand rejected mate, cold husband, green-tea rival, and revenge-return tropes; the video must quickly clarify this world uses modern elite Pack power rather than animal transformation fantasy.",
+        "pain_points": [
+          "Viewers want immediate proof that the betrayal is not a misunderstanding.",
+          "They need the child rejection to land without turning the recap into an audiobook.",
+          "They expect a final hook that promises escape and future payoff without spoiling later arcs."
+        ]
+      },
+      "angles_discovered": [
+        {
+          "name": "He Chose Her First",
+          "hook": "He saved his mistress first, then told his bleeding Luna to walk back alone.",
+          "type": "narrative",
+          "why_now": "The primary-source chapter opens on public abandonment, the cleanest one-line betrayal for short-form recap.",
+          "grounded_in": [
+            "Lucien chooses Seraphina first",
+            "Evelyn survives alone",
+            "shelter replacement"
+          ]
+        },
+        {
+          "name": "The Replacement Was Already Waiting",
+          "hook": "By the time Evelyn survived the mountain, another woman was already wearing her Luna blanket.",
+          "type": "narrative",
+          "why_now": "The black-and-gold blanket gives the arc a concrete visual symbol of identity theft.",
+          "grounded_in": [
+            "Seraphina wears Luna blanket",
+            "warning tape blocks Evelyn",
+            "Caspian gives charm to Seraphina"
+          ]
+        },
+        {
+          "name": "She Signed With Her Broken Life",
+          "hook": "With one hand crushed, Evelyn used the other to end the bond.",
+          "type": "narrative",
+          "why_now": "The left-hand severance request offers a compact transformation beat from victimhood to agency.",
+          "grounded_in": [
+            "left-hand severance",
+            "Luna ring removal",
+            "Lucien burns letter"
+          ]
+        }
+      ],
+      "visual_references": [
+        {
+          "description": "User-provided character sheet for Evelyn, Lucien, and Seraphina.",
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+          "what_works": "Provides stable faces, proportions, wardrobe class signals, and comic-book reference continuity for the three central adults."
+        },
+        {
+          "description": "Default Burned Luna, Crowned Queen visual style.",
+          "url": "file:///Users/wangzhiqiang/novel/OpenMontage/styles/novel-comic-recap-arc.visual-style.md",
+          "what_works": "Defines 9:16 modern American superhero comic style, luxury noir palette, hard cel shading, and no-text image constraints."
+        }
+      ],
+      "sources": [
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+          "title": "adapt_arc0101.md",
+          "used_for": "Arc boundaries, nodes, future-spoiler protections, must-show moments, and compression strategy.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+          "title": "ec_arc0101_Ch1-3.md",
+          "used_for": "Chapter beats, freeze frames, and dialogue candidate selection.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+          "title": "chapter_1.txt",
+          "used_for": "Final wording for snowline abandonment and shelter-station replacement.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+          "title": "chapter_2.txt",
+          "used_for": "Final wording for Caspian rejection and Lucien's not-important verdict.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+          "title": "chapter_3.txt",
+          "used_for": "Final wording for severance request, ring removal, and fireplace refusal.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/bible_setting.md",
+          "title": "bible_setting.md",
+          "used_for": "World rules, character functions, future reveal protections, and forbidden visual interpretations.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/stage_1_plan.md",
+          "title": "stage_1_plan.md",
+          "used_for": "Stage-level debt state, arc role, and spoiler boundary for phase one.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+          "title": "char_c001_c002_c003_v001.png",
+          "used_for": "Character reference image for Evelyn, Lucien, and Seraphina.",
+          "reliability": "primary"
+        },
+        {
+          "url": "file:///Users/wangzhiqiang/novel/OpenMontage/styles/novel-comic-recap-arc.visual-style.md",
+          "title": "novel-comic-recap-arc.visual-style.md",
+          "used_for": "Visual style block, asset style block, palette, lighting, camera language, and global negative constraints.",
+          "reliability": "primary"
+        }
+      ],
+      "research_summary": "Arc 0101 is not a revenge payoff yet; it is the exact mini-story where Evelyn survives public abandonment, realizes her home has already replaced her, and makes the first real decision to leave even as Lucien proves he will not let her go peacefully.",
+      "metadata": {
+        "arc_brief": {
+          "episode_unit": "arc",
+          "arc_id": "0101",
+          "title": "Snowline Abandonment",
+          "book_title": "The Luna He Left to Freeze",
+          "source_paths": {
+            "novel_project_path": "/Users/wangzhiqiang/novel/novel20260413",
+            "erchuang_dir": "/Users/wangzhiqiang/novel/novel20260413/erchuang",
+            "novels_dir": "/Users/wangzhiqiang/novel/novel20260413/novels",
+            "adapt_arc": "/Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+            "ec_arc": "/Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+            "chapter_texts": {
+              "1": "/Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+              "2": "/Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+              "3": "/Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+            },
+            "bible_setting": "/Users/wangzhiqiang/novel/novel20260413/erchuang/bible_setting.md",
+            "book_title": "/Users/wangzhiqiang/novel/novel20260413/erchuang/book_title.txt",
+            "stage_plan": "/Users/wangzhiqiang/novel/novel20260413/erchuang/stage_1_plan.md",
+            "character_references": [
+              "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+              "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_prompt.md"
+            ],
+            "visual_style": "/Users/wangzhiqiang/novel/OpenMontage/styles/novel-comic-recap-arc.visual-style.md"
+          },
+          "chapter_range": {
+            "start": 1,
+            "end": 3
+          },
+          "chapter_text_paths": {
+            "1": "/Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+            "2": "/Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+            "3": "/Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+          },
+          "protected_future_arcs": [
+            {
+              "arc_id": "0102",
+              "protected": "Seraphina invading the Pack medical center with stolen formula, destroying mother's manuscript, and Lucien locking Evelyn out of the lab."
+            },
+            {
+              "arc_id": "0103",
+              "protected": "Lucien freezing materials and budget, Seraphina destroying Evelyn's right-hand nerves with corrosive reagent, suppressed monitoring and testimony."
+            },
+            {
+              "arc_id": "0104",
+              "protected": "Fake re-signing of severance papers, birthday banquet public mother claim, Caspian forcing Lucien to divorce Evelyn."
+            }
+          ],
+          "bottom_card_protections": [
+            "Evelyn's research strength may only be hinted.",
+            "External protection forces remain fully hidden.",
+            "Fake death and identity-switch route remain fully hidden.",
+            "Sterling family identity line remains fully hidden."
+          ],
+          "arc_start": "Blizzard mountain collapse; Evelyn's right hand is crushed while Lucien publicly saves Seraphina first.",
+          "arc_landing": "Evelyn has not escaped, but her final illusion about husband, child, and Luna identity is uprooted; she begins active emotional and practical severance.",
+          "nodes": [
+            {
+              "node_id": "n1",
+              "name": "Snowline Abandonment",
+              "dimension": "life-or-death betrayal",
+              "emotional_core": "Evelyn realizes Lucien will not choose her even when her life and right hand are at risk.",
+              "extreme_expression": "During a blizzard collapse, Lucien carries the lightly injured Seraphina onto the helicopter and leaves Evelyn pinned and bleeding in the snow.",
+              "iconic_frame": "Evelyn half-kneels in red-stained snow while Lucien boards the helicopter with Seraphina in his arms.",
+              "payoff_anchor": "helicopter door / shelter line",
+              "source_refs": [
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt"
+              ],
+              "must_show_priority": "must"
+            },
+            {
+              "node_id": "n2",
+              "name": "Shelter Station Replacement",
+              "dimension": "identity humiliation",
+              "emotional_core": "Before Evelyn can even recover, Seraphina occupies the public Luna position.",
+              "extreme_expression": "Evelyn reaches the shelter and sees Seraphina wrapped in the black-and-gold wolf blanket reserved for the Luna.",
+              "iconic_frame": "Warning tape separates bloodied Evelyn from Seraphina leaning against Lucien under bright shelter lights.",
+              "payoff_anchor": "black-and-gold wolf blanket / warning tape",
+              "source_refs": [
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt"
+              ],
+              "must_show_priority": "must"
+            },
+            {
+              "node_id": "n3",
+              "name": "Rejected At Home",
+              "dimension": "maternal rejection",
+              "emotional_core": "Evelyn survives and returns home, but Caspian treats her injury as something disgusting.",
+              "extreme_expression": "Feverish and bandaged, she reaches for Caspian; he hides behind Seraphina and gives Seraphina the charm meant for his mother.",
+              "iconic_frame": "Caspian clings to Seraphina while Evelyn stands with her left hand half-raised and her right hand bandaged.",
+              "payoff_anchor": "wolf charm / medicine and blood smell",
+              "source_refs": [
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt"
+              ],
+              "must_show_priority": "must"
+            },
+            {
+              "node_id": "n4",
+              "name": "The Verdict Through The Door",
+              "dimension": "worth collapse",
+              "emotional_core": "Evelyn stops inventing excuses because Lucien personally reduces her injury to a practical inconvenience.",
+              "extreme_expression": "Outside the study, she hears Lucien say her crushed hand is not important as long as she can remain in the Manor.",
+              "iconic_frame": "Evelyn braces against the study wall while Lucien calmly tends to Seraphina inside.",
+              "payoff_anchor": "not that important / study door gap",
+              "source_refs": [
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt"
+              ],
+              "must_show_priority": "must"
+            },
+            {
+              "node_id": "n5",
+              "name": "Cold Severance",
+              "dimension": "emotional cutting",
+              "emotional_core": "The breakup becomes real when Evelyn acts quietly instead of begging for an explanation.",
+              "extreme_expression": "With her left hand, she writes a severance request, removes the Luna ring, leaves the master suite, and packs only what is hers.",
+              "iconic_frame": "The Luna ring and master key sit on the severance letter under a desk lamp.",
+              "payoff_anchor": "Luna ring / severance letter / east guest room",
+              "source_refs": [
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+              ],
+              "must_show_priority": "must"
+            },
+            {
+              "node_id": "n6",
+              "name": "The Fireplace Refusal",
+              "dimension": "control pressure",
+              "emotional_core": "Lucien makes clear that one document cannot free her from a system built to keep her.",
+              "extreme_expression": "He burns the severance letter without reading it and declares Blackthorn Pack has no discarded Luna.",
+              "iconic_frame": "The letter blackens in the fireplace while Evelyn watches from the doorway shadow without crying.",
+              "payoff_anchor": "fireplace ashes / no discarded Luna",
+              "source_refs": [
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/ec_arc0101_Ch1-3.md",
+                "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+              ],
+              "must_show_priority": "must"
+            }
+          ],
+          "chapter_beats": [
+            {
+              "chapter": 1,
+              "title": "He Chose Her First",
+              "nodes": [
+                "n1",
+                "n2"
+              ],
+              "freeze_frame": "Seraphina leans in Lucien's arms under the Luna blanket while Evelyn stands outside warning tape with snow and blood on her hand."
+            },
+            {
+              "chapter": 2,
+              "title": "No Place Left",
+              "nodes": [
+                "n3",
+                "n4"
+              ],
+              "freeze_frame": "Evelyn braces against the cold wall outside Lucien's study while his not-important verdict repeats."
+            },
+            {
+              "chapter": 3,
+              "title": "Burn What Binds Me",
+              "nodes": [
+                "n5",
+                "n6"
+              ],
+              "freeze_frame": "The severance letter blackens in Lucien's fire while Evelyn stands in shadow with a new decision."
+            }
+          ],
+          "chapter_text_evidence": [
+            {
+              "chapter": 1,
+              "evidence": "Final text confirms medical supplies, crushed right hand, helicopter choice, shelter-line survival, warning tape, Luna blanket, and exact Seraphina line.",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt"
+            },
+            {
+              "chapter": 2,
+              "evidence": "Final text confirms fevered return, staff hesitation, Caspian hiding behind Seraphina, charm transfer, and Lucien minimizing microsurgery risk.",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt"
+            },
+            {
+              "chapter": 3,
+              "evidence": "Final text confirms left-hand severance writing, Luna ring removal, old east guest room, Lucien burning the letter, and final escape vow.",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+            }
+          ],
+          "must_show_moments": [
+            "Blood on snow under rotor wash as Lucien carries Seraphina away.",
+            "Seraphina in the black-and-gold Luna blanket behind warning tape.",
+            "Caspian hiding behind Seraphina with the wolf charm.",
+            "Evelyn outside the study door hearing the not-important verdict.",
+            "Left-hand severance letter, Luna ring, and master suite key.",
+            "Fireplace burning the letter while Evelyn stands in shadow and chooses a non-peaceful exit."
+          ],
+          "dialogue_candidates": [
+            {
+              "text": "Take Seraphina first.",
+              "speaker": "Lucien Draven",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+              "use": "speech_bubble",
+              "node_id": "n1"
+            },
+            {
+              "text": "She can make it back to the shelter line herself.",
+              "speaker": "Lucien Draven",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+              "use": "speech_bubble",
+              "node_id": "n1"
+            },
+            {
+              "text": "Sister Evelyn won't mind, right?",
+              "speaker": "Seraphina Vale",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt",
+              "use": "speech_bubble",
+              "node_id": "n2"
+            },
+            {
+              "text": "You smell like medicine and blood.",
+              "speaker": "Caspian Draven",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+              "use": "speech_bubble",
+              "node_id": "n3"
+            },
+            {
+              "text": "As long as it doesn't stop her from staying in the Manor, it's not that important.",
+              "speaker": "Lucien Draven",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt",
+              "use": "speech_bubble_or_caption",
+              "node_id": "n4"
+            },
+            {
+              "text": "This ends here.",
+              "speaker": "Evelyn Ashford",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+              "use": "speech_bubble",
+              "node_id": "n5"
+            },
+            {
+              "text": "Burn it.",
+              "speaker": "Lucien Draven",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+              "use": "speech_bubble",
+              "node_id": "n6"
+            },
+            {
+              "text": "Blackthorn Pack has no discarded Luna.",
+              "speaker": "Lucien Draven",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+              "use": "speech_bubble",
+              "node_id": "n6"
+            },
+            {
+              "text": "Then I'll have to leave in a way you can't stop.",
+              "speaker": "Evelyn Ashford",
+              "source": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt",
+              "use": "closing_bubble",
+              "node_id": "n6"
+            }
+          ],
+          "hero_frame_candidates": [
+            {
+              "frame": "snowline helicopter abandonment",
+              "node_id": "n1"
+            },
+            {
+              "frame": "warning tape and Luna blanket replacement",
+              "node_id": "n2"
+            },
+            {
+              "frame": "study door verdict",
+              "node_id": "n4"
+            },
+            {
+              "frame": "ring and severance letter under desk lamp",
+              "node_id": "n5"
+            },
+            {
+              "frame": "fireplace letter burn with Evelyn in doorway shadow",
+              "node_id": "n6"
+            }
+          ],
+          "compression_notes": [
+            "Keep all six nodes, but combine n1+n2 into one opening sequence and n5+n6 into one final escalation sequence.",
+            "Use 8-10 scenes for a 90-second runtime; avoid one scene per chapter and avoid audiobook-style prose recitation.",
+            "Speech bubbles should carry only the cruelest lines; narration supplies connective tissue and emotional interpretation.",
+            "Do not reveal later lab invasion, hand-destruction by reagent, birthday mother claim, fake death, Sterling identity, or external allies."
+          ],
+          "character_references": [
+            {
+              "path": "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+              "uri": "file:///Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+              "characters": [
+                "Evelyn Ashford",
+                "Lucien Draven",
+                "Seraphina Vale"
+              ],
+              "usage": "face/style continuity reference"
+            },
+            {
+              "path": "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_prompt.md",
+              "uri": "file:///Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_prompt.md",
+              "characters": [
+                "Evelyn Ashford",
+                "Lucien Draven",
+                "Seraphina Vale"
+              ],
+              "usage": "descriptor provenance; do not render prompt labels in scene images"
+            }
+          ],
+          "visual_style": {
+            "source_path": "/Users/wangzhiqiang/novel/OpenMontage/styles/novel-comic-recap-arc.visual-style.md",
+            "style_core": "Modern American superhero comic-book illustration style",
+            "visual_style_block": "9:16 vertical modern American superhero comic-book illustration; semi-realistic adult proportions; thick outer ink contours; hard-edged cel shading; bold black shadow masses; modern luxury noir world; cold black, graphite gray, snow white, deep ocean blue with limited blood red and fire orange accents; strong contrast and vertical power imbalance; no image text, logos, watermarks, subtitles, wolf transformations, animal traits, medieval/fantasy, anime/webtoon, 3D, or live-action photorealism.",
+            "asset_style_block": "Modern American superhero comic-book character sheet style, prestige graphic novel cover finish, heroic semi-realistic adult proportions, angular facial planes, thicker outer contour lines, bold black spot shadows, high-contrast cel shading, dramatic rim light, modern luxury noir palette, clearly non-photorealistic, no text, no labels, no watermark.",
+            "palette": "cold black, graphite gray, snow white, deep ocean blue; supporting medical cold blue, old gold, ivory; accents blood red, fire orange, alarm red, cold silver",
+            "lighting": "cold white diffuse light for blizzard/shelter/medical moments; warm gold plus deep shadows for manor and study; fire orange only at the fireplace climax",
+            "camera_language": "vertical dramatic tension, close-ups/medium close-ups for humiliation and regret, low angles for power pressure, high angles for trapped Evelyn, slow push-in and fixed stare motion",
+            "global_negative": "no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+            "sound_policy": "none_or_minimal_environment_only"
+          }
+        }
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "decision": "PASS",
+    "round": 1,
+    "findings": [],
+    "summary": {
+      "critical": 0,
+      "suggestions": 0,
+      "nitpicks": 0,
+      "playbook_violations": 0,
+      "success_criteria_met": "5/5"
+    }
+  },
+  "cost_snapshot": {
+    "spent_usd": 0,
+    "estimated_remaining_usd": 0,
+    "budget_default_usd": 0.5,
+    "notes": "Pre-production only; no generation or render executed."
+  },
+  "metadata": {
+    "artifact_path": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/research_brief.json"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "publish",
+  "status": "completed",
+  "timestamp": "2026-06-27T10:41:06.874693+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": false,
+  "human_approved": true,
+  "artifacts": {
+    "publish_log": {
+      "version": "1.0",
+      "entries": [
+        {
+          "platform": "tiktok",
+          "status": "draft",
+          "visibility": "private",
+          "export_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4",
+          "timestamp": "2026-06-27T10:21:27.894251+00:00",
+          "metadata_used": {
+            "title": "He Left His Luna Bleeding In The Snow",
+            "description": "Lucien saved Seraphina first while Evelyn bled in the snow. By the end of the night, his Luna understood that peaceful leaving would never work.",
+            "hashtags": [
+              "#RejectedLuna",
+              "#WerewolfRomance",
+              "#RomanceRecap",
+              "#ComicRecap",
+              "#ShortDrama",
+              "#RevengeArc"
+            ],
+            "chapters": [
+              {
+                "label": "Snowline betrayal",
+                "start_seconds": 0
+              },
+              {
+                "label": "Home rejects her",
+                "start_seconds": 31
+              },
+              {
+                "label": "The verdict",
+                "start_seconds": 43
+              },
+              {
+                "label": "Severance and fire",
+                "start_seconds": 57
+              }
+            ]
+          }
+        },
+        {
+          "platform": "youtube_shorts",
+          "status": "draft",
+          "visibility": "private",
+          "export_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4",
+          "timestamp": "2026-06-27T10:21:27.894251+00:00",
+          "metadata_used": {
+            "title": "Her Husband Chose The Other Woman First",
+            "description": "Lucien saved Seraphina first while Evelyn bled in the snow. By the end of the night, his Luna understood that peaceful leaving would never work. Follow for the next arc.",
+            "hashtags": [
+              "#RejectedLuna",
+              "#WerewolfRomance",
+              "#RomanceRecap",
+              "#ComicRecap",
+              "#ShortDrama"
+            ],
+            "chapters": []
+          }
+        },
+        {
+          "platform": "instagram_reels",
+          "status": "draft",
+          "visibility": "private",
+          "export_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4",
+          "timestamp": "2026-06-27T10:21:27.894251+00:00",
+          "metadata_used": {
+            "title": "The Luna Finally Stopped Begging",
+            "description": "Lucien saved Seraphina first while Evelyn bled in the snow. By the end of the night, his Luna understood that peaceful leaving would never work.",
+            "hashtags": [
+              "#RejectedLuna",
+              "#WerewolfRomance",
+              "#RomanceRecap",
+              "#ComicRecap",
+              "#ShortDrama"
+            ],
+            "chapters": []
+          }
+        }
+      ],
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "episode_unit": "arc",
+        "final_video_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4",
+        "thumbnail_candidate_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/thumbnail_candidate.jpg",
+        "title_options": [
+          "He Left His Luna Bleeding In The Snow",
+          "Her Husband Chose The Other Woman First",
+          "The Luna Finally Stopped Begging",
+          "He Burned Her Severance Letter"
+        ],
+        "short_description": "Lucien saved Seraphina first while Evelyn bled in the snow. By the end of the night, his Luna understood that peaceful leaving would never work.",
+        "thumbnail_concept": "Use the shelter-station betrayal frame: Evelyn injured in the foreground while Lucien shelters Seraphina under the Luna blanket, with the controlled speech bubble above him.",
+        "hero_frame_recommendation": {
+          "timestamp_seconds": 17.5,
+          "scene_id": "sc02",
+          "path": "projects/the-luna-he-left-to-freeze-arc0101/renders/thumbnail_candidate.jpg"
+        },
+        "content_warnings": [
+          "fictional injury/blood",
+          "emotional abandonment",
+          "family rejection"
+        ],
+        "protected_future_arc_policy": "No fake-death, Sterling identity, lab sabotage, or future revenge mechanics mentioned.",
+        "source_refs": {
+          "script": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/script.json",
+          "scene_plan": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/scene_plan.json",
+          "render_report": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/render_report.json",
+          "final_review": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/final_review.json"
+        },
+        "duration_seconds": 87.38,
+        "resolution": "1080x1920",
+        "approval_required_before_actual_publish": true,
+        "caption_mode": "full_script_paged_captions",
+        "aspect_ratio_verified": "1080x1920 SAR 1:1 DAR 9:16"
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "status": "passed",
+    "checks": [
+      "Draft metadata now points to corrected full-caption standard 9:16 final.mp4.",
+      "No platform upload performed."
+    ]
+  },
+  "cost_snapshot": {
+    "stage_cost_usd": 0,
+    "total_cost_usd": 0
+  },
+  "metadata": {
+    "revision": "v2_full_captions_standard_9x16",
+    "final_video_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4"
+  }
+}

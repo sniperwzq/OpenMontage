@@ -1,60 +1,61 @@
-# Script Director - Novel Comic Recap Arc Pipeline
+# Script Director - 小说漫画解说 Arc Pipeline
 
-## Purpose
+## 目标
 
-Write one fast English narrator script for the complete arc. The result is a schema-valid `script` artifact.
+为完整 Arc 写一版快节奏英文旁白脚本，并产出 schema-valid 的 `script` artifact。
 
-## Pacing Defaults
+## 默认节奏
 
-- 75 seconds: 180-220 English words.
-- 90 seconds: 230-270 English words.
-- 120 seconds: 300-360 English words.
-- Use short spoken sentences: usually 6-12 words.
-- Avoid exposition about lore unless it changes the betrayal, status, or stakes.
+- 75 秒：约 180-220 个英文词。
+- 90 秒：约 230-270 个英文词。
+- 120 秒：约 300-360 个英文词。
+- 口播句子要短，通常 6-12 个词。
+- 除非 lore 会改变背叛、地位或 stakes，否则不要解释设定背景。
 
-## Structure
+## 结构
 
-Use this shape, adapting to the node count:
+根据节点数量调整，但默认使用这个形状：
 
-1. `hook`: 0-4 seconds, one brutal premise.
-2. `setup`: only enough context to understand the first betrayal.
-3. `node_*`: one compressed section per major arc node, or merged sections when the arc has too many nodes.
-4. `turn`: the moment the heroine stops explaining away the betrayal.
-5. `arc_landing`: the arc's complete emotional landing.
-6. `cliffhanger`: next-arc curiosity without spoiling protected material.
+1. `hook`：0-4 秒，一句残酷前提。
+2. `setup`：只给理解第一笔背叛所需的最少上下文。
+3. `node_*`：每个重要 Arc 节点一段；节点过多时合并。
+4. `turn`：女主停止替背叛找理由的瞬间。
+5. `arc_landing`：本 Arc 完整情绪落点。
+6. `cliffhanger`：制造下一 Arc 好奇，但不能剧透 protected material。
 
-## Writing Rules
+## 写作规则
 
-- Treat `adapt_arc` as the truth for arc start, landing, protected boundaries, and node intent.
-- Treat `ec_arc` as beat/detail/dialogue material.
-- Do not narrate chapter-by-chapter unless the arc structure itself demands it.
-- Do not write audiobook prose.
-- Do not include long direct quotes.
-- Use high-clarity Western romance/revenge recap language.
-- Keep names pronounceable and consistent with `bible_setting.md`.
+- `adapt_arc` 是 Arc 起点、落点、保护边界和节点意图的权威。
+- `ec_arc` 是 beat、细节和对白素材库。
+- `novels/chapter_N.txt` 是最终措辞、连续性和短对白候选的权威。
+- 除非 Arc 结构本身要求，否则不要逐章讲述。
+- 不要写 audiobook prose。
+- 不要包含长篇直接引用。
+- 使用清晰、直接、适合西方 romance / revenge recap 的语言。
+- 人名读音和写法要与 `bible_setting.md` 保持一致。
 
-## Dialogue Bubble Selection
+## Dialogue Bubble 选择
 
-Select 3-6 short lines for speech bubbles. Prefer:
+选择 3-6 句短台词用于 speech bubbles。优先：
 
-- commands that reveal betrayal,
-- humiliating public lines,
-- child rejection lines,
-- final controlling threat,
-- heroine's quiet decision line.
+- 暴露背叛的命令
+- 公开羞辱的句子
+- 孩子的拒绝
+- 结尾的控制威胁
+- 女主安静下决定的句子
 
-Speech bubbles are not subtitles. They should be sparse and dramatic.
+Speech bubbles 不是字幕。它们应该稀疏、有戏剧性，不要替代旁白。
 
-## Output Requirements
+## 输出要求
 
-Produce schema-valid `script`:
+产出 schema-valid 的 `script`：
 
 - `version: "1.0"`
 - `title`
 - `total_duration_seconds`
 - `sections[]`
 
-Add metadata:
+添加 metadata：
 
 ```json
 "metadata": {
@@ -73,10 +74,10 @@ Add metadata:
 }
 ```
 
-## Quality Gate
+## 质量门
 
-- The arc feels complete.
-- The pace is faster than the single-chapter pilot.
-- Every must-show node appears or is intentionally merged.
-- No protected future reveal leaks.
-- The last section creates next-arc desire without making this arc feel unfinished.
+- 这个 Arc 听起来是完整的。
+- 节奏比单章试播更快。
+- 每个 must-show node 都出现，或被明确合并。
+- 不泄露 protected future reveal。
+- 最后一段制造下一 Arc 欲望，但不能让本 Arc 显得没讲完。

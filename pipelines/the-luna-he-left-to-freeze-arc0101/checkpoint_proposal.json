@@ -1,0 +1,673 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "proposal",
+  "status": "completed",
+  "timestamp": "2026-06-27T09:01:08.904281+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": true,
+  "human_approved": true,
+  "artifacts": {
+    "proposal_packet": {
+      "version": "1.0",
+      "concept_options": [
+        {
+          "id": "c1",
+          "title": "He Chose Her First",
+          "hook": "He saved his mistress first, then left his Luna bleeding in the snow.",
+          "narrative_structure": "story",
+          "visual_approach": "Fast comic-panel escalation from blizzard abandonment to shelter replacement, then home rejection, left-hand severance, and fireplace control. Prioritize five hero frames with slow push-ins, hard shadow cuts, phrase captions, and 4-5 speech bubbles.",
+          "suggested_playbook": "flat-motion-graphics",
+          "target_audience": "Western short-form paranormal romance and rejected-mate recap viewers who want immediate betrayal and a clean final escape hook.",
+          "target_platform": "tiktok",
+          "target_duration_seconds": 90,
+          "key_points": [
+            "Lucien publicly saves Seraphina while Evelyn is badly injured.",
+            "Seraphina occupies Evelyn's Luna symbolism before Evelyn even recovers.",
+            "Caspian and Lucien each make Evelyn understand she is treated as a tool, not family.",
+            "Evelyn signs the severance, but Lucien burns it, setting up a harder escape."
+          ],
+          "core_message": "This is the night Evelyn stops waiting to be chosen and starts planning to leave.",
+          "cta": "Follow for the next arc: what happens when her only safe exit is no longer a peaceful one.",
+          "tone": "cold, dramatic, bruising, controlled, revenge-seeded",
+          "grounded_in": [
+            "n1",
+            "n2",
+            "n3",
+            "n4",
+            "n5",
+            "n6"
+          ],
+          "why_this_works": "It opens with the strongest source-supported betrayal and preserves the arc landing: psychological severance before future revenge reveals."
+        },
+        {
+          "id": "c2",
+          "title": "The Luna Blanket Was On Another Woman",
+          "hook": "She survived the mountain, only to find another woman wearing her title.",
+          "narrative_structure": "story",
+          "visual_approach": "Center the black-and-gold Luna blanket, wolf charm, Luna ring, and burned letter as repeated identity symbols. The edit uses tighter close-ups and more object inserts to make replacement feel ceremonial.",
+          "suggested_playbook": "flat-motion-graphics",
+          "target_audience": "Viewers drawn to public humiliation, identity theft, and symbolic revenge setups.",
+          "target_platform": "youtube",
+          "target_duration_seconds": 95,
+          "key_points": [
+            "Seraphina does not just receive care; she publicly takes Evelyn's visual position.",
+            "Caspian repeats that replacement pattern inside the Manor.",
+            "Evelyn rejects the symbols that kept her tied to Blackthorn Pack."
+          ],
+          "core_message": "Every symbol of Evelyn's old life is stolen, returned, or burned in one night.",
+          "cta": "Watch next to see what she does when the Pack refuses to release her.",
+          "tone": "humiliating, symbolic, elegant, cold",
+          "grounded_in": [
+            "Luna blanket",
+            "wolf charm",
+            "Luna ring",
+            "severance letter"
+          ],
+          "why_this_works": "It gives the visual team strong recurring props and keeps the full arc coherent without spoiling later plot mechanics."
+        },
+        {
+          "id": "c3",
+          "title": "She Signed With Her Left Hand",
+          "hook": "They crushed her right hand, so she used the left one to end everything.",
+          "narrative_structure": "story",
+          "visual_approach": "Begin with the left-hand signing as a cold open, then flash back through the three betrayals that forced it. This version is more psychological and less chronological, with the ring/fireplace as the main final visual rhyme.",
+          "suggested_playbook": "flat-motion-graphics",
+          "target_audience": "Viewers who prefer quiet female-lead resolve and cold revenge setup over pure suffering montage.",
+          "target_platform": "instagram",
+          "target_duration_seconds": 85,
+          "key_points": [
+            "Evelyn's injury becomes a visible measure of what the Pack took from her.",
+            "Her calm severance is stronger than an outburst.",
+            "Lucien's burned-letter refusal proves she will need a different kind of escape."
+          ],
+          "core_message": "Evelyn's first act of freedom is quiet, deliberate, and immediately challenged.",
+          "cta": "The next arc begins when peaceful severance is no longer enough.",
+          "tone": "restrained, bitter, intimate, ominous",
+          "grounded_in": [
+            "left-hand severance",
+            "not important verdict",
+            "fireplace refusal"
+          ],
+          "why_this_works": "It highlights Evelyn's agency, but it sacrifices some of the raw opening shock compared with the betrayal-first structure."
+        }
+      ],
+      "selected_concept": {
+        "concept_id": "c1",
+        "rationale": "Recommended pending user approval: it has the clearest short-form hook, covers every required arc node in order, and delays future reveals correctly.",
+        "modifications": [
+          "Use the provided character reference image for Evelyn, Lucien, and Seraphina continuity.",
+          "Default to no music; use environmental sound only if added later."
+        ]
+      },
+      "production_plan": {
+        "pipeline": "novel-comic-recap-arc",
+        "playbook": "flat-motion-graphics",
+        "stages": [
+          {
+            "stage": "research",
+            "tools": [],
+            "approach": "Completed from local arc design, chapter breakdown, final chapter text, bible, stage plan, character reference, and visual style.",
+            "fallback_if_unavailable": "Blocked if source files are missing."
+          },
+          {
+            "stage": "script",
+            "tools": [],
+            "approach": "Write a 90-second English recap script that compresses six arc nodes into fast emotional escalation, with 3-6 speech bubbles and phrase captions.",
+            "fallback_if_unavailable": "Revise manually; no generation tool required."
+          },
+          {
+            "stage": "scene_plan",
+            "tools": [],
+            "approach": "Plan 8-10 vertical comic scenes with safe zones, overlay bubbles, image requirements, and no baked-in image text.",
+            "fallback_if_unavailable": "Reduce scene count to maintain asset feasibility."
+          },
+          {
+            "stage": "assets",
+            "tools": [
+              {
+                "tool_name": "tts_selector",
+                "role": "Generate English narration",
+                "provider": "piper/local via selector",
+                "available": true,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Only configured TTS provider; free local path."
+              },
+              {
+                "tool_name": "codex_image_import",
+                "role": "Import generated or prepared comic stills into the project asset manifest",
+                "provider": "codex_runtime",
+                "available": true,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "No API key required and compatible with user-supplied character reference workflow."
+              },
+              {
+                "tool_name": "image_selector",
+                "role": "Optional still-image generation path if local diffusion is used",
+                "provider": "multi/local_diffusion",
+                "available": true,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Configured image capability exists, but exact generation route should be confirmed before asset stage."
+              },
+              {
+                "tool_name": "music_gen",
+                "role": "Optional AI music generation",
+                "provider": "elevenlabs",
+                "available": false,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Not configured; default proposal avoids added music."
+              },
+              {
+                "tool_name": "pixabay_music",
+                "role": "Optional royalty-free music search",
+                "provider": "pixabay_music",
+                "available": true,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Free/no-key, but external scraping and the visual style recommends no added music."
+              }
+            ],
+            "approach": "Use character reference and visual style to create/import comic stills, generate local TTS narration, and skip music unless approved.",
+            "fallback_if_unavailable": "If image generation/import is blocked, pause with missing-assets list before compose."
+          },
+          {
+            "stage": "edit",
+            "tools": [],
+            "approach": "Create edit decisions with phrase captions, captionHighlightMode none, 4-5 speech bubbles, and Remotion motion instructions.",
+            "fallback_if_unavailable": "Simplify overlay count or merge scenes, but do not change runtime without approval."
+          },
+          {
+            "stage": "compose",
+            "tools": [
+              {
+                "tool_name": "video_compose",
+                "role": "Render 9:16 final video through approved runtime",
+                "provider": "ffmpeg/remotion backend",
+                "available": true,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Required compose tool with Remotion render engine available."
+              },
+              {
+                "tool_name": "audio_mixer",
+                "role": "Mix narration and any approved environmental audio",
+                "provider": "ffmpeg",
+                "available": true,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Available local audio processing."
+              },
+              {
+                "tool_name": "hyperframes_compose",
+                "role": "Alternative HTML/GSAP renderer",
+                "provider": "hyperframes",
+                "available": false,
+                "estimated_cost_usd": 0,
+                "why_this_provider": "Unavailable on this machine; listed for runtime audit."
+              }
+            ],
+            "approach": "Render with Remotion if approved; perform ffprobe and frame-sampling checks after render.",
+            "fallback_if_unavailable": "If Remotion becomes unavailable after approval, stop and request a new runtime decision."
+          },
+          {
+            "stage": "publish",
+            "tools": [],
+            "approach": "Prepare title, description, thumbnail direction, and platform metadata after final render.",
+            "fallback_if_unavailable": "No publish action without final human approval."
+          }
+        ],
+        "quality_tradeoffs": [
+          {
+            "tradeoff": "Remotion versus HyperFrames",
+            "recommendation": "Use Remotion now.",
+            "quality_impact": "Remotion is available and fits speech bubbles, phrase captions, still-panel motion, and audio timing; HyperFrames could offer GSAP typography but is unavailable and less aligned with this comic-panel workflow."
+          },
+          {
+            "tradeoff": "Piper local TTS versus paid cloud voices",
+            "recommendation": "Use Piper unless you want to configure a premium voice provider.",
+            "quality_impact": "Piper is free and available but less polished than ElevenLabs/OpenAI/Doubao; paid voices would improve performance and emotion."
+          },
+          {
+            "tradeoff": "No music versus royalty-free music search",
+            "recommendation": "No music or minimal environmental audio.",
+            "quality_impact": "Matches the style guide and avoids melodrama; music could add energy but risks fighting the cold noir tone."
+          },
+          {
+            "tradeoff": "Still-led comic recap versus true AI video generation",
+            "recommendation": "Use still-led comic recap.",
+            "quality_impact": "Video generation providers are not configured, and this pipeline is designed for animated comic panels rather than fully generated motion clips."
+          }
+        ],
+        "alternative_paths": [
+          {
+            "description": "Zero-key local path: local Piper TTS, generated/imported comic stills, Remotion composition, no added music.",
+            "total_cost_usd": 0,
+            "quality_level": "free",
+            "what_changes": "Best available now; voice quality and image generation options are limited by local setup."
+          },
+          {
+            "description": "Premium voice upgrade: configure ElevenLabs, OpenAI, Google, or Doubao TTS before assets.",
+            "total_cost_usd": 0.5,
+            "quality_level": "standard",
+            "what_changes": "Improves narration performance while keeping the same visual plan."
+          },
+          {
+            "description": "Premium media upgrade: configure FAL/OpenAI/Google/xAI image or video providers.",
+            "total_cost_usd": 1.5,
+            "quality_level": "premium",
+            "what_changes": "Adds broader image style control or true motion clips, but requires API keys and a revised asset plan."
+          }
+        ],
+        "delivery_promise": {
+          "promise_type": "motion_led",
+          "motion_required": false,
+          "source_required": false,
+          "tone_mode": "cold dramatic comic recap",
+          "quality_floor": "presentable",
+          "approved_fallback": "still_led"
+        },
+        "renderer_family": "animation-first",
+        "render_runtime": "remotion",
+        "music_source": {
+          "source_type": "none",
+          "mood_direction": "No added music by default; optional restrained environmental sounds such as wind, helicopter distance, footsteps, study fire, and paper burn.",
+          "estimated_cost_usd": 0
+        },
+        "voice_selection": {
+          "provider": "piper",
+          "voice_id": "local-default-en",
+          "rationale": "Only configured TTS provider in preflight; free and available for English narration.",
+          "estimated_cost_usd": 0
+        },
+        "decision_log_ref": "pipelines/the-luna-he-left-to-freeze-arc0101/decision_log.json",
+        "provider_rankings": {
+          "image": [
+            {
+              "tool_name": "codex_image_import",
+              "provider": "codex_runtime",
+              "weighted_score": 0.86,
+              "task_fit": 0.9,
+              "output_quality": 0.82,
+              "explanation": "Best no-key path for importing generated/reference-guided stills after approval."
+            },
+            {
+              "tool_name": "image_selector",
+              "provider": "local_diffusion/multi",
+              "weighted_score": 0.74,
+              "task_fit": 0.8,
+              "output_quality": 0.68,
+              "explanation": "Configured image capability, but actual output consistency needs asset-stage verification."
+            }
+          ],
+          "tts": [
+            {
+              "tool_name": "tts_selector",
+              "provider": "piper",
+              "weighted_score": 0.75,
+              "task_fit": 0.8,
+              "output_quality": 0.62,
+              "explanation": "Available free local narration; lower emotional nuance than premium providers."
+            },
+            {
+              "tool_name": "elevenlabs_tts",
+              "provider": "elevenlabs",
+              "weighted_score": 0.68,
+              "task_fit": 0.9,
+              "output_quality": 0.9,
+              "explanation": "Strong fit and quality but unavailable until ELEVENLABS_API_KEY is configured."
+            }
+          ],
+          "music": [
+            {
+              "tool_name": "none",
+              "provider": "style_policy",
+              "weighted_score": 0.88,
+              "task_fit": 0.9,
+              "output_quality": 0.8,
+              "explanation": "Default visual style explicitly recommends no added music."
+            },
+            {
+              "tool_name": "pixabay_music",
+              "provider": "pixabay_music",
+              "weighted_score": 0.58,
+              "task_fit": 0.55,
+              "output_quality": 0.65,
+              "explanation": "Available and free, but less aligned with the no-music policy."
+            }
+          ],
+          "video": [
+            {
+              "tool_name": "video_compose",
+              "provider": "remotion",
+              "weighted_score": 0.88,
+              "task_fit": 0.92,
+              "output_quality": 0.8,
+              "explanation": "Available render engine for animated still panels, captions, and bubbles."
+            },
+            {
+              "tool_name": "hyperframes_compose",
+              "provider": "hyperframes",
+              "weighted_score": 0.35,
+              "task_fit": 0.7,
+              "output_quality": 0.75,
+              "explanation": "Potentially useful for kinetic typography but unavailable now."
+            }
+          ]
+        }
+      },
+      "cost_estimate": {
+        "total_estimated_usd": 0,
+        "line_items": [
+          {
+            "tool": "tts_selector/piper",
+            "operation": "Generate approximately 90 seconds of English narration",
+            "quantity": 1,
+            "estimated_usd": 0,
+            "notes": "Local configured provider."
+          },
+          {
+            "tool": "codex_image_import / image workflow",
+            "operation": "Create or import approximately 8-10 comic stills after approval",
+            "quantity": 10,
+            "estimated_usd": 0,
+            "notes": "Zero-key path; exact image generation route confirmed at assets stage."
+          },
+          {
+            "tool": "video_compose/remotion",
+            "operation": "Render 9:16 vertical recap with captions and speech bubbles",
+            "quantity": 1,
+            "estimated_usd": 0,
+            "notes": "Local render; will require sandbox escalation for render/browser/encoder access."
+          },
+          {
+            "tool": "audio_mixer/ffmpeg",
+            "operation": "Mix narration with optional environmental audio",
+            "quantity": 1,
+            "estimated_usd": 0,
+            "notes": "Local."
+          }
+        ],
+        "budget_cap_usd": 0.5,
+        "budget_verdict": "within_budget",
+        "savings_options": [
+          "Already on zero-key path; main savings choice is to keep no music and avoid paid video generation."
+        ]
+      },
+      "approval": {
+        "status": "approved",
+        "user_notes": "User approved the recommended path: c1 concept, Remotion runtime, Piper local TTS, and no added music.",
+        "approved_budget_usd": 0
+      },
+      "metadata": {
+        "arc_id": "0101",
+        "novel_project_path": "/Users/wangzhiqiang/novel/novel20260413",
+        "character_reference_paths": [
+          "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png"
+        ],
+        "estimated_scene_count": "8-10",
+        "speech_bubble_count": "4-5",
+        "caption_style": "phrase",
+        "captionHighlightMode": "none",
+        "preflight_status": "degraded",
+        "preflight_notes": [
+          "Required TTS and compose tools are available.",
+          "Remotion available; HyperFrames unavailable.",
+          "Video generation providers unavailable.",
+          "No local music_library tracks found; Pixabay music search available but not recommended by style policy."
+        ]
+      }
+    },
+    "decision_log": {
+      "version": "1.0",
+      "project_id": "the-luna-he-left-to-freeze-arc0101",
+      "decisions": [
+        {
+          "decision_id": "d-001",
+          "stage": "proposal",
+          "category": "pipeline_selection",
+          "subject": "Production pipeline",
+          "options_considered": [
+            {
+              "option_id": "novel-comic-recap-arc",
+              "label": "novel-comic-recap-arc",
+              "score": 0.95,
+              "reason": "User explicitly requested this pipeline and supplied novel project path plus arc id."
+            },
+            {
+              "option_id": "animation",
+              "label": "generic animation pipeline",
+              "score": 0.45,
+              "reason": "Could render animation, but lacks novel arc intake and spoiler-boundary contract.",
+              "rejected_because": "Wrong source workflow."
+            }
+          ],
+          "selected": "novel-comic-recap-arc",
+          "reason": "Matches user request and source structure exactly.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.95
+        },
+        {
+          "decision_id": "d-002",
+          "stage": "proposal",
+          "category": "concept_selection",
+          "subject": "Concept direction",
+          "options_considered": [
+            {
+              "option_id": "c1",
+              "label": "He Chose Her First",
+              "score": 0.9,
+              "reason": "Strongest short-form hook and complete node coverage."
+            },
+            {
+              "option_id": "c2",
+              "label": "The Luna Blanket Was On Another Woman",
+              "score": 0.82,
+              "reason": "Excellent symbolic treatment but less immediate than the survival betrayal hook."
+            },
+            {
+              "option_id": "c3",
+              "label": "She Signed With Her Left Hand",
+              "score": 0.78,
+              "reason": "Strong agency angle but softens the opening shock."
+            }
+          ],
+          "selected": "c1",
+          "reason": "Recommended because it opens with the source-supported highest-intensity betrayal while preserving the severance landing.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.86
+        },
+        {
+          "decision_id": "d-003",
+          "stage": "proposal",
+          "category": "renderer_family_selection",
+          "subject": "Creative renderer family",
+          "options_considered": [
+            {
+              "option_id": "animation-first",
+              "label": "Animation-first comic recap",
+              "score": 0.88,
+              "reason": "Fits still comic panels, captions, bubbles, and controlled vertical motion."
+            },
+            {
+              "option_id": "cinematic-trailer",
+              "label": "Cinematic trailer",
+              "score": 0.52,
+              "reason": "Would imply true motion clips; video generation providers are unavailable and the requested format is recap drama.",
+              "rejected_because": "Wrong delivery character for available tools."
+            }
+          ],
+          "selected": "animation-first",
+          "reason": "Best match for one-arc comic recap with still-led images and motion overlays.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.84
+        },
+        {
+          "decision_id": "d-004",
+          "stage": "proposal",
+          "category": "render_runtime_selection",
+          "subject": "Render runtime",
+          "options_considered": [
+            {
+              "option_id": "remotion",
+              "label": "Remotion",
+              "score": 0.9,
+              "reason": "Available; best fit for animated still panels, speech bubbles, phrase captions, and audio timing."
+            },
+            {
+              "option_id": "hyperframes",
+              "label": "HyperFrames",
+              "score": 0.35,
+              "reason": "Could support HTML/GSAP kinetic typography, but it is unavailable on this machine.",
+              "rejected_because": "runtime not available on this machine"
+            },
+            {
+              "option_id": "ffmpeg",
+              "label": "FFmpeg-only",
+              "score": 0.5,
+              "reason": "Available for simple concat/trim but weaker for controlled captions and comic bubbles.",
+              "rejected_because": "Lower visual control than Remotion."
+            }
+          ],
+          "selected": "remotion",
+          "reason": "Recommended because Remotion is available and aligned with the pipeline default for comic-panel motion and overlay control.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.88
+        },
+        {
+          "decision_id": "d-005",
+          "stage": "proposal",
+          "category": "voice_selection",
+          "subject": "Narration voice provider",
+          "options_considered": [
+            {
+              "option_id": "piper",
+              "label": "Piper local TTS",
+              "score": 0.75,
+              "reason": "Available and free, suitable for zero-key draft/presentable path."
+            },
+            {
+              "option_id": "elevenlabs",
+              "label": "ElevenLabs TTS",
+              "score": 0.68,
+              "reason": "Higher emotional quality but unavailable until API key setup.",
+              "rejected_because": "not configured"
+            },
+            {
+              "option_id": "openai_tts",
+              "label": "OpenAI TTS",
+              "score": 0.64,
+              "reason": "Potential high quality but unavailable until API key setup.",
+              "rejected_because": "not configured"
+            }
+          ],
+          "selected": "piper",
+          "reason": "Only configured provider; keeps production zero-key unless user chooses an upgrade.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.76
+        },
+        {
+          "decision_id": "d-006",
+          "stage": "proposal",
+          "category": "music_source",
+          "subject": "Music and sound policy",
+          "options_considered": [
+            {
+              "option_id": "none",
+              "label": "No added music",
+              "score": 0.88,
+              "reason": "Matches visual style SOUND_POLICY and avoids melodrama."
+            },
+            {
+              "option_id": "pixabay_music",
+              "label": "Pixabay Music",
+              "score": 0.52,
+              "reason": "Available free/no-key search, but external scraping and less aligned with the cold style.",
+              "rejected_because": "not recommended by style policy"
+            },
+            {
+              "option_id": "elevenlabs_music",
+              "label": "ElevenLabs music generation",
+              "score": 0.3,
+              "reason": "Could generate music but unavailable until API key setup.",
+              "rejected_because": "not configured"
+            }
+          ],
+          "selected": "none",
+          "reason": "Style policy defaults to no added music; environmental audio can be considered later if needed.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.82
+        },
+        {
+          "decision_id": "d-007",
+          "stage": "proposal",
+          "category": "motion_commitment",
+          "subject": "Motion requirement classification",
+          "options_considered": [
+            {
+              "option_id": "still_led",
+              "label": "Still-led animated comic recap",
+              "score": 0.86,
+              "reason": "Matches pipeline and available tools; motion comes from panel animation and overlays."
+            },
+            {
+              "option_id": "true_video_generation",
+              "label": "True generated motion clips",
+              "score": 0.25,
+              "reason": "No configured video generation providers and not necessary for this recap format.",
+              "rejected_because": "providers unavailable"
+            }
+          ],
+          "selected": "still_led",
+          "reason": "The delivery promise can be presentable with animated still panels, so true motion is not a hard requirement.",
+          "user_visible": true,
+          "user_approved": true,
+          "confidence": 0.83
+        }
+      ]
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "decision": "PASS",
+    "round": 1,
+    "findings": [
+      {
+        "severity": "suggestion",
+        "title": "Piper voice quality tradeoff",
+        "description": "Local Piper TTS is free and available but may be less emotionally polished than paid voices.",
+        "action": "Accepted by approval; continue with Piper unless user later requests a voice upgrade.",
+        "status": "accepted"
+      },
+      {
+        "severity": "suggestion",
+        "title": "HyperFrames unavailable",
+        "description": "Runtime option was considered and rejected because it is unavailable on this machine.",
+        "action": "Accepted by approval; continue with Remotion.",
+        "status": "accepted"
+      }
+    ],
+    "summary": {
+      "critical": 0,
+      "suggestions": 2,
+      "nitpicks": 0,
+      "playbook_violations": 0,
+      "success_criteria_met": "4/4"
+    }
+  },
+  "cost_snapshot": {
+    "spent_usd": 0,
+    "estimated_remaining_usd": 0,
+    "budget_default_usd": 0.5,
+    "notes": "Proposal approved; no generation or render executed."
+  },
+  "metadata": {
+    "artifact_paths": {
+      "proposal_packet": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/proposal_packet.json",
+      "decision_log": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/decision_log.json"
+    }
+  }
+}

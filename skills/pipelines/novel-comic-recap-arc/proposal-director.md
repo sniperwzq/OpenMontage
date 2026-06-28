@@ -1,92 +1,89 @@
-# Proposal Director - Novel Comic Recap Arc Pipeline
+# Proposal Director - 小说漫画解说 Arc Pipeline
 
-## Purpose
+## 目标
 
-Turn the `research_brief.metadata.arc_brief` into an approved production plan for one arc / one video.
+把 `research_brief.metadata.arc_brief` 转换成一个可供用户批准的生产方案。核心约束是：一个 Arc 产出一个完整视频。
 
-## Process
+## 流程
 
-### 1. Confirm Production Shape
+### 1. 确认生产形态
 
-State plainly:
+先明确说明：
 
-- one arc becomes one complete recap video,
-- chapters are source material,
-- target duration is 75-120 seconds unless the user overrides,
-- narration is English for Western audiences,
-- the video is recap drama, not audiobook reading.
-- visual style follows the current `visual_style.md` when available, with `Modern American superhero comic-book illustration style` as the default look.
+- 一个 Arc 变成一个完整 recap video。
+- 章节只是源素材，不是输出单位。
+- 除非用户另行指定，目标时长为 75-120 秒。
+- 旁白使用面向西方观众的英文。
+- 视频是 recap drama，不是 audiobook reading。
+- 视觉风格优先遵循当前 `visual_style.md`；默认风格是 `Modern American superhero comic-book illustration style`。
 
-### 2. Offer Three Concept Options
+### 2. 提供三个方案方向
 
-All options cover the full arc. Vary only the treatment:
+所有选项都必须覆盖完整 Arc，只改变处理方式：
 
-- hook framing,
-- emotional emphasis,
-- compression strategy,
-- visual density,
-- ending cliffhanger angle.
+- hook framing
+- 情绪强调
+- 压缩策略
+- 画面密度
+- 结尾悬念角度
 
-Examples:
+常见方向：
 
-- betrayal-first hook,
-- cold-revenge hook,
-- identity-humiliation hook.
+- betrayal-first hook
+- cold-revenge hook
+- identity-humiliation hook
 
-Do not propose "one video per chapter" unless the user explicitly requests it.
+除非用户明确要求，否则不要提出“每章一个视频”。
 
-### 3. Present Runtime Options
+### 3. 展示渲染 Runtime 选项
 
-Follow `AGENT_GUIDE.md` exactly. If both Remotion and HyperFrames are available, present both before locking `render_runtime`.
+严格遵守 `AGENT_GUIDE.md`。如果 Remotion 和 HyperFrames 都可用，必须在锁定 `render_runtime` 前同时展示两者。
 
-Recommended default for this format:
+本格式的推荐默认值：
 
-- Remotion for still-led comic panels, Ken Burns motion, speech bubbles, captions, and audio.
+- Remotion：适合 still-led comic panels、Ken Burns motion、speech bubbles、captions 和音频控制。
 
-Honest tradeoff:
+诚实说明 tradeoff：
 
-- HyperFrames can work for HTML/GSAP kinetic typography, but this format benefits from the existing Remotion scene stack and speech-bubble/caption control.
+- HyperFrames 可用于 HTML / GSAP kinetic typography，但这个漫画解说格式更依赖既有 Remotion scene stack，以及对 speech bubble / caption 的精确控制。
 
-### 4. Lock The Production Plan
+### 4. 锁定生产方案
 
-The selected concept should normally use:
+选定 concept 后通常使用：
 
-- `target_duration_seconds`: about 90
+- `target_duration_seconds`: 约 90
 - `renderer_family`: `animation-first`
-- `render_runtime`: user-approved runtime, normally `remotion`
+- `render_runtime`: 用户批准的 runtime，通常为 `remotion`
 - `delivery_promise.promise_type`: `motion_led`
 - `delivery_promise.motion_required`: `false`
 - `delivery_promise.approved_fallback`: `still_led`
-- `music_source.source_type`: `none`, `user_library`, or approved local/free source
-- `voice_selection`: local/free TTS first, unless user approves another provider
+- `music_source.source_type`: `none`、`user_library` 或用户批准的本地/免费来源
+- `voice_selection`: 优先 local/free TTS，除非用户批准其他 provider
 
-Use the current visual style's sound policy as default: no added emotional music
-unless requested; if sound is used, prefer restrained environmental ambience.
-English narration remains part of this recap pipeline even if the visual style's
-source-footage policy says not to add unrelated narration.
+默认使用当前视觉风格里的声音策略：不额外添加煽情音乐；如果使用声音，优先克制环境声。即使视觉风格里的 source-footage policy 提到不要添加无关旁白，本 recap pipeline 仍然需要英文旁白。
 
-### 5. Approval Gate
+### 5. 用户批准门
 
-Do not proceed to script/assets until the user approves the concept and runtime.
+用户批准 concept 和 runtime 之前，不进入 script / assets 阶段。
 
-## Proposal Content Requirements
+## 方案内容要求
 
-Include:
+必须包含：
 
-- title options,
-- target duration,
-- node coverage summary,
-- image count estimate,
-- visual style source and a short style summary,
-- TTS path,
-- music/sound policy, defaulting to no music or minimal environment sound,
-- caption style: phrase captions, no word highlighting,
-- speech bubble count: usually 3-6,
-- cost estimate with zero-key path first.
+- title options
+- target duration
+- node coverage summary
+- image count estimate
+- visual style source 和简短风格摘要
+- TTS path
+- music / sound policy，默认无音乐或最小环境声
+- caption style：phrase captions，不使用 word highlighting
+- speech bubble count：通常 3-6 个
+- cost estimate，优先展示 zero-key path
 
-## Quality Gate
+## 质量门
 
-- `production_plan.pipeline` is `novel-comic-recap-arc`.
-- Proposal covers the full arc.
-- Runtime selection is auditable in `decision_log`.
-- Cost and API-key assumptions are explicit.
+- `production_plan.pipeline` 必须是 `novel-comic-recap-arc`。
+- Proposal 覆盖完整 Arc。
+- Runtime selection 必须能在 `decision_log` 中审计。
+- 成本和 API key 假设必须明确。

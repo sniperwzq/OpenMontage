@@ -1,0 +1,325 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "script",
+  "status": "completed",
+  "timestamp": "2026-06-27T09:05:43.430343+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": true,
+  "human_approved": true,
+  "artifacts": {
+    "script": {
+      "version": "1.0",
+      "title": "He Chose Her First",
+      "total_duration_seconds": 90,
+      "sections": [
+        {
+          "id": "hook",
+          "label": "Hook",
+          "start_seconds": 0,
+          "end_seconds": 5,
+          "text": "Lucien saved another woman first. His Luna was bleeding in the snow.",
+          "speaker_directions": "Cold, fast, accusatory.",
+          "enhancement_cues": [
+            {
+              "type": "overlay",
+              "description": "Hard cut from black to blizzard, rotor wash, red blood on white snow.",
+              "timestamp_seconds": 0
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt"
+        },
+        {
+          "id": "setup",
+          "label": "Minimal Setup",
+          "start_seconds": 5,
+          "end_seconds": 14,
+          "text": "Evelyn Ashford had spent years holding Blackthorn Pack together. But when the mountain collapsed, her right hand was crushed under stone while she protected medical supplies.",
+          "speaker_directions": "Tense but restrained; no lore exposition.",
+          "enhancement_cues": [
+            {
+              "type": "broll",
+              "description": "Evelyn pinned beside medical crates on a broken snow road.",
+              "timestamp_seconds": 7
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt"
+        },
+        {
+          "id": "node_1_2",
+          "label": "Snowline Betrayal And Replacement",
+          "start_seconds": 14,
+          "end_seconds": 31,
+          "text": "Lucien arrived by helicopter, saw her trapped, and still ordered, \"Take Seraphina first.\" Then he said Evelyn could reach the shelter line herself. She crawled back alive and found Seraphina wrapped in the black-and-gold Luna blanket, leaning against him like the wife he had chosen.",
+          "speaker_directions": "Build anger; let the quoted order land with a short pause.",
+          "enhancement_cues": [
+            {
+              "type": "animation",
+              "description": "Slow push from helicopter door to shelter warning tape and Luna blanket.",
+              "timestamp_seconds": 20
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_1.txt"
+        },
+        {
+          "id": "node_3",
+          "label": "Home Rejects Her",
+          "start_seconds": 31,
+          "end_seconds": 43,
+          "text": "Feverish and bandaged, Evelyn returned to the Manor and reached for Caspian. Her own son hid behind Seraphina. He said she smelled like medicine and blood, then gave Seraphina the charm meant for his mother.",
+          "speaker_directions": "Lower, more intimate; make the child rejection hurt without melodrama.",
+          "enhancement_cues": [
+            {
+              "type": "overlay",
+              "description": "Speech bubble: \"You smell like medicine and blood.\"",
+              "timestamp_seconds": 36
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt"
+        },
+        {
+          "id": "turn",
+          "label": "The Verdict",
+          "start_seconds": 43,
+          "end_seconds": 57,
+          "text": "Still, she gave Lucien one last excuse. Maybe he had not understood her injury. Outside his study, the doctor warned that her hand might need microsurgery. Lucien only asked if she could still stay in the Manor. Then came the verdict: \"It is not that important.\"",
+          "speaker_directions": "Quiet and devastating; slow down on the final sentence.",
+          "enhancement_cues": [
+            {
+              "type": "animation",
+              "description": "Door gap, cold wall, Evelyn bracing herself as warm study light cuts across frame.",
+              "timestamp_seconds": 48
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_2.txt"
+        },
+        {
+          "id": "node_5",
+          "label": "Cold Severance",
+          "start_seconds": 57,
+          "end_seconds": 71,
+          "text": "That was when she stopped begging the house to love her. With her right hand useless, Evelyn used her left to write the severance request. She removed the Luna ring, left the master key, and packed only what was hers.",
+          "speaker_directions": "Controlled resolve; this is agency, not panic.",
+          "enhancement_cues": [
+            {
+              "type": "broll",
+              "description": "Desk lamp, left-hand writing, Luna ring beside the master suite key.",
+              "timestamp_seconds": 62
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+        },
+        {
+          "id": "node_6",
+          "label": "The Fire",
+          "start_seconds": 71,
+          "end_seconds": 84,
+          "text": "Lucien did not even read it. He asked where she was staying, then told the butler, \"Burn it.\" The letter curled black in the fireplace while he declared, \"Blackthorn Pack has no discarded Luna.\"",
+          "speaker_directions": "Cold, clipped, with emphasis on control.",
+          "enhancement_cues": [
+            {
+              "type": "animation",
+              "description": "Fire eats the severance page; Lucien in hard side light; Evelyn in doorway shadow.",
+              "timestamp_seconds": 75
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/novels/chapter_3.txt"
+        },
+        {
+          "id": "arc_landing",
+          "label": "Arc Landing And Cliffhanger",
+          "start_seconds": 84,
+          "end_seconds": 90,
+          "text": "Evelyn did not cry. She understood peaceful leaving would never work. So the next time she leaves, it will be in a way he cannot burn.",
+          "speaker_directions": "Quiet finality; end on threat, not despair.",
+          "enhancement_cues": [
+            {
+              "type": "overlay",
+              "description": "Final phrase caption: a way he cannot burn.",
+              "timestamp_seconds": 88
+            }
+          ],
+          "source_ref": "file:///Users/wangzhiqiang/novel/novel20260413/erchuang/adapt_arc0101.md"
+        }
+      ],
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "video_language": "en-US",
+        "episode_unit": "arc",
+        "target_audience": "Western romance/revenge short-form viewers",
+        "word_count": 266,
+        "target_word_range": "230-270 words for 90 seconds",
+        "node_coverage": [
+          {
+            "node_id": "n1",
+            "name": "Snowline Abandonment",
+            "covered_in": [
+              "node_1_2"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n2",
+            "name": "Shelter Station Replacement",
+            "covered_in": [
+              "node_1_2"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n3",
+            "name": "Rejected At Home",
+            "covered_in": [
+              "node_3"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n4",
+            "name": "The Verdict Through The Door",
+            "covered_in": [
+              "turn"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n5",
+            "name": "Cold Severance",
+            "covered_in": [
+              "node_5"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n6",
+            "name": "The Fireplace Refusal",
+            "covered_in": [
+              "node_6",
+              "arc_landing"
+            ],
+            "status": "covered"
+          }
+        ],
+        "merged_nodes": [
+          {
+            "section_id": "node_1_2",
+            "merged_node_ids": [
+              "n1",
+              "n2"
+            ],
+            "reason": "Opening betrayal and public replacement are one continuous escalation sequence."
+          },
+          {
+            "section_id": "node_6",
+            "merged_node_ids": [
+              "n6"
+            ],
+            "reason": "Fireplace refusal carries directly into the arc landing and cliffhanger."
+          }
+        ],
+        "dialogue_bubbles": [
+          {
+            "text": "Take Seraphina first.",
+            "speaker": "Lucien Draven",
+            "section_id": "node_1_2",
+            "node_id": "n1"
+          },
+          {
+            "text": "You smell like medicine and blood.",
+            "speaker": "Caspian Draven",
+            "section_id": "node_3",
+            "node_id": "n3"
+          },
+          {
+            "text": "It is not that important.",
+            "speaker": "Lucien Draven",
+            "section_id": "turn",
+            "node_id": "n4"
+          },
+          {
+            "text": "Burn it.",
+            "speaker": "Lucien Draven",
+            "section_id": "node_6",
+            "node_id": "n6"
+          },
+          {
+            "text": "Blackthorn Pack has no discarded Luna.",
+            "speaker": "Lucien Draven",
+            "section_id": "node_6",
+            "node_id": "n6"
+          }
+        ],
+        "phrase_caption_candidates": [
+          "saved another woman first",
+          "bleeding in the snow",
+          "the wife he had chosen",
+          "one last excuse",
+          "peaceful leaving would never work",
+          "a way he cannot burn"
+        ],
+        "protected_future_arcs": [
+          {
+            "arc_id": "0102",
+            "protected": "Seraphina invading the Pack medical center with stolen formula, destroying mother's manuscript, and Lucien locking Evelyn out of the lab."
+          },
+          {
+            "arc_id": "0103",
+            "protected": "Lucien freezing materials and budget, Seraphina destroying Evelyn's right-hand nerves with corrosive reagent, suppressed monitoring and testimony."
+          },
+          {
+            "arc_id": "0104",
+            "protected": "Fake re-signing of severance papers, birthday banquet public mother claim, Caspian forcing Lucien to divorce Evelyn."
+          }
+        ],
+        "bottom_card_protections": [
+          "Evelyn's research strength may only be hinted.",
+          "External protection forces remain fully hidden.",
+          "Fake death and identity-switch route remain fully hidden.",
+          "Sterling family identity line remains fully hidden."
+        ],
+        "caption_style": "phrase",
+        "captionHighlightMode": "none",
+        "source_artifacts": {
+          "research_brief": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/research_brief.json",
+          "proposal_packet": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/proposal_packet.json",
+          "decision_log": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/decision_log.json"
+        }
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "decision": "PASS",
+    "round": 2,
+    "findings": [
+      {
+        "severity": "critical",
+        "title": "Initial script exceeded target word range",
+        "description": "Round 1 script was 277 words for a 90-second target where the director recommends 230-270 words.",
+        "action": "Compressed setup, turn, and landing language while preserving all six nodes and five dialogue bubbles.",
+        "status": "fixed"
+      }
+    ],
+    "summary": {
+      "critical": 1,
+      "critical_fixed": 1,
+      "suggestions": 0,
+      "nitpicks": 0,
+      "playbook_violations": 0,
+      "success_criteria_met": "5/5",
+      "notes": "User approved revised script at 266 words."
+    }
+  },
+  "cost_snapshot": {
+    "spent_usd": 0,
+    "estimated_remaining_usd": 0,
+    "budget_default_usd": 0.5,
+    "notes": "Script approved; no generation or render executed."
+  },
+  "metadata": {
+    "artifact_path": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/script.json",
+    "user_approval": "approved"
+  }
+}

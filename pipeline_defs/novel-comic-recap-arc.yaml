@@ -1,11 +1,10 @@
 name: novel-comic-recap-arc
 version: "1.0"
 description: >
-  Custom pipeline for turning one adapted novel arc into one vertical English comic-recap
-  drama video. It reads stable arc files such as adapt_arcXXXX.md and ec_arcXXXX_ChN-M.md,
-  compresses variable node counts into a fast complete mini-story, generates/organizes
-  comic-style stills, adds narration, speech bubbles, phrase captions, and renders a
-  single 9:16 short-form recap.
+  定制 pipeline：把一个二创小说 Arc 制作成一个英文竖屏漫画解说剧情短视频。
+  它读取 adapt_arcXXXX.md、ec_arcXXXX_ChN-M.md 以及对应 novels/chapter_N.txt
+  正文，把可变数量的故事节点压缩成一个节奏快但完整的小故事，生成或整理漫画风格
+  静帧，添加旁白、speech bubbles、phrase captions，并渲染成单条 9:16 短视频。
 category: animation
 stability: beta
 default_checkpoint_policy: guided
@@ -64,6 +63,26 @@ metadata:
   default_visual_style_name: "Burned Luna, Crowned Queen"
   default_image_style_core: "Modern American superhero comic-book illustration style"
   default_music_policy: "none_or_minimal_environment_only"
+  source_intake:
+    mode: "novel_project_path_plus_arc_id"
+    required_input_fields:
+      - novel_project_path
+      - arc_id
+    erchuang_dir_name: "erchuang"
+    novels_dir_name: "novels"
+    adapt_arc_pattern: "adapt_arc{arc_id}.md"
+    ec_arc_pattern: "ec_arc{arc_id}_ChN-M.md"
+    chapter_file_pattern: "chapter_{chapter_number}.txt"
+    ignored_arc_file_patterns:
+      - "adapt_arc{arc_id}_backup*.md"
+    optional_context_files:
+      - "bible_setting.md"
+      - "book_title.txt"
+      - "stage_{stage_number}_plan.md"
+      - "stage_{stage_number_padded}_plan.md"
+      - "visual_style.md"
+    resolver: "lib.novel_arc_intake.resolve_novel_arc_source_bundle"
+    resolved_bundle_artifact_path: "research_brief.metadata.arc_brief.source_paths"
 
 stages:
   - name: research
@@ -74,14 +93,15 @@ stages:
     checkpoint_required: true
     human_approval_default: false
     review_focus:
-      - Arc intake captures adapt_arc and ec_arc files without chapter-structure lock-in
-      - Variable node count is preserved and ranked for recap importance
-      - No-spoiler boundaries and bottom-card protections are carried forward
-      - Bible and character-reference constraints are recorded
+      - 当用户提供 novel_project_path 和 arc_id 时，项目路径 intake 能解析 erchuang Arc 文件和 novels 章节正文
+      - Arc intake 能捕获 adapt_arc 和 ec_arc，但不把视频结构锁死为章节结构
+      - 保留可变节点数量，并按 recap 重要性排序
+      - 无剧透边界和 bottom-card protections 被继续向后传递
+      - bible 与角色参考约束被记录
     success_criteria:
-      - Schema-valid research_brief artifact
-      - research_brief.metadata.arc_brief contains arc_id, source_paths, nodes, boundaries, and episode_unit="arc"
-      - Local source files are cited in sources
+      - 产出 schema-valid 的 research_brief artifact
+      - research_brief.metadata.arc_brief 包含 arc_id、source_paths、chapter_range、nodes、boundaries，且 episode_unit="arc"
+      - 本地源文件已写入 sources 引用
 
   - name: proposal
     skill: pipelines/novel-comic-recap-arc/proposal-director

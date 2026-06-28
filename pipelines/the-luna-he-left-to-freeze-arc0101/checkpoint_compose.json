@@ -1,0 +1,167 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "compose",
+  "status": "completed",
+  "timestamp": "2026-06-27T10:40:44.242461+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": false,
+  "human_approved": true,
+  "artifacts": {
+    "render_report": {
+      "version": "1.0",
+      "outputs": [
+        {
+          "path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4",
+          "format": "mp4",
+          "codec": "h264",
+          "audio_codec": "aac",
+          "resolution": "1080x1920",
+          "fps": 30.0,
+          "duration_seconds": 87.381,
+          "file_size_bytes": 88707090,
+          "platform_target": "tiktok"
+        }
+      ],
+      "render_time_seconds": 68.04,
+      "warnings": [
+        "This revision replaces sparse phrase captions with full-script paged captions."
+      ],
+      "verification_notes": [
+        "Corrected final.mp4 is 1080x1920 with SAR 1:1 and DAR 9:16.",
+        "Pixel format/color metadata standardized to yuv420p tv range bt709.",
+        "Full-script paged captions generated from 264 caption tokens; no word highlighting.",
+        "Contact sheet sampled six points and shows captions present across the video.",
+        "Audio stream present; final duration 87.381 seconds."
+      ],
+      "render_grammar": "animation-first",
+      "slideshow_risk_score": {
+        "average": 0.0,
+        "verdict": "strong"
+      },
+      "decision_log_ref": "pipelines/the-luna-he-left-to-freeze-arc0101/decision_log.json",
+      "final_review_ref": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/final_review.json",
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "episode_unit": "arc",
+        "render_runtime": "remotion",
+        "remotion_composition": "ComicRecap",
+        "profile": "tiktok",
+        "caption_mode": "full_script_paged_captions",
+        "caption_token_count": 264,
+        "captionHighlightMode": "none",
+        "standardized_output": "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v2_standard_9x16.mp4",
+        "previous_sparse_caption_backup": "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v1_sparse_captions.mp4",
+        "contact_sheet": "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v2_standard_9x16_contact_sheet.jpg",
+        "gpu_paths_used": [
+          "remotion_chromium_angle",
+          "ffmpeg_h264_videotoolbox"
+        ]
+      }
+    },
+    "final_review": {
+      "version": "1.0",
+      "output_path": "projects/the-luna-he-left-to-freeze-arc0101/renders/final.mp4",
+      "status": "pass",
+      "checks": {
+        "technical_probe": {
+          "valid_container": true,
+          "duration_seconds": 87.381,
+          "resolution": "1080x1920",
+          "fps": 30.0,
+          "has_audio": true,
+          "codec": "h264",
+          "file_size_bytes": 88707090,
+          "issues": []
+        },
+        "visual_spotcheck": {
+          "frames_sampled": 6,
+          "frame_paths": [
+            "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v2_standard_9x16_contact_sheet.jpg"
+          ],
+          "black_frames_detected": false,
+          "broken_overlays": false,
+          "missing_assets": false,
+          "unreadable_text": false,
+          "issues": []
+        },
+        "audio_spotcheck": {
+          "narration_present": true,
+          "music_present": false,
+          "unexpected_silence": false,
+          "clipping_detected": false,
+          "mix_intelligible": true,
+          "issues": []
+        },
+        "promise_preservation": {
+          "delivery_promise_honored": true,
+          "renderer_family_used": "animation-first",
+          "render_runtime_used": "remotion",
+          "runtime_swap_detected": false,
+          "runtime_swap_check": "ok \u2014 Remotion runtime preserved; output standardized with FFmpeg hardware encode only after Remotion render",
+          "motion_ratio_actual": 1.0,
+          "silent_downgrade_detected": false,
+          "issues": []
+        },
+        "subtitle_check": {
+          "subtitles_expected": true,
+          "subtitles_present": true,
+          "coverage_ratio": 1.0,
+          "timing_drift_detected": false,
+          "issues": []
+        },
+        "transcript_comparison": {
+          "transcript_matches_script": true,
+          "word_accuracy": 1.0,
+          "issues": [
+            "Caption source generated directly from approved script text rather than STT transcript."
+          ]
+        }
+      },
+      "issues_found": [],
+      "recommended_action": "present_to_user",
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "episode_unit": "arc",
+        "render_runtime": "remotion",
+        "remotion_composition": "ComicRecap",
+        "profile": "tiktok",
+        "caption_mode": "full_script_paged_captions",
+        "caption_token_count": 264,
+        "captionHighlightMode": "none",
+        "standardized_output": "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v2_standard_9x16.mp4",
+        "previous_sparse_caption_backup": "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v1_sparse_captions.mp4",
+        "contact_sheet": "projects/the-luna-he-left-to-freeze-arc0101/renders/final_v2_standard_9x16_contact_sheet.jpg",
+        "gpu_paths_used": [
+          "remotion_chromium_angle",
+          "ffmpeg_h264_videotoolbox"
+        ],
+        "display_aspect_ratio": "9:16",
+        "sample_aspect_ratio": "1:1",
+        "pix_fmt": "yuv420p",
+        "color_range": "tv"
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "status": "passed",
+    "checks": [
+      "Corrected final.mp4 is 1080x1920 with SAR 1:1 and DAR 9:16.",
+      "Pixel format/color metadata standardized to yuv420p tv range bt709.",
+      "Full-script paged captions generated from 264 caption tokens; no word highlighting.",
+      "Contact sheet sampled six points and shows captions present across the video.",
+      "Audio stream present; final duration 87.381 seconds."
+    ]
+  },
+  "cost_snapshot": {
+    "stage_cost_usd": 0,
+    "total_cost_usd": 0
+  },
+  "metadata": {
+    "revision": "v2_full_captions_standard_9x16"
+  }
+}

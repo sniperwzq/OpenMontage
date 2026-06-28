@@ -1,0 +1,863 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "scene_plan",
+  "status": "completed",
+  "timestamp": "2026-06-27T09:50:46.934320+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": true,
+  "human_approved": true,
+  "artifacts": {
+    "scene_plan": {
+      "version": "1.0",
+      "style_playbook": "flat-motion-graphics",
+      "scenes": [
+        {
+          "id": "sc01",
+          "type": "animation",
+          "description": "A blizzard-black mountain road split by fresh rockfall; Evelyn lies half-kneeling beside strapped medical crates, her right hand trapped under dark stone, red blood cutting through snow while helicopter light slices the storm above.",
+          "start_seconds": 0,
+          "end_seconds": 8,
+          "script_section_id": "hook",
+          "framing": "High-angle vertical composition with Evelyn small in the lower third and rotor light pressing down from the top.",
+          "movement": "Quick fade from black, then slow dolly in toward her trapped hand and face.",
+          "transition_in": "Hard cut from black on narration hit.",
+          "transition_out": "White snow-wash wipe into helicopter arrival.",
+          "overlay_notes": "Phrase captions only: \"saved another woman first\" and \"bleeding in the snow\". No speech bubble in image.",
+          "shot_language": {
+            "shot_size": "medium_wide",
+            "camera_movement": "dolly_in",
+            "lens_mm": 35,
+            "lighting_key": "overcast_soft",
+            "depth_of_field": "medium",
+            "color_temperature": "cool"
+          },
+          "shot_intent": "Establish physical danger and immediate betrayal before any world explanation.",
+          "narrative_role": "build_tension",
+          "information_role": "Viewer learns Evelyn is injured while protecting Pack supplies during the collapse.",
+          "hero_moment": true,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "shock and pain under restraint",
+              "action_sequence": [
+                "brace left hand in snow",
+                "look upward toward helicopter light",
+                "hold body over medical crates"
+              ],
+              "notes": "Right hand visibly trapped and bandaged by blood but avoid gore."
+            }
+          ],
+          "texture_keywords": [
+            "wind-cut snow",
+            "blood-red accent",
+            "hard ink shadows",
+            "cold rotor light"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Scene content: 9:16 vertical modern American superhero comic-book illustration; semi-realistic adult proportions; thick outer ink contours; hard-edged cel shading; bold black shadow masses; modern luxury noir world; cold black, graphite gray, snow white, deep ocean blue with limited blood red and fire orange accents; strong contrast and vertical power imbalance; no image text, logos, watermarks, subtitles, wolf transformations, animal traits, medieval/fantasy, anime/webtoon, 3D, or live-action photorealism.. Evelyn pinned on snow road beside medical crates, crushed right hand under rock, helicopter light overhead. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Phrase captions timed to hook; keep text in lower-middle safe zone.",
+              "source": "source"
+            },
+            {
+              "type": "audio",
+              "description": "Narration segment for hook; optional low wind texture only if approved in assets.",
+              "source": "generate"
+            }
+          ]
+        },
+        {
+          "id": "sc02",
+          "type": "character_scene",
+          "description": "Lucien in a black executive coat carries Seraphina toward the helicopter ladder; Evelyn remains behind in the snow, reaching with her free left hand as guards hesitate between them.",
+          "start_seconds": 8,
+          "end_seconds": 18,
+          "script_section_id": "node_1_2",
+          "framing": "Low-angle view from Evelyn position; Lucien and Seraphina dominate the upper frame, Evelyn foregrounded at bottom edge.",
+          "movement": "Slow upward tilt from Evelyn hand to Lucien turning away.",
+          "transition_in": "Snow-wash wipe from sc01.",
+          "transition_out": "Rotor blur match cut to shelter lights.",
+          "overlay_notes": "Speech bubble overlay from Lucien: \"Take Seraphina first.\" Place near Lucien, not baked into image.",
+          "shot_language": {
+            "shot_size": "medium",
+            "camera_movement": "tilt_up",
+            "lens_mm": 50,
+            "lighting_key": "rim_lit",
+            "depth_of_field": "medium",
+            "color_temperature": "cool"
+          },
+          "shot_intent": "Make Lucien\u2019s choice visual before the bubble confirms it.",
+          "narrative_role": "deliver_payload",
+          "information_role": "Viewer understands the abandonment is public, deliberate, and not a misunderstanding.",
+          "hero_moment": false,
+          "character_actions": [
+            {
+              "character_id": "Lucien Draven",
+              "emotion": "cold command",
+              "action_sequence": [
+                "hold Seraphina securely",
+                "turn away from Evelyn",
+                "face partly hidden by storm light"
+              ],
+              "dialogue": "Take Seraphina first."
+            },
+            {
+              "character_id": "Seraphina Vale",
+              "emotion": "performative fear",
+              "action_sequence": [
+                "cling to Lucien coat",
+                "look away from Evelyn"
+              ]
+            },
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "stunned betrayal",
+              "action_sequence": [
+                "reach from snow with left hand",
+                "watch helicopter ladder"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "rotor snow haze",
+            "black coat silhouette",
+            "cold silver light",
+            "red scarf bandage accent"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Lucien carrying Seraphina toward helicopter while Evelyn remains injured in snow foreground; guards hesitate; no readable signs or text. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Speech bubble: \"Take Seraphina first.\" Bubble appears for roughly 2 seconds near Lucien.",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc03",
+          "type": "character_scene",
+          "description": "Temporary shelter station under harsh white lamps; warning tape cuts across the frame, keeping snow-soaked Evelyn outside while Seraphina sits under the black-and-gold Luna blanket against Lucien.",
+          "start_seconds": 18,
+          "end_seconds": 31,
+          "script_section_id": "node_1_2",
+          "framing": "Symmetrical medium-wide interior with warning tape as horizontal barrier and Evelyn isolated in the lower foreground.",
+          "movement": "Subtle lateral tracking from Evelyn side of the tape to Seraphina under the blanket.",
+          "transition_in": "Rotor blur into fluorescent shelter light.",
+          "transition_out": "Lamp flicker cut to manor fireplace warmth.",
+          "overlay_notes": "Phrase caption: \"like the wife he had chosen\". Optional small bubble from Seraphina is deferred to edit if caption space allows.",
+          "shot_language": {
+            "shot_size": "wide",
+            "camera_movement": "tracking_right",
+            "lens_mm": 35,
+            "lighting_key": "high_key",
+            "depth_of_field": "deep",
+            "color_temperature": "cool"
+          },
+          "shot_intent": "Convert physical abandonment into public identity replacement.",
+          "narrative_role": "emotional_beat",
+          "information_role": "Viewer sees Seraphina occupying Evelyn\u2019s Luna symbol while Evelyn is blocked outside.",
+          "hero_moment": true,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "humiliated disbelief",
+              "action_sequence": [
+                "stand outside warning tape",
+                "hold bandaged right hand",
+                "stare at the blanket"
+              ]
+            },
+            {
+              "character_id": "Seraphina Vale",
+              "emotion": "soft triumph",
+              "action_sequence": [
+                "sit under black-and-gold blanket",
+                "lean into Lucien shoulder"
+              ]
+            },
+            {
+              "character_id": "Lucien Draven",
+              "emotion": "protective toward wrong woman",
+              "action_sequence": [
+                "hold cup near Seraphina",
+                "ignore Evelyn across tape"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "fluorescent shelter lamps",
+            "wet wool",
+            "black-gold fabric",
+            "yellow barrier tape"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Shelter station scene with Evelyn outside warning tape and Seraphina wearing symbolic black-and-gold wolf-pattern blanket beside Lucien; no text on tape or blanket. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Phrase caption and optional non-baked warning tape accent overlay if image lacks clear barrier.",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc04",
+          "type": "character_scene",
+          "description": "Blackthorn Manor sitting room with tall fireplace and cold luxury; feverish Evelyn reaches toward Caspian with her left hand while the child hides behind Seraphina clutching a small wooden wolf charm.",
+          "start_seconds": 31,
+          "end_seconds": 43,
+          "script_section_id": "node_3",
+          "framing": "Medium shot triangle: Evelyn isolated left, Seraphina and Caspian locked together right, fireplace vertical behind them.",
+          "movement": "Slow dolly out to reveal the distance between mother and child.",
+          "transition_in": "Warm fireplace cut from shelter light.",
+          "transition_out": "Match cut from charm to study door handle.",
+          "overlay_notes": "Speech bubble overlay near Caspian: \"You smell like medicine and blood.\" Keep bubble above lower caption zone.",
+          "shot_language": {
+            "shot_size": "medium",
+            "camera_movement": "dolly_out",
+            "lens_mm": 50,
+            "lighting_key": "tungsten_warm",
+            "depth_of_field": "medium",
+            "color_temperature": "warm"
+          },
+          "shot_intent": "Land the child rejection as a separate wound from Lucien\u2019s betrayal.",
+          "narrative_role": "emotional_beat",
+          "information_role": "Viewer learns Evelyn has been replaced inside the family, not only in public.",
+          "hero_moment": false,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "feverish hope collapsing",
+              "action_sequence": [
+                "extend left hand carefully",
+                "keep bandaged right hand close to body"
+              ]
+            },
+            {
+              "character_id": "Caspian Draven",
+              "emotion": "childish rejection",
+              "action_sequence": [
+                "hide behind Seraphina skirt",
+                "hold wooden wolf charm",
+                "turn face away from Evelyn"
+              ],
+              "dialogue": "You smell like medicine and blood."
+            },
+            {
+              "character_id": "Seraphina Vale",
+              "emotion": "contained satisfaction",
+              "action_sequence": [
+                "place one hand on Caspian shoulder",
+                "look at Evelyn with fake sympathy"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "gold firelight",
+            "dark wood trim",
+            "ivory shawl",
+            "small carved charm"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Manor sitting room, Evelyn reaching to child while Caspian hides behind Seraphina holding wolf charm; no text or labels. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Speech bubble: \"You smell like medicine and blood.\"",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc05",
+          "type": "character_scene",
+          "description": "Narrow corridor outside Lucien\u2019s study; Evelyn braces against dark wall paneling, fever-pale, while a blade of warm light leaks from the almost-closed door.",
+          "start_seconds": 43,
+          "end_seconds": 51,
+          "script_section_id": "turn",
+          "framing": "Close-up profile on Evelyn in shadow with door gap as bright vertical line behind her.",
+          "movement": "Static held stare, slight digital push only in edit.",
+          "transition_in": "Charm-to-door-handle match cut.",
+          "transition_out": "Rack focus suggestion from Evelyn hand to study interior.",
+          "overlay_notes": "Phrase caption: \"one last excuse\". No speech bubble yet.",
+          "shot_language": {
+            "shot_size": "close_up",
+            "camera_movement": "static",
+            "lens_mm": 85,
+            "lighting_key": "low_key",
+            "depth_of_field": "shallow",
+            "color_temperature": "mixed"
+          },
+          "shot_intent": "Hold Evelyn at the last second before emotional collapse.",
+          "narrative_role": "build_tension",
+          "information_role": "Viewer feels she is still waiting for one sentence of care.",
+          "hero_moment": false,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "last fragile hope",
+              "action_sequence": [
+                "brace left fingers on doorframe",
+                "listen without entering",
+                "keep injured hand against ribs"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "dark wall paneling",
+            "thin gold door light",
+            "fever pallor",
+            "quiet corridor"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Close-up of Evelyn outside study door in dark corridor, warm light line from door gap, feverish face and bandaged right hand. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Phrase caption: \"one last excuse\" placed above bottom safe zone.",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc06",
+          "type": "character_scene",
+          "description": "Inside the study, Lucien stands in warm lamplight beside Seraphina and a doctor\u2019s black medical bag; in foreground shadow, Evelyn\u2019s blurred shoulder frames the scene from outside the door.",
+          "start_seconds": 51,
+          "end_seconds": 57,
+          "script_section_id": "turn",
+          "framing": "Over-shoulder composition from Evelyn\u2019s doorway shadow toward Lucien in control of the room.",
+          "movement": "Rack focus from Evelyn silhouette to Lucien\u2019s cold face.",
+          "transition_in": "Doorway focus shift from sc05.",
+          "transition_out": "Cut on verdict to desk paper.",
+          "overlay_notes": "Speech bubble overlay from Lucien: \"It is not that important.\" Keep clear of faces.",
+          "shot_language": {
+            "shot_size": "over_shoulder",
+            "camera_movement": "rack_focus",
+            "lens_mm": 85,
+            "lighting_key": "tungsten_warm",
+            "depth_of_field": "shallow",
+            "color_temperature": "mixed"
+          },
+          "shot_intent": "Make the verdict feel overheard and irreversible.",
+          "narrative_role": "deliver_payload",
+          "information_role": "Viewer learns Lucien values Evelyn only as a functional household presence.",
+          "hero_moment": true,
+          "character_actions": [
+            {
+              "character_id": "Lucien Draven",
+              "emotion": "clinical indifference",
+              "action_sequence": [
+                "stand beside desk",
+                "look toward doctor not Evelyn",
+                "hold one hand near Seraphina chair"
+              ],
+              "dialogue": "It is not that important."
+            },
+            {
+              "character_id": "Seraphina Vale",
+              "emotion": "quietly reassured",
+              "action_sequence": [
+                "sit with shawl and tea",
+                "avoid looking toward door"
+              ]
+            },
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "hope ending",
+              "action_sequence": [
+                "remain outside as foreground silhouette"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "warm study lamps",
+            "medical bag",
+            "doorway shadow",
+            "hard side light"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Over-shoulder from Evelyn shadow into study: Lucien near desk, Seraphina seated, doctor presence suggested by medical bag, no readable documents. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Speech bubble: \"It is not that important.\"",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc07",
+          "type": "broll",
+          "description": "Desk-lamp close-up: crooked left-hand writing on a severance request, bandaged right hand resting uselessly nearby, ink pooling at Evelyn\u2019s signature beside a glass of water and pain pills.",
+          "start_seconds": 57,
+          "end_seconds": 64,
+          "script_section_id": "node_5",
+          "framing": "Insert shot from above, paper angle diagonal, hands and objects filling frame without readable text.",
+          "movement": "Slow zoom in on the left hand and ink line.",
+          "transition_in": "Cut on verdict to blank paper and ink.",
+          "transition_out": "Desk-lamp flare to ring close-up.",
+          "overlay_notes": "Do not show readable words on paper. Caption: \"she stopped begging\".",
+          "shot_language": {
+            "shot_size": "insert",
+            "camera_movement": "zoom_in",
+            "lens_mm": 85,
+            "lighting_key": "low_key",
+            "depth_of_field": "shallow",
+            "color_temperature": "warm"
+          },
+          "shot_intent": "Show agency through action rather than a tearful confrontation.",
+          "narrative_role": "resolution",
+          "information_role": "Viewer understands Evelyn is initiating severance using her left hand.",
+          "hero_moment": false,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "cold resolve",
+              "action_sequence": [
+                "write with left hand",
+                "keep bandaged right hand still",
+                "steady paper with wrist"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "desk lamp pool",
+            "wet ink",
+            "white bandage",
+            "old wood grain"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Insert of Evelyn writing severance request with left hand, no readable words on the paper, bandaged right hand nearby, desk lamp, pain pills. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Phrase caption: \"she stopped begging\".",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc08",
+          "type": "broll",
+          "description": "The Luna ring and master suite key lie on top of the severance paper under a hard desk lamp; Evelyn\u2019s half-packed trunk sits open in the background with plain clothes and her mother\u2019s notes.",
+          "start_seconds": 64,
+          "end_seconds": 71,
+          "script_section_id": "node_5",
+          "framing": "Extreme close-up foreground on ring and key, trunk blurred in upper background.",
+          "movement": "Orbital micro-move around ring edge to reveal the key beside it.",
+          "transition_in": "Desk-lamp flare from sc07.",
+          "transition_out": "Match cut from ring gold to fireplace flame.",
+          "overlay_notes": "Phrase caption: \"packed only what was hers\". No text on paper.",
+          "shot_language": {
+            "shot_size": "extreme_close_up",
+            "camera_movement": "orbital",
+            "lens_mm": 135,
+            "lighting_key": "rim_lit",
+            "depth_of_field": "shallow",
+            "color_temperature": "warm"
+          },
+          "shot_intent": "Turn abstract severance into concrete returned symbols.",
+          "narrative_role": "evidence",
+          "information_role": "Viewer sees Evelyn returning wife/Luna symbols and keeping only personal identity items.",
+          "hero_moment": false,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "controlled release",
+              "action_sequence": [
+                "hand leaves frame after placing ring and key"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "black enamel ring",
+            "gold edge light",
+            "brass key",
+            "plain gray fabric"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Extreme close-up of symbolic Luna ring and master suite key on paper with no readable text, open trunk blurred behind. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Phrase caption: \"packed only what was hers\".",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc09",
+          "type": "character_scene",
+          "description": "Lucien\u2019s study fireplace in harsh orange light; severance paper slides from a silver tray into the fire as Lucien\u2019s black-gloved hand gestures dismissively, his face cut by shadow.",
+          "start_seconds": 71,
+          "end_seconds": 84,
+          "script_section_id": "node_6",
+          "framing": "Medium close composition with fire in lower third, Lucien looming above, butler tray at edge.",
+          "movement": "Dolly in from tray to flame as paper catches fire.",
+          "transition_in": "Gold ring edge match cut to flame.",
+          "transition_out": "Firelight dissolve to doorway shadow.",
+          "overlay_notes": "Two speech bubbles, timed sequentially: \"Burn it.\" then \"Blackthorn Pack has no discarded Luna.\" Keep bubbles upper-middle away from flame captions.",
+          "shot_language": {
+            "shot_size": "medium_close",
+            "camera_movement": "dolly_in",
+            "lens_mm": 50,
+            "lighting_key": "low_key",
+            "depth_of_field": "medium",
+            "color_temperature": "warm"
+          },
+          "shot_intent": "Show Lucien refusing the severance as control, not heartbreak.",
+          "narrative_role": "deliver_payload",
+          "information_role": "Viewer learns the peaceful legal/emotional exit is denied immediately.",
+          "hero_moment": true,
+          "character_actions": [
+            {
+              "character_id": "Lucien Draven",
+              "emotion": "cold ownership",
+              "action_sequence": [
+                "stand beside fireplace",
+                "drop paper without reading",
+                "look toward butler rather than letter"
+              ],
+              "dialogue": "Burn it. Blackthorn Pack has no discarded Luna."
+            }
+          ],
+          "texture_keywords": [
+            "orange fire accent",
+            "black glove",
+            "silver tray",
+            "charred paper curl"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Lucien in study dropping severance paper into fireplace without reading it; paper has no readable writing; butler tray edge visible. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Speech bubbles: \"Burn it.\" and \"Blackthorn Pack has no discarded Luna.\" staggered to narration.",
+              "source": "source"
+            }
+          ]
+        },
+        {
+          "id": "sc10",
+          "type": "character_scene",
+          "description": "Doorway shadow behind the study: Evelyn remains dry-eyed and resolved, her face framed by darkness while fireplace light outlines her bandaged right hand and the burning room beyond.",
+          "start_seconds": 84,
+          "end_seconds": 90,
+          "script_section_id": "arc_landing",
+          "framing": "Vertical close-up with Evelyn centered in shadow, fireplace glow behind her forming a thin rim line around her face and bandaged hand.",
+          "movement": "Very slow dolly in to her eyes, ending on frozen stare.",
+          "transition_in": "Firelight dissolve from sc09.",
+          "transition_out": "Cut to black after final caption.",
+          "overlay_notes": "Final phrase caption: \"a way he cannot burn\". No cliffhanger spoiler beyond this line.",
+          "shot_language": {
+            "shot_size": "close_up",
+            "camera_movement": "dolly_in",
+            "lens_mm": 85,
+            "lighting_key": "silhouette",
+            "depth_of_field": "shallow",
+            "color_temperature": "mixed"
+          },
+          "shot_intent": "Complete the arc with Evelyn\u2019s decision, not with Lucien\u2019s control.",
+          "narrative_role": "resolution",
+          "information_role": "Viewer understands the arc landing: she has not escaped yet, but her inner break is complete.",
+          "hero_moment": false,
+          "character_actions": [
+            {
+              "character_id": "Evelyn Ashford",
+              "emotion": "dry-eyed resolve",
+              "action_sequence": [
+                "stand in doorway shadow",
+                "close left fist slowly",
+                "stare forward without tears"
+              ]
+            }
+          ],
+          "texture_keywords": [
+            "doorway silhouette",
+            "fire rim light",
+            "dry eyes",
+            "black corridor"
+          ],
+          "required_assets": [
+            {
+              "type": "image",
+              "description": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Evelyn in doorway shadow watching fireplace light from study, bandaged right hand visible, dry-eyed resolve, no text or spoilers. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+              "source": "generate"
+            },
+            {
+              "type": "overlay",
+              "description": "Final phrase caption: \"a way he cannot burn\" centered above lower UI safe zone.",
+              "source": "source"
+            }
+          ]
+        }
+      ],
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "episode_unit": "arc",
+        "aspect_ratio": "9:16",
+        "scene_budget": 10,
+        "target_duration_seconds": 90,
+        "render_runtime": "remotion",
+        "renderer_family": "animation-first",
+        "node_to_scene_map": {
+          "n1": [
+            "sc01",
+            "sc02"
+          ],
+          "n2": [
+            "sc03"
+          ],
+          "n3": [
+            "sc04"
+          ],
+          "n4": [
+            "sc05",
+            "sc06"
+          ],
+          "n5": [
+            "sc07",
+            "sc08"
+          ],
+          "n6": [
+            "sc09",
+            "sc10"
+          ]
+        },
+        "script_section_to_scene_map": {
+          "hook": [
+            "sc01"
+          ],
+          "setup": [
+            "sc01"
+          ],
+          "node_1_2": [
+            "sc02",
+            "sc03"
+          ],
+          "node_3": [
+            "sc04"
+          ],
+          "turn": [
+            "sc05",
+            "sc06"
+          ],
+          "node_5": [
+            "sc07",
+            "sc08"
+          ],
+          "node_6": [
+            "sc09"
+          ],
+          "arc_landing": [
+            "sc10"
+          ]
+        },
+        "speech_bubble_plan": [
+          {
+            "scene_id": "sc02",
+            "text": "Take Seraphina first.",
+            "speaker": "Lucien Draven",
+            "placement": "upper right near Lucien",
+            "timing_seconds": [
+              14,
+              18
+            ]
+          },
+          {
+            "scene_id": "sc04",
+            "text": "You smell like medicine and blood.",
+            "speaker": "Caspian Draven",
+            "placement": "upper right above child",
+            "timing_seconds": [
+              35,
+              39
+            ]
+          },
+          {
+            "scene_id": "sc06",
+            "text": "It is not that important.",
+            "speaker": "Lucien Draven",
+            "placement": "upper middle near Lucien, clear of faces",
+            "timing_seconds": [
+              53,
+              57
+            ]
+          },
+          {
+            "scene_id": "sc09",
+            "text": "Burn it.",
+            "speaker": "Lucien Draven",
+            "placement": "upper left near Lucien hand line",
+            "timing_seconds": [
+              73,
+              76
+            ]
+          },
+          {
+            "scene_id": "sc09",
+            "text": "Blackthorn Pack has no discarded Luna.",
+            "speaker": "Lucien Draven",
+            "placement": "upper middle, wider bubble",
+            "timing_seconds": [
+              79,
+              84
+            ]
+          }
+        ],
+        "caption_style": "phrase",
+        "captionHighlightMode": "none",
+        "safe_zone_policy": "Keep all faces in central 70 percent of vertical frame; keep speech bubbles in upper/mid safe area; keep phrase captions above lower platform UI safe zone; no image-baked text.",
+        "visual_style_source": "/Users/wangzhiqiang/novel/OpenMontage/styles/novel-comic-recap-arc.visual-style.md",
+        "style_core": "Modern American superhero comic-book illustration style",
+        "visual_style_block": "9:16 vertical modern American superhero comic-book illustration; semi-realistic adult proportions; thick outer ink contours; hard-edged cel shading; bold black shadow masses; modern luxury noir world; cold black, graphite gray, snow white, deep ocean blue with limited blood red and fire orange accents; strong contrast and vertical power imbalance; no image text, logos, watermarks, subtitles, wolf transformations, animal traits, medieval/fantasy, anime/webtoon, 3D, or live-action photorealism.",
+        "global_negative": "no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+        "character_reference_paths": [
+          {
+            "path": "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+            "uri": "file:///Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_v001.png",
+            "characters": [
+              "Evelyn Ashford",
+              "Lucien Draven",
+              "Seraphina Vale"
+            ],
+            "usage": "face/style continuity reference"
+          },
+          {
+            "path": "/Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_prompt.md",
+            "uri": "file:///Users/wangzhiqiang/novel/novel20260413/mv/assets/char/char_c001_c002_c003_prompt.md",
+            "characters": [
+              "Evelyn Ashford",
+              "Lucien Draven",
+              "Seraphina Vale"
+            ],
+            "usage": "descriptor provenance; do not render prompt labels in scene images"
+          }
+        ],
+        "protected_future_arcs": [
+          {
+            "arc_id": "0102",
+            "protected": "Seraphina invading the Pack medical center with stolen formula, destroying mother's manuscript, and Lucien locking Evelyn out of the lab."
+          },
+          {
+            "arc_id": "0103",
+            "protected": "Lucien freezing materials and budget, Seraphina destroying Evelyn's right-hand nerves with corrosive reagent, suppressed monitoring and testimony."
+          },
+          {
+            "arc_id": "0104",
+            "protected": "Fake re-signing of severance papers, birthday banquet public mother claim, Caspian forcing Lucien to divorce Evelyn."
+          }
+        ],
+        "bottom_card_protections": [
+          "Evelyn's research strength may only be hinted.",
+          "External protection forces remain fully hidden.",
+          "Fake death and identity-switch route remain fully hidden.",
+          "Sterling family identity line remains fully hidden."
+        ],
+        "asset_generation_notes": [
+          "Generated images must not contain subtitles, speech text, readable documents, logos, watermarks, or warning-tape text.",
+          "Use the provided character sheet for Evelyn, Lucien, and Seraphina continuity where supported by the chosen image workflow.",
+          "Caspian and minor staff can be generated from descriptions; do not introduce future-arc characters or Sterling/Adrian references.",
+          "Environmental audio only remains optional; no music source is planned."
+        ],
+        "quality_checks": {
+          "variation": {
+            "score": 0.0,
+            "verdict": "strong",
+            "violations": [],
+            "suggestions": []
+          },
+          "slideshow_risk": {
+            "average": 0.0,
+            "verdict": "strong",
+            "dimensions": {
+              "repetition": {
+                "score": 0.0,
+                "reason": "Good variety"
+              },
+              "decorative_visuals": {
+                "score": 0.0,
+                "reason": "Most scenes have clear communicative purpose"
+              },
+              "weak_motion": {
+                "score": 0.0,
+                "reason": "Camera movement appears purposeful"
+              },
+              "weak_shot_intent": {
+                "score": 0.0,
+                "reason": "Strong shot intent coverage"
+              },
+              "typography_overreliance": {
+                "score": 0.0,
+                "reason": "Visual-first approach"
+              },
+              "unsupported_cinematic_claims": {
+                "score": 0.0,
+                "reason": "Not claiming cinematic treatment"
+              }
+            },
+            "render_runtime": "remotion"
+          }
+        }
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "decision": "PASS",
+    "round": 2,
+    "findings": [],
+    "summary": {
+      "critical": 0,
+      "suggestions": 0,
+      "nitpicks": 0,
+      "playbook_violations": 0,
+      "success_criteria_met": "4/4",
+      "notes": "User approved scene plan; quality checks were strong."
+    }
+  },
+  "cost_snapshot": {
+    "spent_usd": 0,
+    "estimated_remaining_usd": 0,
+    "budget_default_usd": 0.5,
+    "notes": "Scene plan approved."
+  },
+  "metadata": {
+    "artifact_path": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/scene_plan.json",
+    "user_approval": "approved"
+  }
+}

@@ -1,0 +1,559 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "edit",
+  "status": "completed",
+  "timestamp": "2026-06-27T09:56:56.625665+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": false,
+  "human_approved": true,
+  "artifacts": {
+    "edit_decisions": {
+      "version": "1.0",
+      "cuts": [
+        {
+          "id": "sc01",
+          "source": "img_sc01",
+          "in_seconds": 0.0,
+          "out_seconds": 7.672,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.06,
+            "position": "center",
+            "animation": "ken-burns-slow-zoom-in"
+          },
+          "transition_in": "cut",
+          "transition_out": "dissolve",
+          "transition_duration": 0.0,
+          "reason": "Establish physical danger and immediate betrayal before any world explanation."
+        },
+        {
+          "id": "sc02",
+          "source": "img_sc02",
+          "in_seconds": 7.672,
+          "out_seconds": 17.262,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.04,
+            "position": "center",
+            "animation": "vertical-tilt-up-with-parallax"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Make Lucien\u2019s choice visual before the bubble confirms it."
+        },
+        {
+          "id": "sc03",
+          "source": "img_sc03",
+          "in_seconds": 17.262,
+          "out_seconds": 29.729,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.06,
+            "position": "center",
+            "animation": "tracking_right-motion"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Convert physical abandonment into public identity replacement."
+        },
+        {
+          "id": "sc04",
+          "source": "img_sc04",
+          "in_seconds": 29.729,
+          "out_seconds": 41.237,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.04,
+            "position": "center",
+            "animation": "dolly_out-motion"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Land the child rejection as a separate wound from Lucien\u2019s betrayal."
+        },
+        {
+          "id": "sc05",
+          "source": "img_sc05",
+          "in_seconds": 41.237,
+          "out_seconds": 48.91,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.04,
+            "position": "center",
+            "animation": "subtle-breathing-hold"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Hold Evelyn at the last second before emotional collapse."
+        },
+        {
+          "id": "sc06",
+          "source": "img_sc06",
+          "in_seconds": 48.91,
+          "out_seconds": 54.664,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.06,
+            "position": "center",
+            "animation": "rack_focus-motion"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Make the verdict feel overheard and irreversible."
+        },
+        {
+          "id": "sc07",
+          "source": "img_sc07",
+          "in_seconds": 54.664,
+          "out_seconds": 61.377,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.04,
+            "position": "center",
+            "animation": "zoom_in-motion"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Show agency through action rather than a tearful confrontation."
+        },
+        {
+          "id": "sc08",
+          "source": "img_sc08",
+          "in_seconds": 61.377,
+          "out_seconds": 68.09,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.04,
+            "position": "center",
+            "animation": "orbital-motion"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Turn abstract severance into concrete returned symbols."
+        },
+        {
+          "id": "sc09",
+          "source": "img_sc09",
+          "in_seconds": 68.09,
+          "out_seconds": 80.557,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.06,
+            "position": "center",
+            "animation": "ken-burns-slow-zoom-in"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "dissolve",
+          "transition_duration": 0.18,
+          "reason": "Show Lucien refusing the severance as control, not heartbreak."
+        },
+        {
+          "id": "sc10",
+          "source": "img_sc10",
+          "in_seconds": 80.557,
+          "out_seconds": 86.311,
+          "speed": 1.0,
+          "layer": "primary",
+          "transform": {
+            "scale": 1.04,
+            "position": "center",
+            "animation": "ken-burns-slow-zoom-in"
+          },
+          "transition_in": "dissolve",
+          "transition_out": "fade",
+          "transition_duration": 0.18,
+          "reason": "Complete the arc with Evelyn\u2019s decision, not with Lucien\u2019s control."
+        }
+      ],
+      "overlays": [
+        {
+          "asset_id": "caption_saved_another_woman_first",
+          "start_seconds": 0.48,
+          "end_seconds": 2.302,
+          "position": {
+            "x": 0.14,
+            "y": 0.74,
+            "width": 0.72,
+            "height": 0.08
+          },
+          "animation": "fade-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "caption_bleeding_in_the_snow",
+          "start_seconds": 2.398,
+          "end_seconds": 4.603,
+          "position": {
+            "x": 0.16,
+            "y": 0.82,
+            "width": 0.72,
+            "height": 0.08
+          },
+          "animation": "fade-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "bubble_take_seraphina_first",
+          "start_seconds": 15.536,
+          "end_seconds": 18.797,
+          "position": {
+            "x": 0.44,
+            "y": 0.18,
+            "width": 0.48,
+            "height": 0.1
+          },
+          "animation": "bubble-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "caption_the_wife_he_had_chosen",
+          "start_seconds": 26.373,
+          "end_seconds": 29.346,
+          "position": {
+            "x": 0.16,
+            "y": 0.8,
+            "width": 0.72,
+            "height": 0.08
+          },
+          "animation": "fade-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "bubble_medicine_and_blood",
+          "start_seconds": 34.524,
+          "end_seconds": 37.593,
+          "position": {
+            "x": 0.25,
+            "y": 0.28,
+            "width": 0.56,
+            "height": 0.1
+          },
+          "animation": "bubble-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "caption_one_last_excuse",
+          "start_seconds": 41.813,
+          "end_seconds": 44.498,
+          "position": {
+            "x": 0.16,
+            "y": 0.76,
+            "width": 0.72,
+            "height": 0.08
+          },
+          "animation": "fade-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "bubble_not_that_important",
+          "start_seconds": 51.787,
+          "end_seconds": 54.664,
+          "position": {
+            "x": 0.42,
+            "y": 0.2,
+            "width": 0.48,
+            "height": 0.1
+          },
+          "animation": "bubble-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "bubble_burn_it",
+          "start_seconds": 71.159,
+          "end_seconds": 73.268,
+          "position": {
+            "x": 0.5,
+            "y": 0.2,
+            "width": 0.34,
+            "height": 0.09
+          },
+          "animation": "bubble-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "bubble_no_discarded_luna",
+          "start_seconds": 75.954,
+          "end_seconds": 80.077,
+          "position": {
+            "x": 0.18,
+            "y": 0.18,
+            "width": 0.68,
+            "height": 0.12
+          },
+          "animation": "bubble-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "caption_peaceful_leaving_would_never_work",
+          "start_seconds": 81.228,
+          "end_seconds": 83.434,
+          "position": {
+            "x": 0.12,
+            "y": 0.73,
+            "width": 0.78,
+            "height": 0.08
+          },
+          "animation": "fade-pop",
+          "opacity": 1
+        },
+        {
+          "asset_id": "caption_a_way_he_cannot_burn",
+          "start_seconds": 83.434,
+          "end_seconds": 86.311,
+          "position": {
+            "x": 0.14,
+            "y": 0.82,
+            "width": 0.72,
+            "height": 0.08
+          },
+          "animation": "fade-pop",
+          "opacity": 1
+        }
+      ],
+      "audio": {
+        "narration": {
+          "segments": [
+            {
+              "asset_id": "narration_full",
+              "start_seconds": 0,
+              "end_seconds": 86.311
+            }
+          ]
+        },
+        "music": {},
+        "sfx": []
+      },
+      "subtitles": {
+        "enabled": true,
+        "style": "phrase",
+        "source": "assets/subtitles.srt",
+        "font": "Inter Tight",
+        "font_size": 54,
+        "color": "#F8FAFC",
+        "outline_color": "#111827",
+        "background": "#00000066",
+        "position": "bottom-center",
+        "max_words_per_line": 7
+      },
+      "music": {},
+      "transitions": [
+        {
+          "type": "dissolve",
+          "at_seconds": 7.672,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 17.262,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 29.729,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 41.237,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 48.91,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 54.664,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 61.377,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 68.09,
+          "duration_seconds": 0.18
+        },
+        {
+          "type": "dissolve",
+          "at_seconds": 80.557,
+          "duration_seconds": 0.18
+        }
+      ],
+      "renderer_family": "animation-first",
+      "render_runtime": "remotion",
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "episode_unit": "arc",
+        "pacing_mode": "fast_arc_recap",
+        "captionHighlightMode": "none",
+        "duration_seconds": 86.311,
+        "target_duration_seconds": 90,
+        "time_scale_from_script": 0.959,
+        "node_coverage": [
+          {
+            "node_id": "n1",
+            "name": "Snowline Abandonment",
+            "covered_in": [
+              "node_1_2"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n2",
+            "name": "Shelter Station Replacement",
+            "covered_in": [
+              "node_1_2"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n3",
+            "name": "Rejected At Home",
+            "covered_in": [
+              "node_3"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n4",
+            "name": "The Verdict Through The Door",
+            "covered_in": [
+              "turn"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n5",
+            "name": "Cold Severance",
+            "covered_in": [
+              "node_5"
+            ],
+            "status": "covered"
+          },
+          {
+            "node_id": "n6",
+            "name": "The Fireplace Refusal",
+            "covered_in": [
+              "node_6",
+              "arc_landing"
+            ],
+            "status": "covered"
+          }
+        ],
+        "speech_bubbles": [
+          {
+            "asset_id": "bubble_take_seraphina_first",
+            "text": "Take Seraphina first.",
+            "speaker": "Lucien Draven"
+          },
+          {
+            "asset_id": "bubble_medicine_and_blood",
+            "text": "You smell like medicine and blood.",
+            "speaker": "Caspian Draven"
+          },
+          {
+            "asset_id": "bubble_not_that_important",
+            "text": "It is not that important.",
+            "speaker": "Lucien Draven"
+          },
+          {
+            "asset_id": "bubble_burn_it",
+            "text": "Burn it.",
+            "speaker": "Lucien Draven"
+          },
+          {
+            "asset_id": "bubble_no_discarded_luna",
+            "text": "Blackthorn Pack has no discarded Luna.",
+            "speaker": "Lucien Draven"
+          }
+        ],
+        "caption_assets": {
+          "caption_saved_another_woman_first": "saved another woman first",
+          "caption_bleeding_in_the_snow": "bleeding in the snow",
+          "caption_the_wife_he_had_chosen": "the wife he had chosen",
+          "caption_one_last_excuse": "one last excuse",
+          "caption_peaceful_leaving_would_never_work": "peaceful leaving would never work",
+          "caption_a_way_he_cannot_burn": "a way he cannot burn"
+        },
+        "source_artifacts": {
+          "script": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/script.json",
+          "scene_plan": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/scene_plan.json",
+          "asset_manifest": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/asset_manifest.json",
+          "proposal_packet": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/proposal_packet.json"
+        }
+      },
+      "slideshow_risk_score": {
+        "average": 0.0,
+        "verdict": "strong",
+        "dimensions": {
+          "repetition": {
+            "score": 0.0,
+            "reason": "Good variety"
+          },
+          "decorative_visuals": {
+            "score": 0.0,
+            "reason": "Most scenes have clear communicative purpose"
+          },
+          "weak_motion": {
+            "score": 0.0,
+            "reason": "Camera movement appears purposeful"
+          },
+          "weak_shot_intent": {
+            "score": 0.0,
+            "reason": "Strong shot intent coverage"
+          },
+          "typography_overreliance": {
+            "score": 0.0,
+            "reason": "Visual-first approach"
+          },
+          "unsupported_cinematic_claims": {
+            "score": 0.0,
+            "reason": "Not claiming cinematic treatment"
+          }
+        },
+        "render_runtime": "remotion"
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "status": "passed",
+    "checks": [
+      "Duration follows verified narration WAV length and remains within approved tolerance.",
+      "All ten planned comic scenes are represented as cuts.",
+      "Five speech bubble overlays stay within approved 3-6 bubble count.",
+      "Render runtime preserved from proposal: remotion.",
+      "Slideshow risk verdict: strong (0.0)."
+    ]
+  },
+  "cost_snapshot": {
+    "stage_cost_usd": 0,
+    "total_cost_usd": 0
+  },
+  "metadata": {
+    "next_stage": "compose"
+  }
+}

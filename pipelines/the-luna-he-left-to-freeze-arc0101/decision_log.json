@@ -1,0 +1,214 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "decisions": [
+    {
+      "decision_id": "d-001",
+      "stage": "proposal",
+      "category": "pipeline_selection",
+      "subject": "Production pipeline",
+      "options_considered": [
+        {
+          "option_id": "novel-comic-recap-arc",
+          "label": "novel-comic-recap-arc",
+          "score": 0.95,
+          "reason": "User explicitly requested this pipeline and supplied novel project path plus arc id."
+        },
+        {
+          "option_id": "animation",
+          "label": "generic animation pipeline",
+          "score": 0.45,
+          "reason": "Could render animation, but lacks novel arc intake and spoiler-boundary contract.",
+          "rejected_because": "Wrong source workflow."
+        }
+      ],
+      "selected": "novel-comic-recap-arc",
+      "reason": "Matches user request and source structure exactly.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.95
+    },
+    {
+      "decision_id": "d-002",
+      "stage": "proposal",
+      "category": "concept_selection",
+      "subject": "Concept direction",
+      "options_considered": [
+        {
+          "option_id": "c1",
+          "label": "He Chose Her First",
+          "score": 0.9,
+          "reason": "Strongest short-form hook and complete node coverage."
+        },
+        {
+          "option_id": "c2",
+          "label": "The Luna Blanket Was On Another Woman",
+          "score": 0.82,
+          "reason": "Excellent symbolic treatment but less immediate than the survival betrayal hook."
+        },
+        {
+          "option_id": "c3",
+          "label": "She Signed With Her Left Hand",
+          "score": 0.78,
+          "reason": "Strong agency angle but softens the opening shock."
+        }
+      ],
+      "selected": "c1",
+      "reason": "Recommended because it opens with the source-supported highest-intensity betrayal while preserving the severance landing.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.86
+    },
+    {
+      "decision_id": "d-003",
+      "stage": "proposal",
+      "category": "renderer_family_selection",
+      "subject": "Creative renderer family",
+      "options_considered": [
+        {
+          "option_id": "animation-first",
+          "label": "Animation-first comic recap",
+          "score": 0.88,
+          "reason": "Fits still comic panels, captions, bubbles, and controlled vertical motion."
+        },
+        {
+          "option_id": "cinematic-trailer",
+          "label": "Cinematic trailer",
+          "score": 0.52,
+          "reason": "Would imply true motion clips; video generation providers are unavailable and the requested format is recap drama.",
+          "rejected_because": "Wrong delivery character for available tools."
+        }
+      ],
+      "selected": "animation-first",
+      "reason": "Best match for one-arc comic recap with still-led images and motion overlays.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.84
+    },
+    {
+      "decision_id": "d-004",
+      "stage": "proposal",
+      "category": "render_runtime_selection",
+      "subject": "Render runtime",
+      "options_considered": [
+        {
+          "option_id": "remotion",
+          "label": "Remotion",
+          "score": 0.9,
+          "reason": "Available; best fit for animated still panels, speech bubbles, phrase captions, and audio timing."
+        },
+        {
+          "option_id": "hyperframes",
+          "label": "HyperFrames",
+          "score": 0.35,
+          "reason": "Could support HTML/GSAP kinetic typography, but it is unavailable on this machine.",
+          "rejected_because": "runtime not available on this machine"
+        },
+        {
+          "option_id": "ffmpeg",
+          "label": "FFmpeg-only",
+          "score": 0.5,
+          "reason": "Available for simple concat/trim but weaker for controlled captions and comic bubbles.",
+          "rejected_because": "Lower visual control than Remotion."
+        }
+      ],
+      "selected": "remotion",
+      "reason": "Recommended because Remotion is available and aligned with the pipeline default for comic-panel motion and overlay control.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.88
+    },
+    {
+      "decision_id": "d-005",
+      "stage": "proposal",
+      "category": "voice_selection",
+      "subject": "Narration voice provider",
+      "options_considered": [
+        {
+          "option_id": "piper",
+          "label": "Piper local TTS",
+          "score": 0.75,
+          "reason": "Available and free, suitable for zero-key draft/presentable path."
+        },
+        {
+          "option_id": "elevenlabs",
+          "label": "ElevenLabs TTS",
+          "score": 0.68,
+          "reason": "Higher emotional quality but unavailable until API key setup.",
+          "rejected_because": "not configured"
+        },
+        {
+          "option_id": "openai_tts",
+          "label": "OpenAI TTS",
+          "score": 0.64,
+          "reason": "Potential high quality but unavailable until API key setup.",
+          "rejected_because": "not configured"
+        }
+      ],
+      "selected": "piper",
+      "reason": "Only configured provider; keeps production zero-key unless user chooses an upgrade.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.76
+    },
+    {
+      "decision_id": "d-006",
+      "stage": "proposal",
+      "category": "music_source",
+      "subject": "Music and sound policy",
+      "options_considered": [
+        {
+          "option_id": "none",
+          "label": "No added music",
+          "score": 0.88,
+          "reason": "Matches visual style SOUND_POLICY and avoids melodrama."
+        },
+        {
+          "option_id": "pixabay_music",
+          "label": "Pixabay Music",
+          "score": 0.52,
+          "reason": "Available free/no-key search, but external scraping and less aligned with the cold style.",
+          "rejected_because": "not recommended by style policy"
+        },
+        {
+          "option_id": "elevenlabs_music",
+          "label": "ElevenLabs music generation",
+          "score": 0.3,
+          "reason": "Could generate music but unavailable until API key setup.",
+          "rejected_because": "not configured"
+        }
+      ],
+      "selected": "none",
+      "reason": "Style policy defaults to no added music; environmental audio can be considered later if needed.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.82
+    },
+    {
+      "decision_id": "d-007",
+      "stage": "proposal",
+      "category": "motion_commitment",
+      "subject": "Motion requirement classification",
+      "options_considered": [
+        {
+          "option_id": "still_led",
+          "label": "Still-led animated comic recap",
+          "score": 0.86,
+          "reason": "Matches pipeline and available tools; motion comes from panel animation and overlays."
+        },
+        {
+          "option_id": "true_video_generation",
+          "label": "True generated motion clips",
+          "score": 0.25,
+          "reason": "No configured video generation providers and not necessary for this recap format.",
+          "rejected_because": "providers unavailable"
+        }
+      ],
+      "selected": "still_led",
+      "reason": "The delivery promise can be presentable with animated still panels, so true motion is not a hard requirement.",
+      "user_visible": true,
+      "user_approved": true,
+      "confidence": 0.83
+    }
+  ]
+}

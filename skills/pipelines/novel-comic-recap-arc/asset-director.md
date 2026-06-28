@@ -1,31 +1,31 @@
-# Asset Director - Novel Comic Recap Arc Pipeline
+# Asset Director - 小说漫画解说 Arc Pipeline
 
-## Purpose
+## 目标
 
-Create or organize narration, comic stills, and optional music for one arc recap. The output is a schema-valid `asset_manifest`.
+为一个 Arc recap 创建或整理旁白、漫画静帧和可选音乐。输出必须是 schema-valid 的 `asset_manifest`。
 
-## Provider Policy
+## Provider 策略
 
-Default to zero-key/local-first:
+默认采用 zero-key / local-first：
 
-- Use generated TTS through `tts_selector`; prefer local/free voices when acceptable.
-- Do not use existing audiobook audio.
-- Use the Codex runtime image flow when the user asks for Codex drawing.
-- Use `codex_image_import` to register externally created Codex images into OpenMontage.
-- If image generation is unavailable, list the exact missing images before attempting a different provider.
+- 通过 `tts_selector` 生成 TTS；质量可接受时优先 local/free voices。
+- 不使用现有 audiobook audio。
+- 用户要求 Codex 绘图时，使用 Codex runtime image flow。
+- 使用 `codex_image_import` 把外部创建的 Codex 图片登记进 OpenMontage。
+- 如果图片生成不可用，先列出准确缺失的图片，不要直接静默换 provider。
 
-Before using any generation tool, read its Layer 3 skill if declared by the registry.
+使用任何 generation tool 前，必须读取 registry 声明的 Layer 3 skill。
 
-## Image Strategy
+## 图片策略
 
-Produce arc-level reusable visuals, not one image per sentence.
+产出 Arc 级可复用视觉，不是一句话一张图。
 
-Default image count:
+默认图片数量：
 
-- 8-10 images for 75-90 seconds.
-- 10-12 images for 90-120 seconds.
+- 75-90 秒：8-10 张。
+- 90-120 秒：10-12 张。
 
-For each image, carry:
+每张图片都要携带：
 
 - `scene_id`
 - `covered_nodes`
@@ -39,58 +39,56 @@ For each image, carry:
 - `resolution`
 - `generation_summary`
 
-## Style Consistency
+## 风格一致性
 
-Read and reuse the active `visual_style.md` across the entire arc. If the user
-does not supply a path, use the bundled repository default:
+整个 Arc 都要读取并复用当前 `visual_style.md`。如果用户没有提供路径，使用仓库默认文件：
 
 `styles/novel-comic-recap-arc.visual-style.md`
 
-Use `VISUAL_STYLE_BLOCK` for scene images and `ASSET_STYLE_BLOCK` for character
-reference sheets.
+场景图片使用 `VISUAL_STYLE_BLOCK`，角色参考图使用 `ASSET_STYLE_BLOCK`。
 
-Current default style core:
+当前默认 style core：
 
 `Modern American superhero comic-book illustration style`
 
-Scene image prompts should preserve:
+Scene image prompts 应保持：
 
-- 9:16 vertical composition with strong upper-body expression readability.
-- heroic semi-realistic adult proportions, angular facial planes, strong cheekbone/jaw structure.
-- thicker outer contour lines, confident interior ink lines, bold black spot shadows.
-- hard-edged cel shading, high contrast, dramatic rim light, graphic painted comic colors.
-- modern luxury noir palette: cold black, graphite gray, snow white, deep ocean blue, medical cold blue, old gold, ivory, blood red/fire orange/alarm red/cold silver only as accents.
-- modern high-society power world: manors, private security, medical foundations, corporate Pack power, old-money interiors, hospitals/labs, ports, rain/snow/fog/night.
-- mood: cold pain, public humiliation, controlled retaliation, identity reversal, dignity being taken back.
+- 9:16 竖屏构图，上半身表情清晰可读。
+- 英雄式半写实成人比例、棱角分明的面部结构、强 cheekbone / jaw structure。
+- 更厚的外轮廓线、明确的内部墨线、强黑色块阴影。
+- 硬边 cel shading、高对比、dramatic rim light、graphic painted comic colors。
+- modern luxury noir palette：cold black、graphite gray、snow white、deep ocean blue、medical cold blue、old gold、ivory；blood red / fire orange / alarm red / cold silver 只作强调色。
+- modern high-society power world：manors、private security、medical foundations、corporate Pack power、old-money interiors、hospitals / labs、ports、rain / snow / fog / night。
+- mood：cold pain、public humiliation、controlled retaliation、identity reversal、dignity being taken back。
 
-Asset reference prompts should use the short asset style:
+Asset reference prompts 使用短版 asset style：
 
 `Modern American superhero comic-book character sheet style, prestige graphic novel cover finish, heroic semi-realistic adult proportions, angular facial planes, strong cheekbone and jaw structure, thicker outer contour lines, confident interior ink lines, bold black spot shadows, high-contrast cel shading, dramatic rim light, sculpted anatomy under tailored luxury clothing, graphic painted comic colors, subtle ink hatching, modern luxury noir palette, clearly non-photorealistic, not a photo, not live-action, not a 3D render, no anime, no manga, no Korean or Japanese webtoon, no otome-game doll face, no soft romance portrait, no delicate fashion-illustration thinness, no glossy game CG, pure white background, no text, no labels, no watermark.`
 
-Apply these global negatives to all generated images:
+所有生成图片都应用这些 global negatives：
 
-- no text, subtitles, watermarks, logos, gibberish screen text;
-- no wolf transformation, animal ears/tails/claws, magic circles, moon-mechanic visuals, glowing race features;
-- no medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral look;
-- no Japanese/Korean webtoon, chibi, 3D cartoon, photorealistic live-action still, glossy game CG;
-- do not render Pack as a primitive tribe or supernatural species society;
-- no wrong-era clothing, buildings, vehicles, weapons, or medical equipment;
-- no excessive gore, nudity, vulgar seduction, or unnecessary action-blockbuster treatment.
+- no text、subtitles、watermarks、logos、gibberish screen text；
+- no wolf transformation、animal ears / tails / claws、magic circles、moon-mechanic visuals、glowing race features；
+- no medieval castles、ancient costume、steampunk、cyberpunk、school youth、rural pastoral look；
+- no Japanese / Korean webtoon、chibi、3D cartoon、photorealistic live-action still、glossy game CG；
+- 不要把 Pack 渲染成原始部落或超自然种族社会；
+- 不要出现错误时代的 clothing、buildings、vehicles、weapons 或 medical equipment；
+- 不要 excessive gore、nudity、vulgar seduction 或不必要的 action-blockbuster treatment。
 
-Use provided character references and `bible_setting.md` to write consistent character descriptors.
+使用角色参考图和 `bible_setting.md` 写出一致的 character descriptors。
 
-## Speech And Captions
+## Speech 与 Captions
 
-- Generate narration from the approved script.
-- Preserve narration script text in the artifact.
-- Captions are phrase captions derived from narration/script timing.
-- Do not create active word highlighting.
-- Default music policy follows `visual_style.md`: no added emotional music unless the user requests it; restrained environment sound is acceptable when available.
+- 从已批准脚本生成旁白。
+- 在 artifact 中保留旁白脚本文本。
+- Captions 从 narration / script timing 派生，使用 phrase captions。
+- 不创建 active word highlighting。
+- 默认音乐策略遵循 `visual_style.md`：除非用户要求，不加情绪音乐；可用时允许克制环境声。
 
-## Quality Gate
+## 质量门
 
-- Narration duration fits target duration.
-- Image prompts cover all planned scenes.
-- Exact text is left for Remotion overlays.
-- Asset manifest separates generated images, provided references, narration, and optional music.
-- Missing assets are explicit blockers, not hidden assumptions.
+- 旁白时长符合目标时长。
+- 图片 prompts 覆盖所有已规划 scenes。
+- 精确文字留给 Remotion overlays。
+- Asset manifest 清晰分离 generated images、provided references、narration 和 optional music。
+- Missing assets 必须作为明确 blocker 暴露，不能藏在假设里。

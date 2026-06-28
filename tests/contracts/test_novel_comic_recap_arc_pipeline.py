@@ -43,3 +43,16 @@ def test_novel_comic_recap_arc_defaults_one_arc_one_video():
         == "Modern American superhero comic-book illustration style"
     )
     assert metadata["default_music_policy"] == "none_or_minimal_environment_only"
+
+
+def test_novel_comic_recap_arc_declares_project_path_intake():
+    manifest = load_pipeline("novel-comic-recap-arc")
+    source_intake = manifest["metadata"]["source_intake"]
+
+    assert source_intake["mode"] == "novel_project_path_plus_arc_id"
+    assert source_intake["required_input_fields"] == ["novel_project_path", "arc_id"]
+    assert source_intake["erchuang_dir_name"] == "erchuang"
+    assert source_intake["novels_dir_name"] == "novels"
+    assert source_intake["resolver"] == (
+        "lib.novel_arc_intake.resolve_novel_arc_source_bundle"
+    )

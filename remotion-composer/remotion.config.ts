@@ -5,5 +5,7 @@ import { Config } from "@remotion/cli/config";
 // Remotion 4.0.441 treats a literal false as "use default" for this option.
 // Passing 0 keeps the value falsy all the way to the Chromium launch check.
 Config.setChromiumMultiProcessOnLinux(0 as unknown as boolean);
-Config.setChromiumOpenGlRenderer("swangle");
+// Prefer hardware-backed ANGLE rendering. The previous `swangle` value forces
+// SwiftShader software rendering and made long vertical comic renders time out.
+Config.setChromiumOpenGlRenderer("angle");
 Config.setOverwriteOutput(true);

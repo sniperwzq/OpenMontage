@@ -1,43 +1,43 @@
-# Scene Director - Novel Comic Recap Arc Pipeline
+# Scene Director - 小说漫画解说 Arc Pipeline
 
-## Purpose
+## 目标
 
-Convert the arc script into a dense 9:16 comic-panel scene plan. The output is a schema-valid `scene_plan`.
+把 Arc 脚本转换成密集的 9:16 漫画分镜 `scene_plan`。输出必须是 schema-valid 的 `scene_plan` artifact。
 
-## Scene Budget
+## Scene 数量预算
 
-Default:
+默认：
 
-- 75-90 seconds: 8-10 scenes.
-- 90-120 seconds: 10-12 scenes.
-- If the arc has fewer nodes, add hook/landing/insert scenes.
-- If the arc has many nodes, merge weaker nodes visually while preserving all must-show turns.
+- 75-90 秒：8-10 个 scenes。
+- 90-120 秒：10-12 个 scenes。
+- 如果 Arc 节点较少，增加 hook / landing / insert scenes。
+- 如果 Arc 节点很多，视觉上合并较弱节点，但必须保留所有 must-show turns。
 
-## Scene Planning Rules
+## 分镜规则
 
-- One scene should carry one emotional job.
-- Do not bake subtitles or speech-bubble text into generated images.
-- Use Remotion overlays for captions, bubbles, warning tape, title cards, and small readable text.
-- Favor strong stills with camera motion over many weak images.
-- Keep vertical-safe composition: important faces and text away from platform UI zones.
-- Follow the active `visual_style.md`: vertical power staging, centered or triangular group composition, clear upper-body expressions, low angles for power pressure, high angles for trapped/scrutinized characters, symmetrical public spaces, oppressive foreground framing for private conflict, slow push-in/orbit/frozen-stare motion.
-- Use the visual style's modern high-society world: Pack as old-money/corporate power, private security, medical foundations, manors, black business cars, closed rooms, cold family insignia. Do not introduce tribal, medieval, magical, or overt werewolf transformation visuals.
+- 一个 scene 只承担一个情绪任务。
+- 不要把字幕或 speech-bubble 文字烘焙进生成图片。
+- captions、bubbles、warning tape、title cards 和小号可读文字都用 Remotion overlays。
+- 优先使用强 stills + camera motion，不要用大量弱图堆数量。
+- 保持竖屏安全区：关键人脸和文字避开平台 UI 区域。
+- 遵循当前 `visual_style.md`：vertical power staging、居中或三角构图、清晰上半身表情、低角度表现压迫、高角度表现被困/被审视、对称公共空间、私人冲突里的压迫性前景、slow push-in / orbit / frozen-stare motion。
+- 使用视觉风格里的 modern high-society world：Pack 作为 old-money / corporate power，私安、医疗基金、庄园、黑色商务车、封闭房间、冰冷家族徽记。不要引入原始部落、中世纪、魔法或明显狼人变身视觉。
 
-## Required Scene Metadata
+## 每个 Scene 必须包含的 Metadata
 
-For every scene, include:
+每个 scene 都要包含：
 
-- script section id,
-- covered arc node(s),
-- visual purpose,
-- image prompt intent,
-- character presence,
-- speech bubble overlay if any,
-- camera motion,
-- safe-zone note,
-- whether it is a hero frame.
+- script section id
+- 覆盖的 Arc node(s)
+- visual purpose
+- image prompt intent
+- character presence
+- speech bubble overlay，如果有
+- camera motion
+- safe-zone note
+- 是否是 hero frame
 
-Store arc-specific details in `scene_plan.metadata`:
+Arc 级细节写入 `scene_plan.metadata`：
 
 ```json
 "metadata": {
@@ -55,19 +55,19 @@ Store arc-specific details in `scene_plan.metadata`:
 }
 ```
 
-## Required Asset Planning
+## Required Asset 规划
 
-Use `required_assets` on each scene:
+每个 scene 使用 `required_assets`：
 
-- `type`: usually `image`, `audio`, `overlay`, or `music`
-- `description`: production-ready description
-- `source`: `generate`, `provided`, or `source`
+- `type`：通常是 `image`、`audio`、`overlay` 或 `music`
+- `description`：可直接进入生产的描述
+- `source`：`generate`、`provided` 或 `source`
 
-Generated image descriptions must be visual-only. Put exact words in overlay notes.
+生成图片描述必须只写视觉内容。精确文字放到 overlay notes。
 
-## Quality Gate
+## 质量门
 
-- Scene count is dense enough for a full arc.
-- The strongest arc moments get the strongest frames.
-- Scene descriptions are specific enough for consistent image generation.
-- Text overlays are separated from image generation.
+- Scene 数量足够支撑完整 Arc。
+- 最强 Arc moments 获得最强画面。
+- Scene descriptions 足够具体，能支持一致的图片生成。
+- Text overlays 与 image generation 明确分离。

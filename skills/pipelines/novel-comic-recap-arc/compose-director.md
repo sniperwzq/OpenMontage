@@ -1,27 +1,27 @@
-# Compose Director - Novel Comic Recap Arc Pipeline
+# Compose Director - 小说漫画解说 Arc Pipeline
 
-## Purpose
+## 目标
 
-Render the approved arc recap into a 9:16 MP4 with narration, phrase captions, speech bubbles, and comic-panel motion.
+把已批准的 Arc recap 渲染成 9:16 MP4，包含旁白、phrase captions、speech bubbles 和 comic-panel motion。
 
-## Runtime Routing
+## Runtime 路由
 
-Read `edit_decisions.render_runtime` first. It must match the runtime locked in `proposal_packet.production_plan.render_runtime`.
+先读取 `edit_decisions.render_runtime`。它必须与 `proposal_packet.production_plan.render_runtime` 中锁定的 runtime 一致。
 
-Recommended default for this format is Remotion, but do not silently switch runtimes. If the approved runtime fails, surface the blocker and wait for user approval before changing path.
+本格式推荐默认使用 Remotion，但禁止静默切换 runtime。如果已批准 runtime 失败，必须暴露 blocker，并等待用户批准后才能改路径。
 
-## Remotion Composition Rules
+## Remotion 合成规则
 
-For Remotion/Explainer-style composition:
+如果使用 Remotion / Explainer-style composition：
 
-- Copy or symlink generated images and audio into `remotion-composer/public/<project>/`.
-- Build props at `remotion-composer/public/demo-props/<project>.json`.
-- Use 9:16 output settings.
-- Use `anime_scene` or equivalent still-led scene components.
-- Use speech-bubble overlays for key dialogue.
-- Use phrase captions with `"captionHighlightMode": "none"`.
+- 把生成图片和音频复制或 symlink 到 `remotion-composer/public/<project>/`。
+- 在 `remotion-composer/public/demo-props/<project>.json` 构建 props。
+- 使用 9:16 output settings。
+- 使用 `anime_scene` 或等价的 still-led scene components。
+- 关键对白使用 speech-bubble overlays。
+- 使用 phrase captions，并设置 `"captionHighlightMode": "none"`。
 
-Required props-level flags:
+Props 级必须包含：
 
 ```json
 {
@@ -34,38 +34,38 @@ Required props-level flags:
 }
 ```
 
-## Text Safety
+## 文字安全
 
-- Do not rely on AI-generated images for exact text.
-- The active visual style forbids text, logo, watermark, subtitles, and gibberish text inside generated images.
-- Captions and speech bubbles are controlled Remotion overlays for the recap format; keep them sparse, readable, and outside faces/key action.
-- Avoid title-card-heavy treatment unless the user explicitly asks for it.
-- Check that captions and speech bubbles do not cover faces or key action.
+- 不要依赖 AI-generated images 渲染精确文字。
+- 当前视觉风格禁止在生成图片里出现 text、logo、watermark、subtitles 和 gibberish text。
+- Captions 和 speech bubbles 是本 recap 格式里受控的 Remotion overlays；要稀疏、可读，并避开人脸和关键动作。
+- 除非用户明确要求，否则不要把视频做成大量 title card。
+- 检查 captions 和 speech bubbles 是否遮挡人脸或关键动作。
 
-## Validation
+## 验证
 
-Before final delivery:
+最终交付前：
 
-- run composition validation when available,
-- render or inspect sampled frames,
-- verify output with ffprobe,
-- confirm audio stream exists,
-- confirm duration is within approved tolerance,
-- confirm no black/blank frames,
-- confirm style consistency across scenes.
-- confirm images keep the modern superhero comic / luxury noir style and do not drift into photoreal, anime, manga, webtoon, 3D, game CG, or fantasy-werewolf imagery.
+- 可用时运行 composition validation。
+- 渲染或检查 sampled frames。
+- 使用 ffprobe 验证输出。
+- 确认存在 audio stream。
+- 确认 duration 在已批准容差内。
+- 确认没有 black / blank frames。
+- 确认各 scene 风格一致。
+- 确认图片保持 modern superhero comic / luxury noir 风格，不漂移到 photoreal、anime、manga、webtoon、3D、game CG 或 fantasy-werewolf imagery。
 
-## Output
+## 输出
 
-Produce:
+产出：
 
 - `render_report`
 - `final_review`
-- final MP4 path under `projects/<project>/renders/`
+- `projects/<project>/renders/` 下的 final MP4 path
 
-## Quality Gate
+## 质量门
 
-- One arc video is complete and watchable.
-- Captions are not word-highlighted.
-- Frame samples show coherent 9:16 composition.
-- Final review notes any remaining risks.
+- 一个 Arc 视频完整且可观看。
+- Captions 没有 word highlighting。
+- Frame samples 显示 9:16 composition 清晰一致。
+- Final review 记录任何剩余风险。

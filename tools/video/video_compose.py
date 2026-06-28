@@ -649,7 +649,7 @@ class VideoCompose(BaseTool):
         "product-reveal": "Explainer",
         "screen-demo": "Explainer",
         "presenter": "TalkingHead",
-        "animation-first": "Explainer",
+        "animation-first": "ComicRecap",
     }
 
     @classmethod

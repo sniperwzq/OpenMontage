@@ -1,0 +1,363 @@
+{
+  "version": "1.0",
+  "project_id": "the-luna-he-left-to-freeze-arc0101",
+  "pipeline_type": "novel-comic-recap-arc",
+  "stage": "assets",
+  "status": "completed",
+  "timestamp": "2026-06-27T09:50:46.970648+00:00",
+  "checkpoint_policy": "guided",
+  "human_approval_required": false,
+  "human_approved": true,
+  "artifacts": {
+    "asset_manifest": {
+      "version": "1.0",
+      "assets": [
+        {
+          "id": "ref_char_c001_c002_c003_v001",
+          "type": "image",
+          "path": "assets/images/ref_char_c001_c002_c003_v001.png",
+          "source_tool": "provided_reference",
+          "scene_id": "global",
+          "model": "provided-reference",
+          "provider": "user_provided",
+          "cost_usd": 0,
+          "resolution": "1536x1024",
+          "format": "png",
+          "quality_score": 1.0,
+          "subtype": "character_reference",
+          "generation_summary": "User-provided character reference sheet for Evelyn Ashford, Lucien Draven, and Seraphina Vale."
+        },
+        {
+          "id": "img_sc01",
+          "type": "image",
+          "path": "assets/images/img_sc01.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc01",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Scene content: 9:16 vertical modern American superhero comic-book illustration; semi-realistic adult proportions; thick outer ink contours; hard-edged cel shading; bold black shadow masses; modern luxury noir world; cold black, graphite gray, snow white, deep ocean blue with limited blood red and fire orange accents; strong contrast and vertical power imbalance; no image text, logos, watermarks, subtitles, wolf transformations, animal traits, medieval/fantasy, anime/webtoon, 3D, or live-action photorealism.. Evelyn pinned on snow road beside medical crates, crushed right hand under rock, helicopter light overhead. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc01: A blizzard-black mountain road split by fresh rockfall; Evelyn lies half-kneeling beside strapped medical crates, her right hand trapped under dark stone, red blood cutting through snow while helicopter light slices the storm above."
+        },
+        {
+          "id": "img_sc02",
+          "type": "image",
+          "path": "assets/images/img_sc02.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc02",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Lucien carrying Seraphina toward helicopter while Evelyn remains injured in snow foreground; guards hesitate; no readable signs or text. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc02: Lucien in a black executive coat carries Seraphina toward the helicopter ladder; Evelyn remains behind in the snow, reaching with her free left hand as guards hesitate between them."
+        },
+        {
+          "id": "img_sc03",
+          "type": "image",
+          "path": "assets/images/img_sc03.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc03",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Shelter station scene with Evelyn outside warning tape and Seraphina wearing symbolic black-and-gold wolf-pattern blanket beside Lucien; no text on tape or blanket. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc03: Temporary shelter station under harsh white lamps; warning tape cuts across the frame, keeping snow-soaked Evelyn outside while Seraphina sits under the black-and-gold Luna blanket against Lucien."
+        },
+        {
+          "id": "img_sc04",
+          "type": "image",
+          "path": "assets/images/img_sc04.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc04",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Manor sitting room, Evelyn reaching to child while Caspian hides behind Seraphina holding wolf charm; no text or labels. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc04: Blackthorn Manor sitting room with tall fireplace and cold luxury; feverish Evelyn reaches toward Caspian with her left hand while the child hides behind Seraphina clutching a small wooden wolf charm."
+        },
+        {
+          "id": "img_sc05",
+          "type": "image",
+          "path": "assets/images/img_sc05.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc05",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Close-up of Evelyn outside study door in dark corridor, warm light line from door gap, feverish face and bandaged right hand. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc05: Narrow corridor outside Lucien\u2019s study; Evelyn braces against dark wall paneling, fever-pale, while a blade of warm light leaks from the almost-closed door."
+        },
+        {
+          "id": "img_sc06",
+          "type": "image",
+          "path": "assets/images/img_sc06.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc06",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Over-shoulder from Evelyn shadow into study: Lucien near desk, Seraphina seated, doctor presence suggested by medical bag, no readable documents. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc06: Inside the study, Lucien stands in warm lamplight beside Seraphina and a doctor\u2019s black medical bag; in foreground shadow, Evelyn\u2019s blurred shoulder frames the scene from outside the door."
+        },
+        {
+          "id": "img_sc07",
+          "type": "image",
+          "path": "assets/images/img_sc07.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc07",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Insert of Evelyn writing severance request with left hand, no readable words on the paper, bandaged right hand nearby, desk lamp, pain pills. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc07: Desk-lamp close-up: crooked left-hand writing on a severance request, bandaged right hand resting uselessly nearby, ink pooling at Evelyn\u2019s signature beside a glass of water and pain pills."
+        },
+        {
+          "id": "img_sc08",
+          "type": "image",
+          "path": "assets/images/img_sc08.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc08",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Extreme close-up of symbolic Luna ring and master suite key on paper with no readable text, open trunk blurred behind. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc08: The Luna ring and master suite key lie on top of the severance paper under a hard desk lamp; Evelyn\u2019s half-packed trunk sits open in the background with plain clothes and her mother\u2019s notes."
+        },
+        {
+          "id": "img_sc09",
+          "type": "image",
+          "path": "assets/images/img_sc09.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc09",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Lucien in study dropping severance paper into fireplace without reading it; paper has no readable writing; butler tray edge visible. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc09: Lucien\u2019s study fireplace in harsh orange light; severance paper slides from a silver tray into the fire as Lucien\u2019s black-gloved hand gestures dismissively, his face cut by shadow."
+        },
+        {
+          "id": "img_sc10",
+          "type": "image",
+          "path": "assets/images/img_sc10.png",
+          "source_tool": "codex_image_import",
+          "scene_id": "sc10",
+          "prompt": "9:16 vertical comic still; use provided character reference for face and wardrobe continuity; keep all subtitles, labels, dialogue, logos, and readable text out of the image; leave upper and lower safe zones for Remotion overlays. Evelyn in doorway shadow watching fireplace light from study, bandaged right hand visible, dry-eyed resolve, no text or spoilers. Negative constraints: no image text, watermarks, logos, subtitles, gibberish screen text, wolf transformations, animal ears/tails/claws, fantasy magic, medieval castles, ancient costume, steampunk, cyberpunk, school youth, rural pastoral, Japanese/Korean webtoon, chibi, 3D cartoon, live-action photo realism, primitive-tribe Pack, wrong-era objects, excessive gore, nudity, vulgar seduction, action-blockbuster treatment",
+          "model": "codex-runtime-image-tool",
+          "provider": "codex_runtime",
+          "cost_usd": 0,
+          "resolution": "1024x1536",
+          "format": "png",
+          "quality_score": 0.82,
+          "subtype": "comic_scene_still",
+          "generation_summary": "Codex runtime generated 9:16 comic still for sc10: Doorway shadow behind the study: Evelyn remains dry-eyed and resolved, her face framed by darkness while fireplace light outlines her bandaged right hand and the burning room beyond."
+        },
+        {
+          "id": "qa_contact_sheet_images_v1",
+          "type": "image",
+          "path": "assets/images/qa_contact_sheet_images_v1.jpg",
+          "source_tool": "local_pillow_contact_sheet",
+          "scene_id": "global",
+          "subtype": "qa_contact_sheet",
+          "provider": "codex_runtime",
+          "model": "local-pillow-contact-sheet",
+          "cost_usd": 0.0,
+          "generation_summary": "Contact sheet used for quick visual QA of generated scene stills.",
+          "resolution": "1000x700",
+          "format": "jpeg",
+          "quality_score": 1.0
+        },
+        {
+          "id": "narration_full",
+          "type": "narration",
+          "path": "assets/audio/narration.wav",
+          "source_tool": "tts_selector",
+          "scene_id": "global",
+          "prompt": "Lucien saved another woman first. His Luna was bleeding in the snow.\n\nEvelyn Ashford had spent years holding Blackthorn Pack together. But when the mountain collapsed, her right hand was crushed under stone while she protected medical supplies.\n\nLucien arrived by helicopter, saw her trapped, and still ordered, \"Take Seraphina first.\" Then he said Evelyn could reach the shelter line herself. She crawled back alive and found Seraphina wrapped in the black-and-gold Luna blanket, leaning against him like the wife he had chosen.\n\nFeverish and bandaged, Evelyn returned to the Manor and reached for Caspian. Her own son hid behind Seraphina. He said she smelled like medicine and blood, then gave Seraphina the charm meant for his mother.\n\nStill, she gave Lucien one last excuse. Maybe he had not understood her injury. Outside his study, the doctor warned that her hand might need microsurgery. Lucien only asked if she could still stay in the Manor. Then came the verdict: \"It is not that important.\"\n\nThat was when she stopped begging the house to love her. With her right hand useless, Evelyn used her left to write the severance request. She removed the Luna ring, left the master key, and packed only what was hers.\n\nLucien did not even read it. He asked where she was staying, then told the butler, \"Burn it.\" The letter curled black in the fireplace while he declared, \"Blackthorn Pack has no discarded Luna.\"\n\nEvelyn did not cry. She understood peaceful leaving would never work. So the next time she leaves, it will be in a way he cannot burn.",
+          "model": "en_US-lessac-medium",
+          "provider": "piper",
+          "cost_usd": 0,
+          "duration_seconds": 78.368,
+          "format": "wav",
+          "quality_score": 0.72,
+          "subtype": "english_narration",
+          "generation_summary": "Full approved English narration generated locally with Piper via tts_selector."
+        },
+        {
+          "id": "subtitles_phrase_draft",
+          "type": "subtitle",
+          "path": "assets/subtitles.srt",
+          "source_tool": "script_timing",
+          "scene_id": "global",
+          "cost_usd": 0,
+          "format": "srt",
+          "quality_score": 0.78,
+          "subtype": "phrase_captions",
+          "generation_summary": "Draft phrase captions derived from approved script section timing; active word highlighting disabled."
+        }
+      ],
+      "total_cost_usd": 0,
+      "metadata": {
+        "pipeline": "novel-comic-recap-arc",
+        "arc_id": "0101",
+        "episode_unit": "arc",
+        "layer3_skills_read": [
+          "imagegen",
+          "text-to-speech",
+          "elevenlabs",
+          "openai-docs"
+        ],
+        "image_provider": "codex_runtime_image_tool + codex_image_import",
+        "tts_provider": "piper via tts_selector",
+        "tts_model": "en_US-lessac-medium",
+        "tts_length_scale": 0.82,
+        "tts_sentence_silence": 0.18,
+        "narration_duration_seconds": 78.368,
+        "target_duration_seconds": 90,
+        "caption_style": "phrase",
+        "captionHighlightMode": "none",
+        "music_source": {
+          "source_type": "none",
+          "mood_direction": "No added music by default; optional restrained environmental sounds such as wind, helicopter distance, footsteps, study fire, and paper burn.",
+          "estimated_cost_usd": 0
+        },
+        "missing_assets": [],
+        "scene_image_coverage": {
+          "sc01": "assets/images/img_sc01.png",
+          "sc02": "assets/images/img_sc02.png",
+          "sc03": "assets/images/img_sc03.png",
+          "sc04": "assets/images/img_sc04.png",
+          "sc05": "assets/images/img_sc05.png",
+          "sc06": "assets/images/img_sc06.png",
+          "sc07": "assets/images/img_sc07.png",
+          "sc08": "assets/images/img_sc08.png",
+          "sc09": "assets/images/img_sc09.png",
+          "sc10": "assets/images/img_sc10.png"
+        },
+        "speech_bubble_plan": [
+          {
+            "scene_id": "sc02",
+            "text": "Take Seraphina first.",
+            "speaker": "Lucien Draven",
+            "placement": "upper right near Lucien",
+            "timing_seconds": [
+              14,
+              18
+            ]
+          },
+          {
+            "scene_id": "sc04",
+            "text": "You smell like medicine and blood.",
+            "speaker": "Caspian Draven",
+            "placement": "upper right above child",
+            "timing_seconds": [
+              35,
+              39
+            ]
+          },
+          {
+            "scene_id": "sc06",
+            "text": "It is not that important.",
+            "speaker": "Lucien Draven",
+            "placement": "upper middle near Lucien, clear of faces",
+            "timing_seconds": [
+              53,
+              57
+            ]
+          },
+          {
+            "scene_id": "sc09",
+            "text": "Burn it.",
+            "speaker": "Lucien Draven",
+            "placement": "upper left near Lucien hand line",
+            "timing_seconds": [
+              73,
+              76
+            ]
+          },
+          {
+            "scene_id": "sc09",
+            "text": "Blackthorn Pack has no discarded Luna.",
+            "speaker": "Lucien Draven",
+            "placement": "upper middle, wider bubble",
+            "timing_seconds": [
+              79,
+              84
+            ]
+          }
+        ],
+        "visual_qa": {
+          "contact_sheet": "assets/images/qa_contact_sheet_images_v1.jpg",
+          "checks": [
+            "10/10 scene stills copied into project assets/images",
+            "Contact sheet manually inspected for major composition and no deliberate baked-in captions",
+            "Exact dialogue remains overlay-only in scene_plan/edit"
+          ]
+        },
+        "notes": [
+          "Piper voice model en_US-lessac-medium was downloaded after initial approved-provider run failed due to missing local voice model. Provider/model path unchanged.",
+          "No music generated or selected, per approved proposal."
+        ]
+      }
+    }
+  },
+  "style_playbook": "flat-motion-graphics",
+  "review": {
+    "decision": "PASS",
+    "round": 1,
+    "findings": [],
+    "summary": {
+      "critical": 0,
+      "suggestions": 0,
+      "nitpicks": 0,
+      "playbook_violations": 0,
+      "success_criteria_met": "5/5",
+      "notes": "14 assets recorded; narration duration 78.368s; missing_assets=0."
+    }
+  },
+  "cost_snapshot": {
+    "spent_usd": 0,
+    "estimated_remaining_usd": 0,
+    "budget_default_usd": 0.5,
+    "notes": "All assets generated/imported locally; no paid API cost."
+  },
+  "metadata": {
+    "artifact_path": "projects/the-luna-he-left-to-freeze-arc0101/artifacts/asset_manifest.json",
+    "piper_voice_downloaded": "en_US-lessac-medium"
+  }
+}

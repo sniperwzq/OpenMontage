@@ -1,5 +1,6 @@
 import { Composition, CalculateMetadataFunction } from "remotion";
 import { Explainer, ExplainerProps } from "./Explainer";
+import { ComicRecap, ComicRecapProps } from "./ComicRecap";
 import {
   CinematicRenderer,
   calculateCinematicMetadata,
@@ -149,6 +150,21 @@ export const Root: React.FC = () => {
           audio: {},
         }}
         calculateMetadata={calculateMetadata}
+      />
+      <Composition
+        id="ComicRecap"
+        component={ComicRecap}
+        durationInFrames={30 * 90}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          cuts: [],
+          overlays: [],
+          captions: [],
+          audio: {},
+        } as ComicRecapProps}
+        calculateMetadata={calculateMetadata as CalculateMetadataFunction<ComicRecapProps>}
       />
       <Composition
         id="CinematicRenderer"
